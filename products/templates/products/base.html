@@ -1,0 +1,2766 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="supports-sticky supports-hover no-touch" style="--window-height:875px;">
+<head><link type="text/css" rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0184/4255/1360/files/quicklink.scss.css?v=1614655406">
+  <link type="text/css" rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0184/4255/1360/files/quicklink.scss.css?v=1614655406">
+  <link type="text/css" href="#" rel="stylesheet">
+  <meta http-equiv="origin-trial" content="AxMeahpLO9nDB/vFXFMGOd/JLhKWx/mOjErAi0qFXDzWuMSYoKpfjFtFfQWMCx+Qg39PMxDJHSLlAJF/H8rtmAwAAABveyJvcmlnaW4iOiJodHRwczovL3MucGluaW1nLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><style type="text/css">.TnITTtw-fp-collapsed-button {
+  display: none;
+  position: fixed !important;
+  top: 16px !important;
+  right: 16px !important;
+}
+
+.TnITTtw-fp-collapsed-button:hover {
+  opacity: 1.0 !important;
+}
+
+.TnITTtw-mate-fp-bar {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif !important;
+  color: #000;
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 999;
+  background: rgb(255 255 255 / 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 16px;
+  border-radius: 11px;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 25%);
+  width: 320px;
+  line-height: initial;
+}
+
+@-moz-document url-prefix() {
+  .TnITTtw-mate-fp-bar {
+      background: rgb(255 255 255 / 1.0);
+  }
+}
+
+.TnITTtw-mate-fp-bar.TnITTtw-dark-mode {
+  background: rgb(44, 44, 43);
+}
+
+.TnITTtw-hide-fp-bar {
+  width: 12px;
+  height: 12px;
+  background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/regular-close-tt.png) !important;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+}
+
+.TnITTtw-hide-fp-bar:hover {
+  background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/hover-close-tt.png) !important;
+}
+
+.TnITTtw-current-page-lang {
+  color: #6d6d72;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.TnITTtw-dark-mode .TnITTtw-current-page-lang {
+  color: #98989D;
+}
+
+.TnITTtw-fp-translate {
+  width: calc(100% - 73px) !important;
+  font-size: 14px !important;
+  text-transform: none !important;
+}
+
+.TnITTtw-fp-translate.TnITTtw-in-progress {
+  animation-name: funky-bg;
+  animation-duration: 10s;
+  animation-timing-function: ease-in;
+}
+
+.TnITTtw-fp-translate.TnITTtw-show-original {
+  width: calc(100% - 20px) !important;
+}
+
+@keyframes funky-bg {
+  from {
+      background-image: linear-gradient(145deg, #01EF92, #00D8FB),
+      linear-gradient(35deg, rgba(1, 239, 146, 0.25), rgba(0, 216, 251, 0.25)) !important;
+  }
+
+  to {
+      background-image: linear-gradient(90deg, #01EF92, #00D8FB),
+      linear-gradient(35deg, rgba(1, 239, 146, 0.25), rgba(0, 216, 251, 0.25)) !important;
+  }
+}
+
+.TnITTtw-change-language, .TnITTtw-stop-fp {
+  width: 38px;
+  height: 38px;
+  background-color: #EFEFF4;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  border-radius: 11px;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.TnITTtw-change-language {
+  background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/globe-earth.png) !important;
+}
+
+.TnITTtw-dark-mode .TnITTtw-change-language {
+  background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/globe-earth-dark.png) !important;
+}
+
+.TnITTtw-stop-fp {
+  display: none;
+  background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/regular-stt-stop.png) !important;
+  background-size: 12px 12px;
+}
+
+.TnITTtw-dark-mode .TnITTtw-change-language, .TnITTtw-dark-mode .TnITTtw-stop-fp {
+  background-color: #525251 !important;
+}
+
+.TnITTtw-change-language:hover, .TnITTtw-stop-fp:hover {
+  background-color: #F6F6F6;
+}
+
+.TnITTtw-change-language:active, .TnITTtw-stop-fp:active {
+  background-color: #E9E9E9;
+}
+
+.TnITTtw-dark-mode .TnITTtw-change-language:hover,
+.TnITTtw-dark-mode .TnITTtw-stop-fp:hover,
+.TnITTtw-dark-mode .TnITTtw-change-language:active,
+.TnITTtw-dark-mode .TnITTtw-stop-fp:active {
+  background-color: #767675;
+}
+
+#TnITTtw-always-translate {
+}
+
+.TnITTtw-fp-options input {
+  padding: initial;
+  width: auto;
+  border: initial;
+  box-shadow: initial;
+  line-height: initial;
+  height: auto;
+  display: initial;
+  position: initial;
+  appearance: auto;
+  top: initial;
+  cursor: pointer;
+  margin: 0;
+}
+
+.TnITTtw-fp-options input[readonly="readonly"] {
+  opacity: 0.5;
+}
+
+#TnITTtw-always-translate + label,
+#TnITTtw-never-translate-lang + label,
+#TnITTtw-never-translate-site + label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif !important;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  margin-left: 4px;
+  color: #000;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 296px;
+  vertical-align: top;
+  line-height: initial;
+  letter-spacing: initial;
+  text-transform: initial;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+#TnITTtw-always-translate + label::before,
+#TnITTtw-never-translate-lang + label::before,
+#TnITTtw-never-translate-site + label::before,
+#TnITTtw-always-translate + label::after,
+#TnITTtw-never-translate-lang + label::after,
+#TnITTtw-never-translate-site + label::after  {
+  content: initial;
+} 
+
+.TnITTtw-always-translate-inner-label {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 252px;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.TnITTtw-dark-mode #TnITTtw-always-translate + label,
+.TnITTtw-dark-mode #TnITTtw-never-translate-lang + label,
+.TnITTtw-dark-mode #TnITTtw-never-translate-site + label {
+  color: #FFF;
+}
+
+#TnITTtw-always-translate + label.TnITTtw-not-pro {
+  opacity: 0.5;
+}
+
+#TnITTtw-always-translate + label .TnITTtw-pro-label {
+  position: relative;
+  background: #000;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 4px;
+  margin-left: 10px;
+  top: -1px;
+  user-select: none;
+  -webkit-user-select: none;
+  display: inline;
+  font-weight: 500;
+}
+
+.TnITTtw-dark-mode #TnITTtw-always-translate + label .TnITTtw-pro-label {
+  background: #FFF;
+  color: #000;
+}
+
+.TnITTtw-inline-original-tooltip {
+  display: none;
+  position: absolute;
+  margin: 0px;
+  border: none;
+  padding: 16px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255 255 255 / 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 11px;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 25%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.TnITTtw-dark-mode.TnITTtw-inline-original-tooltip {
+  background-color: rgb(0 0 0 / 0.915);
+  color: #FFF;
+}
+
+.TnITTtw-inline-original-tooltip .TnITTtw-close-original-tooltip {
+  width: 12px;
+  height: 12px;
+  background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/regular-close-tt.png) !important;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+}
+
+.TnITTtw-inline-original-tooltip .TnITTtw-close-original-tooltip:hover {
+  background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/hover-close-tt.png) !important;
+}
+
+.TnITTtw-inline-original-tooltip .TnITTtw-original-label {
+  margin: 0;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #6d6d72;
+  margin-bottom: 10px;
+}
+
+.TnITTtw-inline-original-tooltip.TnITTtw-dark-mode .TnITTtw-original-label {
+  color: #98989D;
+}
+
+.TnITTtw-inline-original-tooltip .TnITTtw-text-layout {
+  display: inline-block;
+  margin: 0;
+  font-size: 16px;
+  color: #000;
+}
+
+.TnITTtw-inline-original-tooltip.TnITTtw-dark-mode .TnITTtw-text-layout {
+  color: #FFF;
+}
+
+.TnITTtw-highlighted-for-original {
+  color: #0F0F5F;
+  background-color: #F0F0A0;
+}
+
+/* Dropdown scrollbars */
+
+#selVisibleScroll-1, #selVisibleScroll-2, #selVisibleScroll-3 {
+  overflow: hidden;
+  height: 259px;
+  width: 100%;
+  position: relative;
+}
+
+#sel-scrollbar-1, #sel-scrollbar-2, #sel-scrollbar-3 {
+  position: absolute;
+  width: 4px;
+  height: 259px;
+  left: 225px;
+}
+
+#sel-track-1, #sel-track-2, #sel-track-3 {
+  position: absolute;
+  top: 1px;
+  width: 4px;
+  height: calc(100% - 6px);
+}
+
+#sel-dragBar-1, #sel-dragBar-2, #sel-dragBar-3 {
+  position: absolute;
+  top: 1px;
+  width: 4px;
+  background: rgba(43, 43, 43, 0.5);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dark-mode #sel-dragBar-1, .dark-mode #sel-dragBar-2, .dark-mode #sel-dragBar-3 {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#sel-dragBar-1:hover, #sel-dragBar-2:hover, #sel-dragBar-3:hover, 
+#sel-dragBar-1:active, #sel-dragBar-2:active, #sel-dragBar-3:active {
+  background: rgba(43, 43, 43, 0.675);
+}
+
+.dark-mode #sel-dragBar-1:hover,
+.dark-mode #sel-dragBar-2:hover,
+.dark-mode #sel-dragBar-3:hover,
+.dark-mode #sel-dragBar-1:active,
+.dark-mode #sel-dragBar-2:active,
+.dark-mode #sel-dragBar-3:active {
+  background: rgba(255, 255, 255, 0.675);
+}
+
+#sel-scrollbar-1, #sel-track-1, #sel-dragBar-1, 
+#sel-scrollbar-2, #sel-track-2, #sel-dragBar-2,
+#sel-scrollbar-3, #sel-track-3, #sel-dragBar-3 {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Spinner for when it's translating a page */
+
+.TnITTtw-cta-button-layout {
+  position: relative;
+  display: inline;
+}
+
+.TnITTtw-spinner {
+  display: none;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+@media screen and (max-width: 800px) {
+  .TnITTtw-spinner {
+    top: 28px;
+  }
+}
+
+.TnITTtw-spinner.in-text {
+  display: block;
+  background: transparent;
+  position: initial;
+}
+
+.TnITTtw-spinner.left {
+  text-align: left;
+}
+
+.TnITTtw-spinner > div {
+  width: 12px;
+  height: 12px;
+  background-color: rgb(0, 71, 46);
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.TnITTtw-spinner.in-text > div {
+  background-color: #000;
+}
+
+.TnITTtw-spinner .TnITTtw-bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.TnITTtw-spinner .TnITTtw-bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}</style><style type="text/css">
+
+.iw-contextMenu {
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.10) !important;
+  border: 1px solid #c8c7cc !important;
+  border-radius: 11px !important;
+  display: none;
+  z-index: 1000000132;
+  max-width: 300px !important;
+  width: auto !important;
+}
+
+.dark-mode .iw-contextMenu,
+.TnITTtw-dark-mode.iw-contextMenu,
+.TnITTtw-dark-mode .iw-contextMenu {
+  border-color: #747473 !important;
+}
+
+.iw-cm-menu {
+  background: #fff !important;
+  color: #000 !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  overflow: visible !important;
+}
+
+.dark-mode .iw-cm-menu,
+.TnITTtw-dark-mode.iw-cm-menu,
+.TnITTtw-dark-mode .iw-cm-menu {
+  background: #525251 !important;
+  color: #FFF !important;
+}
+
+.iw-curMenu {
+}
+
+.iw-cm-menu li {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif !important;
+  list-style: none !important;
+  padding: 10px !important;
+  padding-right: 20px !important;
+  border-bottom: 1px solid #c8c7cc !important;
+  font-weight: 400 !important;
+  cursor: pointer !important;
+  position: relative !important;
+  font-size: 14px !important;
+  margin: 0 !important;
+  line-height: inherit !important;
+  border-radius: 0 !important;
+  display: block !important;
+}
+
+.dark-mode .iw-cm-menu li, .TnITTtw-dark-mode .iw-cm-menu li {
+  border-bottom-color: #747473 !important;
+}
+
+.iw-cm-menu li:first-child {
+  border-top-left-radius: 11px !important;
+  border-top-right-radius: 11px !important;
+}
+
+.iw-cm-menu li:last-child {
+  border-bottom-left-radius: 11px !important;
+  border-bottom-right-radius: 11px !important;
+  border-bottom: none !important;
+}
+
+.iw-mOverlay {
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0px !important;
+  left: 0px !important;
+  background: #FFF !important;
+  opacity: .5 !important;
+}
+
+.iw-contextMenu li.iw-mDisable {
+  opacity: 0.3 !important;
+  cursor: default !important;
+}
+
+.iw-mSelected {
+  background-color: #F6F6F6 !important;
+}
+
+.dark-mode .iw-mSelected, .TnITTtw-dark-mode .iw-mSelected {
+  background-color: #676766 !important;
+}
+
+.iw-cm-arrow-right {
+  width: 0 !important;
+  height: 0 !important;
+  border-top: 5px solid transparent !important;
+  border-bottom: 5px solid transparent !important;
+  border-left: 5px solid #000 !important;
+  position: absolute !important;
+  right: 5px !important;
+  top: 50% !important;
+  margin-top: -5px !important;
+}
+
+.dark-mode .iw-cm-arrow-right, .TnITTtw-dark-mode .iw-cm-arrow-right {
+  border-left-color: #FFF !important;
+}
+
+.iw-mSelected > .iw-cm-arrow-right {
+}
+
+/*context menu css end */</style><style type="text/css">.ui_selector, .TnITTtw-ui_selector {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif;
+  display: inline-block;
+}
+
+.ui_selector .select, .TnITTtw-ui_selector .TnITTtw-select {
+  color: #000;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid rgba(200, 199, 204, 0.5);
+  padding: 10px 15px;
+  width: 201px;
+  -webkit-user-select: none;
+  cursor: pointer;
+  border-radius: 11px;
+  display: inline-block;
+  background-image: -webkit-linear-gradient(top, #FAFAFA, #F6F6F6);
+  background-image: -moz-linear-gradient(top, #FAFAFA, #F6F6F6);
+  background-size: auto 48px;
+  background-position: 0px -11px;
+  box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.10);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.dark-mode .ui_selector .select, 
+.TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-select {
+  background-image: -webkit-linear-gradient(top, #4A4A49, #40403F);
+  background-image: -moz-linear-gradient(top, #4A4A49, #40403F);
+  color: #FFF;
+  border-color: #747473;
+}
+
+.ui_selector .select:hover,
+.TnITTtw-ui_selector .TnITTtw-select:hover {
+  color: #424242;
+  background-image: -webkit-linear-gradient(top, #FAFAFA, #FAFAFA);
+  background-image: -moz-linear-gradient(top, #FAFAFA, #FAFAFA);
+}
+
+.ui_selector .select:active,
+.TnITTtw-ui_selector .TnITTtw-select:active {
+  color: #6d6d72;
+  background-image: -webkit-linear-gradient(top, #F6F6F6, #F6F6F6);
+  background-image: -moz-linear-gradient(top, #F6F6F6, #F6F6F6);
+}
+
+.dark-mode .ui_selector .select:hover,
+.dark-mode .ui_selector .select:active,
+.TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-select:hover,
+.TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-select:active {
+  background-image: -webkit-linear-gradient(top, #4A4A49, #4A4A49);
+  background-image: -moz-linear-gradient(top, #4A4A49, #4A4A49);
+  color: #FFF;
+  border-color: #747473;
+}
+
+.ui_selector .select .detected-ico,
+.TnITTtw-ui_selector .TnITTtw-select .TnITTtw-detected-ico {
+  display: inline-block;
+}
+
+.ui_selector .active, .ui_selector .active:hover, .ui_selector .active:active,
+.TnITTtw-ui_selector .TnITTtw-active, .TnITTtw-ui_selector .TnITTtw-active:hover, .TnITTtw-ui_selector .TnITTtw-active:active {
+  box-shadow: 0 -1px 15px -10px rgba(0, 0, 0, 0.85) !important;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background: #F3F3F3;
+}
+
+.sliding-text,
+.TnITTtw-sliding-text {
+  position: relative;
+}
+
+.ui_selector .options,
+.TnITTtw-ui_selector .TnITTtw-options {
+  margin-left: 0px;
+  margin-top: -4px;
+  background: #fff;
+  border: 1px solid rgba(200, 199, 204, 0.5);
+  width: 231px;
+  overflow: hidden;
+  max-height: 313px;
+  position: absolute;
+  font-size: 12px;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 25%);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  display: none;
+}
+
+.ui_selector .options.standalone,
+.TnITTtw-ui_selector .TnITTtw-options.TnITTtw-standalone {
+  border-radius: 11px;
+  margin-top: 16px;
+}
+
+/* for now, it can only be on the top */
+.ui_selector .options-arrow,
+.TnITTtw-ui_selector .TnITTtw-options-arrow {
+  display: none;
+  position: absolute;
+  width: 32px !important;
+  height: 18px !important;
+  background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/tt-dropdown-arrow.png);
+  background-size: 32px 18px;
+  transform: rotate(180deg);
+  margin-top: -1px;
+}
+
+.dark-mode .ui_selector .options-arrow,
+.TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-options-arrow {
+  background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/tt-dropdown-arrow-dark.png);
+}
+
+.dark-mode .ui_selector .options,
+.TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-options {
+  background: #525251;
+}
+
+.ui_selector .options ul,
+.TnITTtw-ui_selector .TnITTtw-options ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 232px;
+}
+
+.ui_selector .options ul li,
+.TnITTtw-ui_selector .TnITTtw-options ul li {
+  padding: 10px 0px;
+  -webkit-user-select: none;
+  text-align: center;
+  font-size: 17px;
+  -webkit-transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  margin: 0 10px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.dark-mode .options ul li,
+.TnITTtw-dark-mode .TnITTtw-options ul li {
+  color: #fff;
+}
+
+.ui_selector .options ul li:last-child,
+.TnITTtw-ui_selector .TnITTtw-options ul li:last-child {
+  margin-bottom: 16px;
+}
+
+.ui_selector .options ul li.option:first-child,
+.ui_selector .options ul li.option_selected:first-child,
+.TnITTtw-ui_selector .TnITTtw-options ul li.TnITTtw-option:first-child,
+.TnITTtw-ui_selector .TnITTtw-options ul li.TnITTtw-option_selected:first-child {
+  margin-top: 16px;
+}
+
+.ui_selector .options ul li.whenHover,
+.TnITTtw-ui_selector .TnITTtw-options ul li.TnITTtw-whenHover {
+  cursor: pointer;
+  background: #f3f3f3;
+  text-align: center;
+}
+
+.dark-mode .ui_selector .options ul li.whenHover,
+.TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-options ul li.TnITTtw-whenHover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.ui_selector .options ul li.option_selected,
+.TnITTtw-ui_selector .TnITTtw-options ul li.TnITTtw-option_selected {
+  cursor: pointer;
+  background-image: linear-gradient(145deg, #01EF92, #00D8FB),
+  linear-gradient(35deg, rgba(1, 239, 146, 0.25), rgba(0, 216, 251, 0.25)) !important;
+  color: #fff;
+  font-weight: 600;
+}
+
+.ui_selector .options ul .group,
+.ui_selector .options ul .group:hover,
+.ui_selector .options ul .group.whenHover,
+.TnITTtw-ui_selector .TnITTtw-options ul .TnITTtw-group,
+.TnITTtw-ui_selector .TnITTtw-options ul .TnITTtw-group:hover,
+.TnITTtw-ui_selector .TnITTtw-options ul .TnITTtw-group.whenHover {
+  padding: 16px 10px;
+  color: #8e8e93;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  cursor: default;
+  background: #FFF;
+}
+
+.dark-mode .ui_selector .options ul .group,
+.dark-mode .ui_selector .options ul .group:hover,
+.dark-mode .ui_selector .options ul .group.whenHover,
+.TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-options ul .TnITTtw-group,
+.TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-options ul .TnITTtw-group:hover,
+.TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-options ul .TnITTtw-group.TnITTtw-whenHover {
+  color: #98989D;
+  background: #525251;
+}
+
+.group-element,
+.TnITTtw-group-element {
+  width: 153px;
+}
+
+.options .dd-search,
+.TnITTtw-options .TnITTtw-dd-search {
+  border-bottom: 1px solid rgba(200, 199, 204, 0.5);
+}
+
+.dark-mode .options .dd-search,
+.TnITTtw-dark-mode .TnITTtw-options .TnITTtw-dd-search {
+  border-bottom-color: #747473;
+}
+
+.dd-search .dd-input,
+.TnITTtw-dd-search .TnITTtw-dd-input {
+  padding: 16px;
+  padding-left: calc(16px * 3);
+  width: 168px;
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif;
+  text-align: left;
+  color: #000;
+  font-size: 17px;
+  background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/searchfield-icon.png);
+  background-position: 16px;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: auto;
+}
+
+.dark-mode .dd-search .dd-input,
+.TnITTtw-dark-mode .TnITTtw-dd-search .TnITTtw-dd-input {
+  color: #FFF;
+  background-color: #525251;
+}
+
+.dd-search .dd-input:focus,
+.TnITTtw-dd-search .TnITTtw-dd-input:focus {
+  -webkit-transition: all 275ms cubic-bezier(0.23, 1, 0.32, 1);
+  outline: none;
+  text-align: left;
+}
+
+.dd-input::-webkit-input-placeholder,
+.TnITTtw-dd-input::-webkit-input-placeholder {
+  color: #8e8e93;
+}
+
+.search-failed-plaque,
+.TnITTtw-search-failed-plaque {
+  text-align: center;
+  padding: 20px;
+  color: #8e8e93;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.dark-mode .search-failed-plaque,
+.TnITTtw-dark-mode .TnITTtw-search-failed-plaque {
+  color: #98989D;
+}
+
+.rm-recent,
+.TnITTtw-rm-recent {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/regular-lang-remove.png);
+  background-size: 10px 10px;
+  top: 15px;
+  right: 10px;
+}
+
+.rm-recent:hover,
+.TnITTtw-rm-recent:hover {
+  background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/hover-lang-remove.png);
+}
+
+.rm-recent:active,
+.TnITTtw-rm-recent:active {
+  background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/down-lang-remove.png);
+}
+
+.option_selected .rm-recent,
+.TnITTtw-option_selected .TnITTtw-rm-recent {
+  background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/down-active-lang-remove.png);
+}
+
+.option_selected .rm-recent:hover,
+.TnITTtw-option_selected .TnITTtw-rm-recent:hover {
+  background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/hover-active-lang-remove.png);
+}
+
+.option_selected .rm-recent:active,
+.TnITTtw-option_selected .TnITTtw-rm-recent:active {
+  background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/down-active-lang-remove.png);
+}
+
+.TnITTtw-hidden {
+  display: none;
+}</style><style type="text/css">@-webkit-keyframes load4 {
+  0%,
+  100% {
+      box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+  }
+  12.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  25% {
+      box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  37.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  50% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  62.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+  75% {
+      box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+  87.5% {
+      box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+  }
+}
+
+@keyframes load4 {
+  0%,
+  100% {
+      box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+  }
+  12.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  25% {
+      box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  37.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  50% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  62.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+  75% {
+      box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+  87.5% {
+      box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+  }
+}</style><style type="text/css">/* This is not a zero-length file! */</style><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/runtime.latest.en.8645d252f07ec25fdbc6.js"><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-packages~Information~NoAddressLocation~Payment~PostPurchase~Review~Shipping~ShopPay~Sho~cf13f96e.latest.en.04837ae4ff5a8e949953.js"><script src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async=""></script><link rel="stylesheet" href="https://127.0.0.1/a/gwrap/css/wrapin.css" type="text/css"><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information~Payment~ShopPay.latest.en.84ff9c0024faf7f72c14.js"><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information.latest.en.900911b3d82c82309ebf.js"><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-ui~app.latest.en.86cd9328cdcd6cd3a58f.js"><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/vendors~app.latest.en.b4546f9bffad10b3673b.js"><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-packages~app.latest.en.f5154093d2604596d084.js"><link rel="prefetch" fetchpriority="low" as="script" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/app.latest.en.931851b1b02f1bcae42a.js"><link rel="prefetch" fetchpriority="low" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-ui~app.latest.en.9f2a5e9ec696775e2217.css"><link rel="prefetch" fetchpriority="low" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/vendors~app.latest.en.e788719f193b49c039a3.css"><link rel="prefetch" fetchpriority="low" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/app.latest.en.6b4c79ead7042980b29d.css"><link rel="prefetch" fetchpriority="low" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information~Payment~ShopPay.latest.en.da9f06164a980bf8e7ea.css"><link rel="prefetch" fetchpriority="low" as="style" href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information.latest.en.9a0274ab07be120c1902.css"></head><body class="prestige--v4 features--heading-normal features--heading-uppercase  template-collection" data-instant-intensity="viewport" data-instant-allow-query-string="" sr-scroll-left="0" sr-scroll-top="0"><div id="better-replay-app" style="display: block;"></div><div id="better-replay-app" style="display: block;"></div><div id="better-replay-app" style="display: block;"></div><div></div><div id="better-replay-app" style="display: block;"></div><div id="better-replay-app" style="display: block;"></div><header id="section-header" class="Header Header--withIcons Header--initialized Header--inline" data-section-id="header" data-section-type="header" data-section-settings="{
+      &quot;navigationStyle&quot;: &quot;inline&quot;,
+      &quot;hasTransparentHeader&quot;: false,
+      &quot;isSticky&quot;: true
+    }" role="banner">
+      <div class="Header__Wrapper">
+        <div class="Header__FlexItem Header__FlexItem--fill">
+          <button class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable hidden-desk" aria-expanded="false" data-action="open-drawer" data-drawer-id="sidebar-menu" aria-label="Open navigation">
+            <span class="hidden-tablet-and-up"><svg class="Icon Icon--nav" role="presentation" viewBox="0 0 20 14">
+          <path d="M0 14v-1h20v1H0zm0-7.5h20v1H0v-1zM0 0h20v1H0V0z" fill="currentColor"></path>
+        </svg></span>
+            <span class="hidden-phone"><svg class="Icon Icon--nav-desktop" role="presentation" viewBox="0 0 24 16">
+          <path d="M0 15.985v-2h24v2H0zm0-9h24v2H0v-2zm0-7h24v2H0v-2z" fill="currentColor"></path>
+        </svg></span>
+          </button><nav class="Header__MainNav hidden-pocket hidden-lap" aria-label="Main navigation">
+              <ul class="HorizontalList HorizontalList--spacingExtraLoose"><li class="HorizontalList__Item " aria-haspopup="true">
+                    <a href="{% url 'pottery' %}" class="Heading u-h6">гончарные курсы<span class="Header__LinkSpacer">гончарные курсы</span></a><div class="MegaMenu  " aria-hidden="true">
+                          <div class="MegaMenu__Inner"><div class="MegaMenu__Item MegaMenu__Item--fit">
+                                <a href="/collections/pottery-classes" class="MegaMenu__Title Heading Text--subdued u-h7">See all pottery classes</a><ul class="Linklist"><li class="Linklist__Item">
+                                        <a href="/collections/summer-pottery-class-program" class="Link Link--secondary">Summer pottery classes</a>
+                                      </li><li class="Linklist__Item">
+                                        <a href="/collections/one-day-pottery-classes" class="Link Link--secondary">One-day pottery classes</a>
+                                      </li><li class="Linklist__Item">
+                                        <a href="/products/book-a-pottery-wheel" class="Link Link--secondary">Book a Pottery Wheel</a>
+                                      </li></ul></div><div class="MegaMenu__Item MegaMenu__Item--fit">
+                                <a href="/collections/pottery-classes" class="MegaMenu__Title Heading Text--subdued u-h7">Skill level</a><ul class="Linklist"><li class="Linklist__Item">
+                                        <a href="/collections/pottery-classes-suitable-for-beginners" class="Link Link--secondary">Pottery classes suitable for beginners</a>
+                                      </li><li class="Linklist__Item">
+                                        <a href="/collections/pottery-classes-suitable-for-experienced" class="Link Link--secondary">Pottery classes suitable for experienced</a>
+                                      </li><li class="Linklist__Item">
+                                        <a href="/collections/pottery-classes-suitable-for-kids" class="Link Link--secondary">Pottery classes suitable for kids</a>
+                                      </li></ul></div><div class="MegaMenu__Item MegaMenu__Item--fit">
+                                <a href="/collections/pottery-classes" class="MegaMenu__Title Heading Text--subdued u-h7">Schedule</a><ul class="Linklist"><li class="Linklist__Item">
+                                        <a href="/collections/day-pottery-classes" class="Link Link--secondary">Day Pottery Classes</a>
+                                      </li><li class="Linklist__Item">
+                                        <a href="/collections/evening-pottery-classes" class="Link Link--secondary">Evening Pottery classes</a>
+                                      </li><li class="Linklist__Item">
+                                        <a href="/collections/weekend-pottery-classes" class="Link Link--secondary">Weekend Pottery classes</a>
+                                      </li></ul></div><div class="MegaMenu__Item" style="width: 660px; min-width: 425px;"><div class="MegaMenu__Push MegaMenu__Push--shrink"><a class="MegaMenu__PushLink" href="/products/book-a-pottery-wheel"><div class="MegaMenu__PushImageWrapper AspectRatio" style="background: url(//cdn.shopify.com/s/files/1/1228/3134/files/mGL_tWhQ_1200x_1_1x1.webp.jpg?v=1683019743); max-width: 370px; --aspect-ratio: 1.0">
+                                      <img class="Image--lazyLoad Image--fadeIn" data-src="//cdn.shopify.com/s/files/1/1228/3134/files/mGL_tWhQ_1200x_1_370x230@2x.webp?v=1683019743" alt="">
+    
+                                      <span class="Image__Loader"></span>
+                                    </div><p class="MegaMenu__PushHeading Heading u-h6">Book a Pottery Wheel</p><p class="MegaMenu__PushSubHeading Heading Text--subdued u-h7">Practice your skill</p></a></div><div class="MegaMenu__Push MegaMenu__Push--shrink"><a class="MegaMenu__PushLink" href="/collections/pottery-classes-suitable-for-kids"><div class="MegaMenu__PushImageWrapper AspectRatio" style="background: url(//cdn.shopify.com/s/files/1/1228/3134/files/Screenshot2023-04-20at14.11.15_d3eb437c-f759-4226-8825-d44132e11ff7_1x1.png.jpg?v=1683019900); max-width: 370px; --aspect-ratio: 1.0">
+                                      <img class="Image--lazyLoad Image--fadeIn" data-src="//cdn.shopify.com/s/files/1/1228/3134/files/Screenshot2023-04-20at14.11.15_d3eb437c-f759-4226-8825-d44132e11ff7_370x230@2x.png?v=1683019900" alt="">
+    
+                                      <span class="Image__Loader"></span>
+                                    </div><p class="MegaMenu__PushHeading Heading u-h6">Explore</p><p class="MegaMenu__PushSubHeading Heading Text--subdued u-h7">Our new kids pottery classes</p></a></div></div></div>
+                        </div></li><li class="HorizontalList__Item " aria-haspopup="true">
+                   
+                    <a href="{% url 'artists' %}" class="Heading u-h6">МАСТЕРА<span class="Header__LinkSpacer">МАСТЕРА</span></a><div class="MegaMenu MegaMenu--spacingEvenly " aria-hidden="true">
+                          <div class="MegaMenu__Inner"><div class="MegaMenu__Item MegaMenu__Item--fit">
+
+                            
+                        </div></li><li class="HorizontalList__Item ">
+                    </li></ul>
+            </nav><form method="post" action="/localization" id="localization_form_header" accept-charset="UTF-8" class="Header__LocalizationForm hidden-pocket hidden-lap" enctype="multipart/form-data"><input type="hidden" name="form_type" value="localization"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="_method" value="put"><input type="hidden" name="return_to" value="/pages/artists"><div class="HorizontalList HorizontalList--spacingLoose"><div class="HorizontalList__Item">
+                <input type="hidden" name="currency_code" value="KGS">
+                <span class="u-visually-hidden">Currency</span>
+    
+    <svg class="Icon Icon--select-arrow" role="presentation" viewBox="0 0 19 12">
+          <polyline fill="none" stroke="currentColor" points="17 2 9.5 10 2 2" fill-rule="evenodd" stroke-width="2" stroke-linecap="square"></polyline>
+        </svg></button>
+    
+                <div id="header-currency-popover-0" class="Popover Popover--small Popover--noWrap" aria-hidden="true">
+                  <header class="Popover__Header">
+                    <button type="button" class="Popover__Close Icon-Wrapper--clickable" data-action="close-popover"><svg class="Icon Icon--close" role="presentation" viewBox="0 0 16 14">
+          <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+        </svg></button>
+                    <span class="Popover__Title Heading u-h4">Currency</span>
+                  </header>
+    
+                  <div class="Popover__Content">
+                    <div class="Popover__ValueList Popover__ValueList--center" data-scrollable=""><button type="submit" name="currency_code" class="Popover__Value  Heading Link Link--primary u-h6" value="AED">
+                          AED د.إ
+                        
+                        </button></div>
+                  </div>
+                </div>
+              </div><div class="HorizontalList__Item">
+                <input type="hidden" name="locale_code" value="en">
+                <span class="u-visually-hidden">Language</span>
+    
+                <button type="button" class="SelectButton Link Link--primary u-h8" aria-haspopup="true" aria-expanded="false" aria-controls="header-locale-popover-0">English<svg class="Icon Icon--select-arrow" role="presentation" viewBox="0 0 19 12">
+          <polyline fill="none" stroke="currentColor" points="17 2 9.5 10 2 2" fill-rule="evenodd" stroke-width="2" stroke-linecap="square"></polyline>
+        </svg></button>
+    
+                <div id="header-locale-popover-0" class="Popover Popover--small Popover--noWrap" aria-hidden="true">
+                  <header class="Popover__Header">
+                    <button type="button" class="Popover__Close Icon-Wrapper--clickable" data-action="close-popover"><svg class="Icon Icon--close" role="presentation" viewBox="0 0 16 14">
+          <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+        </svg></button>
+  
+                  </header>
+    
+                  <div class="Popover__Content">
+                    <div class="Popover__ValueList Popover__ValueList--center" data-scrollable=""><button type="submit" name="locale_code" class="Popover__Value is-selected Heading Link Link--primary u-h6" value="en" aria-current="true">English</button><button type="submit" name="locale_code" class="Popover__Value  Heading Link Link--primary u-h6" value="da">Dansk</button></div>
+                  </div>
+                </div>
+              </div></div></form></div><div class="Header__FlexItem Header__FlexItem--logo"><div class="Header__Logo"><a href="/" class="Header__LogoLink"><span class="Heading u-h4">YONOBI</span></a></div></div>
+    
+        <div class="Header__FlexItem Header__FlexItem--fill"><nav class="Header__SecondaryNav">
+              <ul class="HorizontalList HorizontalList--spacingLoose hidden-pocket hidden-lap">
+                <li class="HorizontalList__Item">
+                  <form method="post" action="/localization" id="localization_form_header" accept-charset="UTF-8" class="Header__LocalizationForm hidden-pocket hidden-lap" enctype="multipart/form-data"><input type="hidden" name="form_type" value="localization"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="_method" value="put"><input type="hidden" name="return_to" value="/pages/artists"><div class="HorizontalList HorizontalList--spacingLoose"><div class="HorizontalList__Item">
+                <input type="hidden" name="currency_code" value="KGS">
+                <span class="u-visually-hidden">Currency</span>
+    
+               
+    
+                <div id="header-currency-popover-1" class="Popover Popover--small Popover--noWrap" aria-hidden="true">
+                  <header class="Popover__Header">
+                    <button type="button" class="Popover__Close Icon-Wrapper--clickable" data-action="close-popover"><svg class="Icon Icon--close" role="presentation" viewBox="0 0 16 14">
+          <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+        </svg></button>
+                    <span class="Popover__Title Heading u-h4">Currency</span>
+                  </header>
+    
+                  
+    
+    
+                <div id="header-locale-popover-1" class="Popover Popover--small Popover--noWrap" aria-hidden="true">
+                  <header class="Popover__Header">
+                    <button type="button" class="Popover__Close Icon-Wrapper--clickable" data-action="close-popover"><svg class="Icon Icon--close" role="presentation" viewBox="0 0 16 14">
+          <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+        </svg></button>
+                    <span class="Popover__Title Heading u-h4">Language</span>
+                  </header>
+    
+                  <div class="Popover__Content">
+                    <div class="Popover__ValueList Popover__ValueList--center" data-scrollable=""><button type="submit" name="locale_code" class="Popover__Value is-selected Heading Link Link--primary u-h6" value="en" aria-current="true">English</button><button type="submit" name="locale_code" class="Popover__Value  Heading Link Link--primary u-h6" value="da">Dansk</button></div>
+                  </div>
+                </div>
+              </div></div>
+                </div></form></li>
+              </ul>
+            </nav><a href="/account" class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable hidden-phone"><svg class="Icon Icon--account" role="presentation" viewBox="0 0 20 20">
+          <g transform="translate(1 1)" stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square">
+            <path d="M0 18c0-4.5188182 3.663-8.18181818 8.18181818-8.18181818h1.63636364C14.337 9.81818182 18 13.4811818 18 18"></path>
+            <circle cx="9" cy="4.90909091" r="4.90909091"></circle>
+          </g>
+        </svg></a>
+          
+        
+        </svg></span>
+          </a>
+    
+          <a href="/cart" class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable " data-action="open-drawer" data-drawer-id="sidebar-cart" aria-expanded="false" aria-label="Open cart" data-no-instant="">
+            <span class="hidden-tablet-and-up"><svg class="Icon Icon--cart" role="presentation" viewBox="0 0 17 20">
+          <path d="M0 20V4.995l1 .006v.015l4-.002V4c0-2.484 1.274-4 3.5-4C10.518 0 12 1.48 12 4v1.012l5-.003v.985H1V19h15V6.005h1V20H0zM11 4.49C11 2.267 10.507 1 8.5 1 6.5 1 6 2.27 6 4.49V5l5-.002V4.49z" fill="currentColor"></path>
+        </svg></span>
+            <span class="hidden-phone"><svg class="Icon Icon--cart-desktop" role="presentation" viewBox="0 0 19 23">
+          <path d="M0 22.985V5.995L2 6v.03l17-.014v16.968H0zm17-15H2v13h15v-13zm-5-2.882c0-2.04-.493-3.203-2.5-3.203-2 0-2.5 1.164-2.5 3.203v.912H5V4.647C5 1.19 7.274 0 9.5 0 11.517 0 14 1.354 14 4.647v1.368h-2v-.912z" fill="currentColor"></path>
+        </svg></span>
+            <span class="Header__CartDot"></span>
+          </a>
+        </div>
+      </div>
+    
+    
+    </header>
+
+
+
+
+  <link type="text/css" rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0184/4255/1360/files/quicklink.scss.css?v=1614655406"><link rel="preconnect dns-prefetch" href="https://triplewhale-pixel.web.app/" crossorigin="">
+  <link rel="preconnect dns-prefetch" href="https://api.config-security.com/" crossorigin="">
+  <script async="" src="https://replayapp.io/collect/initialize.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KD5MN3S"></script><script src="https://replayapp.io/js/camera-da29441937.js" type="text/javascript" data-main="__SREC__" async=""></script><script async="" src="https://replayapp.io/collect/initialize.js"></script><script async="" src="https://invitejs.trustpilot.com/tp.min.js" type="text/javascript"></script><script type="text/javascript" async="" src="https://brmicrojs.cartkitcdn.com/br.production.min.js?unique_id=itsyonobi.myshopify.com&amp;replayApiKey=bb805550-04ab-11ea-bce7-c9b493773477&amp;proof_ignore_admin_visits=false&amp;shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://brmicrojs.cartkitcdn.com/br.production.min.js?unique_id=itsyonobi.myshopify.com&amp;replayApiKey=bb805550-04ab-11ea-bce7-c9b493773477&amp;proof_ignore_admin_visits=false&amp;shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://cdn.api.better-replay.com/replay.js?unique_id=itsyonobi.myshopify.com&amp;replayApiKey=bb805550-04ab-11ea-bce7-c9b493773477&amp;proof_ignore_admin_visits=false&amp;shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://api.reaktion.com/assets/tracking/store.js?s=np2z3Ii6p8EIeGWI6JSn0wS9TrGdJaxa&amp;shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://cdn.shopify.com/shopifycloud/shopify_chat/storefront/shopifyChatV1.js?api_env=production&amp;c=%23515151&amp;i=chat_bubble&amp;p=bottom_right&amp;s=icon&amp;shop_id=yda_41ZJdpdisG3EiWk03_H9f_1CuZrzlSh3xm3l530&amp;t=no_text&amp;v=1&amp;shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=TQ7gJF&amp;shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://wrapin.prezenapps.com/public/js/load-wrapin-v5-app.js?shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://cdn.shopify.com/s/files/1/0184/4255/1360/files/quicklink.v3.min.js?v=1645163498&amp;shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://cdn.shopify.com/shopifycloud/privacy-banner/storefront-banner.js?shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://geolocation-recommendations.shopifyapps.com/locale_bar/script.js?shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.sync.bootstrap.min.js?shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://ecommplugins-trustboxsettings.trustpilot.com/itsyonobi.myshopify.com.js?settings=1683912360939&amp;shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://ecommplugins-scripts.trustpilot.com/v2.1/js/header.min.js?settings=eyJrZXkiOiJuelByWERYM1FQNktCbHdDIiwicyI6InNrdSJ9&amp;v=2.5&amp;shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://chimpstatic.com/mcjs-connected/js/users/9c92e994948c370317a510f3d/f1af57527d736033cede7ff87.js?shop=itsyonobi.myshopify.com"></script><script async="" src="https://s.pinimg.com/ct/lib/main.14eb2ef4.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/destination?id=MC-F6XQLSXEX7&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/destination?id=AW-924796438&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-ECJ70NCPR7&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://s.pinimg.com/ct/core.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://connect.facebook.net/signals/config/223706158483290?v=2.9.110&amp;r=stable" async=""></script><script src="https://connect.facebook.net/signals/config/223240644703989?v=2.9.110&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://cdn.shopify.com/s/trekkie.storefront.6deef03150cfc3807450afdae3e05f036f41d450.min.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KD5MN3S"></script><script>
+  /* >> TriplePixel :: start*/
+  ~function(W,H,A,L,E,_,B,N){function O(U,T,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,H.open("GET",U,!0),H.send(null),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):N[B]=R):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}A.getItem('"!nC`')||(A=N,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return W=L(),(E._q=E._q||[]).push([W,t,e]),W},E.ch=W,B="configSecurityConfModel",N[B]=1,O("//conf.config-security.com/model",0),O("//triplewhale-pixel.web.app/triplefw.txt?",5)))}}("","TriplePixel",localStorage);
+  /* << TriplePixel :: end*/
+  </script>
+     <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KD5MN3S');</script>
+  <!-- End Google Tag Manager -->
+      
+    
+  
+  
+      
+      <meta charset="utf-8"> 
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=1.0">
+      <meta name="theme-color" content="">
+  
+      
+      </title><meta name="description" content="Book our popular pottery class in the heart of Copenhagen and experience how fun and relaxing it can be to create ceramics. Book now!"><link rel="canonical" href="https://yonobi.com/collections/pottery-classes"><link rel="shortcut icon" href="//cdn.shopify.com/s/files/1/1228/3134/files/favicon_eb0c0487-22b9-42ea-b0ef-2801db74f453_96x.png?v=1680339881" type="image/png"><meta property="og:type" content="website">
+    <meta property="og:title" content="Pottery Classes">
+    <meta property="og:image" content="http://cdn.shopify.com/s/files/1/1228/3134/collections/Desktop_-_1_74342df2-7c13-4e72-8c2a-87506505863e.png?v=1678431339">
+    <meta property="og:image:secure_url" content="https://cdn.shopify.com/s/files/1/1228/3134/collections/Desktop_-_1_74342df2-7c13-4e72-8c2a-87506505863e.png?v=1678431339">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200"><meta property="og:description" content="Book our popular pottery class in the heart of Copenhagen and experience how fun and relaxing it can be to create ceramics. Book now!"><meta property="og:url" content="https://yonobi.com/collections/pottery-classes">
+  <meta property="og:site_name" content="YONOBI"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Pottery Classes">
+    <meta name="twitter:description" content="Learn how to create your ceramics at one of YŌNOBI’s many pottery classes at our cozy studio in the heart of Copenhagen. We invite you to explore the world of pottery with our classes - learn how to master the potter wheel, create beautiful sculptures, and create unique creations with your hands and simple pottery tools. We have throwing classes and sculpture classes for all levels. All our classes are small and taught in Danish and English. &nbsp;If you go further down the page, you can read more about our classes and sign up for our waiting list, so you will receive an email as soon as new classes are added. If you have any other questions, please contact us or read our FAQ at the bottom of this page. We are looking forward to meeting you! Buy a pottery">
+    <meta name="twitter:image" content="https://cdn.shopify.com/s/files/1/1228/3134/collections/Desktop_-_1_74342df2-7c13-4e72-8c2a-87506505863e_600x600_crop_center.png?v=1678431339">
+      <style>
+    @font-face {
+    font-family: Raleway;
+    font-weight: 500;
+    font-style: normal;
+    font-display: fallback;
+    src: url("https://fonts.shopifycdn.com/raleway/raleway_n5.8806e3eebc45823d354c5d49afbb18219675b983.woff2?h1=aXRzeW9ub2JpLmNvbQ&h2=eW9ub2JpLmRr&h3=aXRzeW9ub2JpLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h4=eW9ub2JpLmNvbQ&hmac=7199303ea58c3a65100b270475fa0378173d20b35cce707075691de0f13fc944") format("woff2"),
+         url("https://fonts.shopifycdn.com/raleway/raleway_n5.5c3e7c6d9b56fa8c650c7014334f7bf1cc39f50c.woff?h1=aXRzeW9ub2JpLmNvbQ&h2=eW9ub2JpLmRr&h3=aXRzeW9ub2JpLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h4=eW9ub2JpLmNvbQ&hmac=ea06e70da0461ce6c5d9886b45b64ed214b8c761951932475aed8206989d4a98") format("woff");
+  }
+  
+    @font-face {
+    font-family: Futura;
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+    src: url("https://fonts.shopifycdn.com/futura/futura_n4.df36ce3d9db534a4d7947f4aa825495ed740e410.woff2?h1=aXRzeW9ub2JpLmNvbQ&h2=eW9ub2JpLmRr&h3=aXRzeW9ub2JpLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h4=eW9ub2JpLmNvbQ&hmac=b86c755af3a0f82fce6b3bc7fad60245f8205591b4363e707ca1e258d0b7a774") format("woff2"),
+         url("https://fonts.shopifycdn.com/futura/futura_n4.6bce24beb4ba1ff4ddeb20f7cd6e2fa513a3d6ec.woff?h1=aXRzeW9ub2JpLmNvbQ&h2=eW9ub2JpLmRr&h3=aXRzeW9ub2JpLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h4=eW9ub2JpLmNvbQ&hmac=1233cbebe64698294ff3cac7fc696f44fc7f600948b4d75de4f5a9f3c25b40e8") format("woff");
+  }
+  
+  
+    @font-face {
+    font-family: Futura;
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;
+    src: url("https://fonts.shopifycdn.com/futura/futura_n7.153f8fffad8e901382179997bbb87aa7a5ff33b3.woff2?h1=aXRzeW9ub2JpLmNvbQ&h2=eW9ub2JpLmRr&h3=aXRzeW9ub2JpLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h4=eW9ub2JpLmNvbQ&hmac=e31e659404aa0b202808965c84bc4c99c729606dec616c70a2459b71b93f7c18") format("woff2"),
+         url("https://fonts.shopifycdn.com/futura/futura_n7.711e9243b3eccc2745ecf4731eba61651a122376.woff?h1=aXRzeW9ub2JpLmNvbQ&h2=eW9ub2JpLmRr&h3=aXRzeW9ub2JpLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h4=eW9ub2JpLmNvbQ&hmac=360dad5081c90c495f0a80310354c0b60fdbaa58dfd9a84d9263d9ad4a17f1ad") format("woff");
+  }
+  
+    @font-face {
+    font-family: Futura;
+    font-weight: 400;
+    font-style: oblique;
+    font-display: fallback;
+    src: url("https://fonts.shopifycdn.com/futura/futura_o4.9747e2e6ed2f11b894984527c927b42234e48815.woff2?h1=aXRzeW9ub2JpLmNvbQ&h2=eW9ub2JpLmRr&h3=aXRzeW9ub2JpLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h4=eW9ub2JpLmNvbQ&hmac=2ec7c6458f6e2f42dffad897e16619e55db95e9dd3c3018c22b6c5e885932abe") format("woff2"),
+         url("https://fonts.shopifycdn.com/futura/futura_o4.d5edc6b1d9a050bbe0beb9093d73b883bf18c6c1.woff?h1=aXRzeW9ub2JpLmNvbQ&h2=eW9ub2JpLmRr&h3=aXRzeW9ub2JpLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h4=eW9ub2JpLmNvbQ&hmac=2244c1a2273c7d2fd1bbf65c1e86fc9e2a74b5a87c9471c4cb8f7c9f56607962") format("woff");
+  }
+  
+    @font-face {
+    font-family: Futura;
+    font-weight: 700;
+    font-style: oblique;
+    font-display: fallback;
+    src: url("https://fonts.shopifycdn.com/futura/futura_o7.ece1472e1fefbb598873ba72dc2bfa2e050347c1.woff2?h1=aXRzeW9ub2JpLmNvbQ&h2=eW9ub2JpLmRr&h3=aXRzeW9ub2JpLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h4=eW9ub2JpLmNvbQ&hmac=7c48da7bf57231d14e08336849346a0ee12d1897e32fef25dd09ac821c38a160") format("woff2"),
+         url("https://fonts.shopifycdn.com/futura/futura_o7.7028291332320745f0217c346c800da7522a22b2.woff?h1=aXRzeW9ub2JpLmNvbQ&h2=eW9ub2JpLmRr&h3=aXRzeW9ub2JpLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h4=eW9ub2JpLmNvbQ&hmac=c9ee3c1f2cfd913100ccf80d43c51fea759065358e9203ff36dac27ba79c4f41") format("woff");
+  }
+  
+  
+    :root {
+      --heading-font-family : Raleway, sans-serif;
+      --heading-font-weight : 500;
+      --heading-font-style  : normal;
+  
+      --text-font-family : Futura, sans-serif;
+      --text-font-weight : 400;
+      --text-font-style  : normal;
+  
+      --base-text-font-size   : 14px;
+      --default-text-font-size: 14px;--background          : #efefef;
+      --background-rgb      : 239, 239, 239;
+      --light-background    : #ffffff;
+      --light-background-rgb: 255, 255, 255;
+      --heading-color       : #1c1b1b;
+      --text-color          : #1c1b1b;
+      --text-color-rgb      : 28, 27, 27;
+      --text-color-light    : #6a6a6a;
+      --text-color-light-rgb: 106, 106, 106;
+      --link-color          : #6a6a6a;
+      --link-color-rgb      : 106, 106, 106;
+      --border-color        : #cfcfcf;
+      --border-color-rgb    : 207, 207, 207;
+  
+      --button-background    : #1c1b1b;
+      --button-background-rgb: 28, 27, 27;
+      --button-text-color    : #ffffff;
+  
+      --header-background       : #ffffff;
+      --header-heading-color    : #1c1b1b;
+      --header-light-text-color : #6a6a6a;
+      --header-border-color     : #dddddd;
+  
+      --footer-background    : #ffffff;
+      --footer-text-color    : #6a6a6a;
+      --footer-heading-color : #1c1b1b;
+      --footer-border-color  : #e9e9e9;
+  
+      --navigation-background      : #1c1b1b;
+      --navigation-background-rgb  : 28, 27, 27;
+      --navigation-text-color      : #ffffff;
+      --navigation-text-color-light: rgba(255, 255, 255, 0.5);
+      --navigation-border-color    : rgba(255, 255, 255, 0.25);
+  
+      --newsletter-popup-background     : #1c1b1b;
+      --newsletter-popup-text-color     : #ffffff;
+      --newsletter-popup-text-color-rgb : 255, 255, 255;
+  
+      --secondary-elements-background       : #1c1b1b;
+      --secondary-elements-background-rgb   : 28, 27, 27;
+      --secondary-elements-text-color       : #ffffff;
+      --secondary-elements-text-color-light : rgba(255, 255, 255, 0.5);
+      --secondary-elements-border-color     : rgba(255, 255, 255, 0.25);
+  
+      --product-sale-price-color    : #f94c43;
+      --product-sale-price-color-rgb: 249, 76, 67;
+  
+      /* Products */
+  
+      --horizontal-spacing-four-products-per-row: 60px;
+          --horizontal-spacing-two-products-per-row : 60px;
+  
+      --vertical-spacing-four-products-per-row: 80px;
+          --vertical-spacing-two-products-per-row : 100px;
+  
+      /* Animation */
+      --drawer-transition-timing: cubic-bezier(0.645, 0.045, 0.355, 1);
+      --header-base-height: 80px; /* We set a default for browsers that do not support CSS variables */
+  
+      /* Cursors */
+      --cursor-zoom-in-svg    : url(//cdn.shopify.com/s/files/1/1228/3134/t/24/assets/cursor-zoom-in.svg?v=170532930330058140181611049366);
+      --cursor-zoom-in-2x-svg : url(//cdn.shopify.com/s/files/1/1228/3134/t/24/assets/cursor-zoom-in-2x.svg?v=56685658183649387561611049363);
+    }
+  </style>
+  
+  <script>
+    // IE11 does not have support for CSS variables, so we have to polyfill them
+    if (!(((window || {}).CSS || {}).supports && window.CSS.supports('(--a: 0)'))) {
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2';
+      script.onload = function() {
+        cssVars({});
+      };
+  
+      document.getElementsByTagName('head')[0].appendChild(script);
+    }
+  </script>
+  
+      <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta name="google-site-verification" content="zp2jPTTfKzBR7oXVWHhRnrBanTUapwlJCar7qSKzP2w">
+  <meta name="google-site-verification" content="2ZEKikpCrdSBbv4xxnAjss0xEOrQSc5xLilWVRetQyM">
+  <meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/12283134/digital_wallets/dialog">
+  <meta name="shopify-checkout-api-token" content="271da6d3ffc06972dbfacc65c4f8971d">
+  <meta id="in-context-paypal-metadata" data-shop-id="12283134" data-venmo-supported="false" data-environment="production" data-locale="en_US" data-paypal-v4="true" data-currency="KGS">
+  <link rel="alternate" type="application/atom+xml" title="Feed" href="/collections/pottery-classes.atom">
+  <link rel="alternate" hreflang="x-default" href="https://yonobi.com/collections/pottery-classes">
+  <link rel="alternate" hreflang="en-DK" href="https://yonobi.com/collections/pottery-classes">
+  <link rel="alternate" hreflang="da-DK" href="https://yonobi.com/da/collections/keramik-kursus">
+  <link rel="alternate" hreflang="en-DE" href="https://yonobi.com/en-de/collections/pottery-classes">
+  <link rel="alternate" hreflang="en-NO" href="https://yonobi.com/en-no/collections/pottery-classes">
+  <link rel="alternate" hreflang="en-SE" href="https://yonobi.com/en-se/collections/pottery-classes">
+  <link rel="alternate" hreflang="en-NL" href="https://yonobi.com/en-nl/collections/pottery-classes">
+  <link rel="alternate" hreflang="en-CH" href="https://yonobi.com/en-ch/collections/pottery-classes">
+  <link rel="alternate" type="application/json+oembed" href="https://yonobi.com/collections/pottery-classes.oembed">
+  <script>
+    (function() {
+      var scripts = ["https://cdn.shopify.com/shopifycloud/checkout-web/assets/runtime.latest.en.8645d252f07ec25fdbc6.js", "https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-packages~Information~NoAddressLocation~Payment~PostPurchase~Review~Shipping~ShopPay~Sho~cf13f96e.latest.en.04837ae4ff5a8e949953.js", "https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information~Payment~ShopPay.latest.en.84ff9c0024faf7f72c14.js", "https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information.latest.en.900911b3d82c82309ebf.js", "https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-ui~app.latest.en.86cd9328cdcd6cd3a58f.js", "https://cdn.shopify.com/shopifycloud/checkout-web/assets/vendors~app.latest.en.b4546f9bffad10b3673b.js", "https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-packages~app.latest.en.f5154093d2604596d084.js", "https://cdn.shopify.com/shopifycloud/checkout-web/assets/app.latest.en.931851b1b02f1bcae42a.js"];
+      var styles = ["https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-ui~app.latest.en.9f2a5e9ec696775e2217.css", "https://cdn.shopify.com/shopifycloud/checkout-web/assets/vendors~app.latest.en.e788719f193b49c039a3.css", "https://cdn.shopify.com/shopifycloud/checkout-web/assets/app.latest.en.6b4c79ead7042980b29d.css", "https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information~Payment~ShopPay.latest.en.da9f06164a980bf8e7ea.css", "https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information.latest.en.9a0274ab07be120c1902.css"];
+  
+      function prefetch(url, as, callback) {
+        var link = document.createElement('link');
+        if (link.relList.supports('prefetch')) {
+          link.rel = 'prefetch';
+          link.fetchPriority = 'low';
+          link.as = as;
+          link.href = url;
+          link.onload = link.onerror = callback;
+          document.head.appendChild(link);
+        } else {
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', url, true);
+          xhr.onloadend = callback;
+          xhr.send();
+        }
+      }
+  
+      function prefetchAssets() {
+        var resources = [].concat(
+          scripts.map(function(url) { return [url, 'script']; }),
+          styles.map(function(url) { return [url, 'style']; })
+        );
+        var index = 0;
+        (function next() {
+          var res = resources[index++];
+          if (res) prefetch(res[0], res[1], next);
+        })();
+      }
+  
+      addEventListener('load', prefetchAssets);
+     })();
+  </script>
+  <script id="apple-pay-shop-capabilities" type="application/json">{"shopId":12283134,"countryCode":"DK","currencyCode":"KGS","merchantCapabilities":["supports3DS"],"merchantId":"gid:\/\/shopify\/Shop\/12283134","merchantName":"YONOBI","requiredBillingContactFields":["postalAddress","email","phone"],"requiredShippingContactFields":["postalAddress","email","phone"],"shippingType":"shipping","supportedNetworks":["visa","maestro","masterCard","amex"],"total":{"type":"pending","label":"YONOBI","amount":"1.00"},"shopifyPaymentsEnabled":true,"supportsSubscriptions":false}</script>
+  <script id="shopify-features" type="application/json">{"accessToken":"271da6d3ffc06972dbfacc65c4f8971d","betas":["rich-media-storefront-analytics"],"domain":"yonobi.com","predictiveSearch":true,"shopId":12283134,"smart_payment_buttons_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/spb.en.js?v=2","dynamic_checkout_cart_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js?v=2","locale":"en","optimusEnabled":false}</script>
+  <script>var Shopify = Shopify || {};
+  Shopify.shop = "itsyonobi.myshopify.com";
+  Shopify.locale = "en";
+  Shopify.currency = {"active":"KGS","rate":"13.05141"};
+  Shopify.country = "KG";
+  Shopify.theme = {"name":"Prestige NEW VERSION","id":83483983919,"theme_store_id":855,"role":"main"};
+  Shopify.theme.handle = "null";
+  Shopify.theme.style = {"id":null,"handle":null};
+  Shopify.cdnHost = "cdn.shopify.com";
+  Shopify.routes = Shopify.routes || {};
+  Shopify.routes.root = "/";</script>
+  <script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
+  <script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadFeatures=n(),t.autoloadFeatures=n()}(window);</script>
+  <script>window.ShopifyPay = window.ShopifyPay || {};
+  window.ShopifyPay.apiHost = "shop.app\/pay";</script>
+  <script>(function() {
+    function asyncLoad() {
+      var urls = ["https:\/\/chimpstatic.com\/mcjs-connected\/js\/users\/9c92e994948c370317a510f3d\/f1af57527d736033cede7ff87.js?shop=itsyonobi.myshopify.com","https:\/\/ecommplugins-scripts.trustpilot.com\/v2.1\/js\/header.min.js?settings=eyJrZXkiOiJuelByWERYM1FQNktCbHdDIiwicyI6InNrdSJ9\u0026v=2.5\u0026shop=itsyonobi.myshopify.com","https:\/\/ecommplugins-trustboxsettings.trustpilot.com\/itsyonobi.myshopify.com.js?settings=1683912360939\u0026shop=itsyonobi.myshopify.com","https:\/\/widget.trustpilot.com\/bootstrap\/v5\/tp.widget.sync.bootstrap.min.js?shop=itsyonobi.myshopify.com","https:\/\/geolocation-recommendations.shopifyapps.com\/locale_bar\/script.js?shop=itsyonobi.myshopify.com","https:\/\/cdn.shopify.com\/shopifycloud\/privacy-banner\/storefront-banner.js?shop=itsyonobi.myshopify.com","https:\/\/cdn.shopify.com\/s\/files\/1\/0184\/4255\/1360\/files\/quicklink.v3.min.js?v=1645163498\u0026shop=itsyonobi.myshopify.com","https:\/\/wrapin.prezenapps.com\/public\/js\/load-wrapin-v5-app.js?shop=itsyonobi.myshopify.com","https:\/\/static.klaviyo.com\/onsite\/js\/klaviyo.js?company_id=TQ7gJF\u0026shop=itsyonobi.myshopify.com","https:\/\/cdn.shopify.com\/shopifycloud\/shopify_chat\/storefront\/shopifyChatV1.js?api_env=production\u0026c=%23515151\u0026i=chat_bubble\u0026p=bottom_right\u0026s=icon\u0026shop_id=yda_41ZJdpdisG3EiWk03_H9f_1CuZrzlSh3xm3l530\u0026t=no_text\u0026v=1\u0026shop=itsyonobi.myshopify.com","https:\/\/api.reaktion.com\/assets\/tracking\/store.js?s=np2z3Ii6p8EIeGWI6JSn0wS9TrGdJaxa\u0026shop=itsyonobi.myshopify.com","https:\/\/cdn.api.better-replay.com\/replay.js?unique_id=itsyonobi.myshopify.com\u0026replayApiKey=bb805550-04ab-11ea-bce7-c9b493773477\u0026proof_ignore_admin_visits=false\u0026shop=itsyonobi.myshopify.com","https:\/\/brmicrojs.cartkitcdn.com\/br.production.min.js?unique_id=itsyonobi.myshopify.com\u0026replayApiKey=bb805550-04ab-11ea-bce7-c9b493773477\u0026proof_ignore_admin_visits=false\u0026shop=itsyonobi.myshopify.com","https:\/\/brmicrojs.cartkitcdn.com\/br.production.min.js?unique_id=itsyonobi.myshopify.com\u0026replayApiKey=bb805550-04ab-11ea-bce7-c9b493773477\u0026proof_ignore_admin_visits=false\u0026shop=itsyonobi.myshopify.com"];
+      for (var i = 0; i < urls.length; i++) {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = urls[i];
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+      }
+    };
+    if(window.attachEvent) {
+      window.attachEvent('onload', asyncLoad);
+    } else {
+      window.addEventListener('load', asyncLoad, false);
+    }
+  })();</script>
+  <script id="__st">var __st={"a":12283134,"offset":7200,"reqid":"5b73ec44-71b0-4c41-bc15-a68b7da4f6cd","pageurl":"yonobi.com\/collections\/pottery-classes","u":"b7944646bb74","p":"collection","rtyp":"collection","rid":417033287};</script>
+  <script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
+  <script>!function(o){o.addEventListener("DOMContentLoaded",function(){window.Shopify=window.Shopify||{},window.Shopify.recaptchaV3=window.Shopify.recaptchaV3||{siteKey:"6LcCR2cUAAAAANS1Gpq_mDIJ2pQuJphsSQaUEuc9"};var t=['form[action*="/contact"] input[name="form_type"][value="contact"]','form[action*="/comments"] input[name="form_type"][value="new_comment"]','form[action*="/account"] input[name="form_type"][value="customer_login"]','form[action*="/account"] input[name="form_type"][value="recover_customer_password"]','form[action*="/account"] input[name="form_type"][value="create_customer"]','form[action*="/contact"] input[name="form_type"][value="customer"]'].join(",");function n(e){e=e.target;null==e||null!=(e=function e(t,n){if(null==t.parentElement)return null;if("FORM"!=t.parentElement.tagName)return e(t.parentElement,n);for(var o=t.parentElement.action,r=0;r<n.length;r++)if(-1!==o.indexOf(n[r]))return t.parentElement;return null}(e,["/contact","/comments","/account"]))&&null!=e.querySelector(t)&&((e=o.createElement("script")).setAttribute("src","https://cdn.shopify.com/shopifycloud/storefront-recaptcha-v3/v0.6/index.js"),o.body.appendChild(e),o.removeEventListener("focus",n,!0),o.removeEventListener("change",n,!0),o.removeEventListener("click",n,!0))}o.addEventListener("click",n,!0),o.addEventListener("change",n,!0),o.addEventListener("focus",n,!0)})}(document);</script>
+  <script integrity="sha256-PxOtY43aY0IIRkJyboCWUgXVuC12GAXQ8LKFAxO8H98=" data-source-attribution="shopify.loadfeatures" defer="defer" src="//cdn.shopify.com/shopifycloud/shopify/assets/storefront/load_feature-3f13ad638dda6342084642726e80965205d5b82d761805d0f0b2850313bc1fdf.js" crossorigin="anonymous"></script>
+  <script crossorigin="anonymous" defer="defer" src="//cdn.shopify.com/shopifycloud/shopify/assets/shopify_pay/storefront-c31d2fa4962d2ef90b673e945ee33f4f87302b97d0882cd8e83a629b84b30dab.js?v=20220906"></script>
+  <script integrity="sha256-h+g5mYiIAULyxidxudjy/2wpCz/3Rd1CbrDf4NudHa4=" data-source-attribution="shopify.dynamic-checkout" defer="defer" src="//cdn.shopify.com/shopifycloud/shopify/assets/storefront/features-87e8399988880142f2c62771b9d8f2ff6c290b3ff745dd426eb0dfe0db9d1dae.js" crossorigin="anonymous"></script>
+  
+  
+  <style id="shopify-dynamic-checkout-cart">@media screen and (min-width: 750px) {
+    #dynamic-checkout-cart {
+      min-height: 50px;
+    }
+  }
+  
+  @media screen and (max-width: 750px) {
+    #dynamic-checkout-cart {
+      min-height: 180px;
+    }
+  }
+  </style><script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script> 
+   <script src="//cdn.shopify.com/s/files/1/1228/3134/t/24/assets/servicify-asset.js?v=9391740801321792721684754072" type="text/javascript"></script>
+  
+      <link rel="stylesheet" href="//cdn.shopify.com/s/files/1/1228/3134/t/24/assets/theme.css?v=59395401306468532801611756147">
+  
+      <script>// This allows to expose several variables to the global scope, to be used in scripts
+        window.theme = {
+          pageType: "collection",
+          moneyFormat: "лв",
+          moneyWithCurrencyFormat: "лв",
+          productImageSize: "square",
+          searchMode: "product,article,page",
+          showPageTransition: false,
+          showElementStaggering: false,
+          showImageZooming: false
+        };
+  
+        window.routes = {
+          rootUrl: "\/",
+          rootUrlWithoutSlash: '',
+          cartUrl: "\/cart",
+          cartAddUrl: "\/cart\/add",
+          cartChangeUrl: "\/cart\/change",
+          searchUrl: "\/search",
+          productRecommendationsUrl: "\/recommendations\/products"
+        };
+  
+        window.languages = {
+          cartAddNote: "Add Order Note",
+          cartEditNote: "Edit Order Note",
+          productImageLoadingError: "This image could not be loaded. Please try to reload the page.",
+          productFormAddToCart: "Add to cart",
+          productFormUnavailable: "Unavailable",
+          productFormSoldOut: "Sold Out",
+          shippingEstimatorOneResult: "1 option available:",
+          shippingEstimatorMoreResults: " options available:",
+          shippingEstimatorNoResults: "No shipping could be found"
+        };
+  
+        window.lazySizesConfig = {
+          loadHidden: false,
+          hFac: 0.5,
+          expFactor: 2,
+          ricTimeout: 150,
+          lazyClass: 'Image--lazyLoad',
+          loadingClass: 'Image--lazyLoading',
+          loadedClass: 'Image--lazyLoaded'
+        };
+  
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+        document.documentElement.style.setProperty('--window-height', window.innerHeight + 'px');
+  
+        // We do a quick detection of some features (we could use Modernizr but for so little...)
+        (function() {
+          document.documentElement.className += ((window.CSS && window.CSS.supports('(position: sticky) or (position: -webkit-sticky)')) ? ' supports-sticky' : ' no-supports-sticky');
+          document.documentElement.className += (window.matchMedia('(-moz-touch-enabled: 1), (hover: none)')).matches ? ' no-supports-hover' : ' supports-hover';
+        }());
+      </script>
+  
+      <script src="//cdn.shopify.com/s/files/1/1228/3134/t/24/assets/lazysizes.min.js?v=174358363404432586981611049348" async=""></script><script src="https://cdn.polyfill.io/v3/polyfill.min.js?unknown=polyfill&amp;features=fetch,Element.prototype.closest,Element.prototype.remove,Element.prototype.classList,Array.prototype.includes,Array.prototype.fill,Object.assign,CustomEvent,IntersectionObserver,IntersectionObserverEntry,URL" defer=""></script>
+      <script src="//cdn.shopify.com/s/files/1/1228/3134/t/24/assets/libs.min.js?v=26178543184394469741611049347" defer=""></script>
+      <script src="//cdn.shopify.com/s/files/1/1228/3134/t/24/assets/theme.min.js?v=3211174084529572291611049351" defer=""></script>
+      <script src="//cdn.shopify.com/s/files/1/1228/3134/t/24/assets/custom.js?v=183944157590872491501611049350" defer=""></script>
+      
+      <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+      </script>
+      
+      <script>
+        (function () {
+          window.onpageshow = function() {
+            if (window.theme.showPageTransition) {
+              var pageTransition = document.querySelector('.PageTransition');
+  
+              if (pageTransition) {
+                pageTransition.style.visibility = 'visible';
+                pageTransition.style.opacity = '0';
+              }
+            }
+  
+            // When the page is loaded from the cache, we have to reload the cart content
+            document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
+              bubbles: true
+            }));
+          };
+        })();
+      </script>
+      
+      <meta name="facebook-domain-verification" content="r09jlcoyqxjb0gfxqeerdd959y7lla">
+      
+      
+  
+  
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+    "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "translation missing: en.general.breadcrumb.home",
+        "item": "https://yonobi.com"
+      },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Pottery Classes",
+            "item": "https://yonobi.com/collections/pottery-classes"
+          }]
+    }
+    </script>
+  
+    <script src="https://cdn.shopify.com/extensions/0dacb584-67a9-4dc4-9405-d639e4d175f4/1.1.0/assets/main.js" type="text/javascript" defer="defer"></script>
+  <script src="https://cdn.shopify.com/extensions/4ccc9f71-28b2-42b6-883a-e54047ebab71/0.91.0/assets/embedInit.js" type="text/javascript" defer="defer"></script>
+  <link href="https://cdn.shopify.com/extensions/4ccc9f71-28b2-42b6-883a-e54047ebab71/0.91.0/assets/style.css" rel="stylesheet" type="text/css" media="all">
+  <link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch">
+  <script>(function(){if ("sendBeacon" in navigator && "performance" in window) {var session_token = document.cookie.match(/_shopify_s=([^;]*)/);function handle_abandonment_event(e) {var entries = performance.getEntries().filter(function(entry) {return /monorail-edge.shopifysvc.com/.test(entry.name);});if (!window.abandonment_tracked && entries.length === 0) {window.abandonment_tracked = true;var currentMs = Date.now();var navigation_start = performance.timing.navigationStart;var payload = {shop_id: 12283134,url: window.location.href,navigation_start,duration: currentMs - navigation_start,session_token: session_token && session_token.length === 2 ? session_token[1] : "",page_type: "collection"};window.navigator.sendBeacon("https://monorail-edge.shopifysvc.com/v1/produce", JSON.stringify({schema_id: "online_store_buyer_site_abandonment/1.1",payload: payload,metadata: {event_created_at_ms: currentMs,event_sent_at_ms: currentMs}}));}}window.addEventListener('pagehide', handle_abandonment_event);}}());</script>
+  <script id="evids-setup">
+    (function () {let t,e;function n(){t={page_viewed:{},collection_viewed:{},product_viewed:{},product_variant_viewed:{},search_submitted:{},product_added_to_cart:{},checkout_started:{},checkout_completed:{},payment_info_submitted:{},session_started:{}},e={wpm:{},trekkie:{}}}function o(t){return`${t||"sh"}-${function(){const t="xxxx-4xxx-xxxx-xxxxxxxxxxxx";let e="";try{const n=window.crypto,o=new Uint16Array(31);n.getRandomValues(o);let r=0;e=t.replace(/[x]/g,(t=>{const e=o[r]%16;return r++,("x"===t?e:3&e|8).toString(16)})).toUpperCase()}catch(n){e=t.replace(/[x]/g,(t=>{const e=16*Math.random()|0;return("x"===t?e:3&e|8).toString(16)})).toUpperCase()}return`${function(){let t=0,e=0;t=(new Date).getTime()>>>0;try{e=performance.now()>>>0}catch(t){e=0}const n=Math.abs(t+e).toString(16).toLowerCase();return"00000000".substr(0,8-n.length)+n}()}-${e}`}()}`}function r(n,r){if(!t[n]||"trekkie"!==(null==r?void 0:r.analyticsFramework)&&"wpm"!==(null==r?void 0:r.analyticsFramework))return o("shu");const i="string"==typeof(c=r.cacheKey)&&c?c:"default";var c;const a=function(t,n,o){const r=e[n];return void 0===r[t]&&(r[t]={}),void 0===r[t][o]?r[t][o]=0:r[t][o]+=1,r[t][o]}(n,r.analyticsFramework,i);return function(e,n,r){const i=t[e];if(void 0===i[r]){const t=o();i[r]=[t]}else if(void 0===i[r][n]){const t=o();i[r].push(t)}return i[r][n]}(n,a,i)}function i(){window.Shopify=window.Shopify||{},n(),window.Shopify.evids=(t,e)=>r(t,e)}i();})();
+  </script>
+  <script id="web-pixels-manager-setup">(function e(e,n,a,t,r,o,i){function s(e,n){if(document.head){var a=document.createElement("link");e.match(/spin\.dev\/?/)&&(e+="?fast_storefront_renderer=1"),a.rel="prefetch",a.href=e,n&&(a.as=n);try{document.head.appendChild(a)}catch(e){console&&console.warn&&console.warn("[Web Pixels Manager] Could not append prefetch link tag to DOM.")}}}var l=i||[],d=null!==e;d&&(window.Shopify=window.Shopify||{},window.Shopify.analytics=window.Shopify.analytics||{},window.Shopify.analytics.replayQueue=[],window.Shopify.analytics.publish=function(e,n,a){window.Shopify.analytics.replayQueue.push([e,n,a])});var c=function(){var e="legacy",n="unknown",a=null,t=navigator.userAgent.match(/(Firefox|Chrome)\/(\d+)/i),r=navigator.userAgent.match(/(Edg)\/(\d+)/i),o=navigator.userAgent.match(/(Version)\/(\d+)(.+)(Safari)\/(\d+)/i);o?(n="safari",a=parseInt(o[2],10)):r?(n="edge",a=parseInt(r[2],10)):t&&(n=t[1].toLocaleLowerCase(),a=parseInt(t[2],10));var i={chrome:60,firefox:55,safari:11,edge:80}[n];return void 0!==i&&null!==a&&i<=a&&(e="modern"),e}(),p=c.substring(0,1),f=t.substring(0,1);if(d)try{self.performance.mark("wpm:start")}catch(e){}if(d&&l.indexOf("web_pixels_prefetch_assets")>-1){var u=self.location.origin,h=(e.webPixelsConfigList||[]).filter((function(e){return"app"===e.type.toLowerCase()}));for(let e=0;e<h.length;e++){s([u,"/wpm@",o,"/web-pixel-",h[e].id,"@",h[e].scriptVersion,"/sandbox/worker.",c,".js"].join(""),"script")}}var w,y,m,g,v,_,b,x,S=[a,l.indexOf("web_pixels_manager_runtime_asset_prefix")>-1?"/wpm":null,"/",f,o,p,".js"].join("");w={src:S,async:!0,onload:function(){if(e){var a=window.webPixelsManager.init(e);n(a),window.Shopify.analytics.replayQueue.forEach((function(e){a.publishCustomEvent(e[0],e[1],e[2])})),window.Shopify.analytics.replayQueue=[],window.Shopify.analytics.publish=a.publishCustomEvent}},onerror:function(){var n=(e.storefrontBaseUrl?e.storefrontBaseUrl.replace(/\/$/,""):self.location.origin)+"/.well-known/shopify/monorail/unstable/produce_batch",a=JSON.stringify({metadata:{event_sent_at_ms:(new Date).getTime()},events:[{schema_id:"web_pixels_manager_load/2.0",payload:{version:r||"latest",page_url:self.location.href,status:"failed",error_msg:S+" has failed to load"},metadata:{event_created_at_ms:(new Date).getTime()}}]});try{if(self.navigator.sendBeacon.bind(self.navigator)(n,a))return!0}catch(e){}const t=new XMLHttpRequest;try{return t.open("POST",n,!0),t.setRequestHeader("Content-Type","text/plain"),t.send(a),!0}catch(e){console&&console.warn&&console.warn("[Web Pixels Manager] Got an unhandled error while logging a load error.")}return!1}},y=document.createElement("script"),m=w.src,g=w.async||!0,v=w.onload,_=w.onerror,b=document.head,x=document.body,y.async=g,y.src=m,v&&y.addEventListener("load",v),_&&y.addEventListener("error",_),b?b.appendChild(y):x?x.appendChild(y):console.error("Did not find a head or body element to append the script")})({shopId: 12283134,storefrontBaseUrl: "https://yonobi.com",cdnBaseUrl: "https://cdn.shopify.com",surface: "storefront-renderer",enabledBetaFlags: ["web_pixels_use_shop_domain_monorail_endpoint","web_pixels_shopify_pixel_validation","web_pixels_prefetch_assets","web_pixels_manager_runtime_asset_prefix","web_pixels_async_pixel_refactor"],webPixelsConfigList: [{"id":"shopify-app-pixel","configuration":"{}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"0548","apiClientId":"shopify-pixel","type":"APP"},{"id":"shopify-custom-pixel","eventPayloadVersion":"v1","runtimeContext":"LAX","scriptVersion":"0548","apiClientId":"shopify-pixel","type":"CUSTOM"},{"id":"42533190","configuration":"{\"myshopifyDomain\":\"itsyonobi.myshopify.com\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"0.25.0-1282d524bd666027c0baee20e1a094c0","type":"APP","apiClientId":2775569}],initData: {"cart":null,"checkout":null,"customer":null,"productVariants":[]},},function pageEvents(webPixelsManagerAPI) {webPixelsManagerAPI.publish("page_viewed");webPixelsManagerAPI.publish("collection_viewed", {"collection":{"id":"417033287","title":"Pottery Classes","productVariants":[{"id":"46905658474822","image":{"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/1228\/3134\/products\/8e7b2aeb-3c0f-4243-9cf9-05f2253688e3-mGL_tWhQ_1200x_20_281_29_9856a2e0-5e4a-4053-9d2e-d956d0bac408.jpg?v=1688024407"},"price":{"amount":37900.0,"currencyCode":"KGS"},"product":{"id":"4816180477999","title":"EVENING WHEEL THROWING CLASS","untranslatedTitle":"EVENING WHEEL THROWING CLASS","vendor":"YONOBI classes","type":"pottery class"},"sku":"","title":"Class 3: 11th of April - 16th of May","untranslatedTitle":"Class 3: 11th of April - 16th of May"},{"id":"46902154068294","image":{"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/1228\/3134\/products\/front4.png?v=1638403186"},"price":{"amount":7830.85,"currencyCode":"KGS"},"product":{"id":"4355292954671","title":"Ceramic class Gift Card","untranslatedTitle":"Ceramic class Gift Card","vendor":"YONOBI classes","type":"Gift Card"},"sku":"","title":"One-day Evening Class 2023","untranslatedTitle":"One-day Evening Class 2023"},{"id":"46851388145990","image":{"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/1228\/3134\/products\/86a50626-da25-40f0-86ce-305b70756de5-76fafcca-73c0-4559-b67c-ee6c54d16ea8-anne-nygard-G4IB-r6nsJI-unsplash_20_281_29.jpg?v=1688024419"},"price":{"amount":10500.0,"currencyCode":"KGS"},"product":{"id":"8376755192134","title":"One-day pottery wheel class (5 hours)","untranslatedTitle":"One-day pottery wheel class (5 hours)","vendor":"YONOBI classes","type":""},"sku":"","title":"Class 0: 8th of July","untranslatedTitle":"Class 0: 8th of July"},{"id":"46529039794502","image":{"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/1228\/3134\/files\/IMG_0939_0f0a74d9-54e1-42b1-a1c0-7a4bd1485f2f.jpg?v=1686884862"},"price":{"amount":24800.0,"currencyCode":"KGS"},"product":{"id":"8377190973766","title":"Weekend Wheel Throwing Class - Mugs and Jugs","untranslatedTitle":"Weekend Wheel Throwing Class - Mugs and Jugs","vendor":"YONOBI classes","type":"pottery class"},"sku":"","title":"Class 1: 22nd - 23rd of July. 28th of July","untranslatedTitle":"Class 1: 22nd - 23rd of July. 28th of July"},{"id":"46529053425990","image":{"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/1228\/3134\/products\/8a4317df-495a-4a17-81dc-bda91079242b-earl-wilcox-_rbrj01mHMA-unsplash_1800x1800_f6bea63f-9b21-4d9a-bca9-8905e3f4a06a.jpg?v=1687387134"},"price":{"amount":28800.0,"currencyCode":"KGS"},"product":{"id":"8377195036998","title":"5-days-intense Evening Wheel Throwing Class","untranslatedTitle":"5-days-intense Evening Wheel Throwing Class","vendor":"YONOBI classes","type":"pottery class"},"sku":"","title":"Class 1: 24th - 27th of July. 3rd of August","untranslatedTitle":"Class 1: 24th - 27th of July. 3rd of August"},{"id":"46887115063622","image":{"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/1228\/3134\/files\/IMG_76952.jpg?v=1687387143"},"price":{"amount":28800.0,"currencyCode":"KGS"},"product":{"id":"8377199362374","title":"5-days-intense Day Wheel Throwing Class","untranslatedTitle":"5-days-intense Day Wheel Throwing Class","vendor":"YONOBI classes","type":"pottery class"},"sku":"","title":"Class 1: 17th - 20th of July. 28th of July","untranslatedTitle":"Class 1: 17th - 20th of July. 28th of July"},{"id":"46529097335110","image":{"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/1228\/3134\/files\/IMG_09352.jpg?v=1688025934"},"price":{"amount":23500.0,"currencyCode":"KGS"},"product":{"id":"8377205391686","title":"4-day intense pottery class - Flatware and slip techniques","untranslatedTitle":"4-day intense pottery class - Flatware and slip techniques","vendor":"YONOBI classes","type":"pottery class"},"sku":"","title":"Class 2: 31st of July - 3rd of August","untranslatedTitle":"Class 2: 31st of July - 3rd of August"},{"id":"46529106510150","image":{"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/1228\/3134\/products\/14afcc95-c5bc-4988-b5cd-26cc93fbb1ab-IMG_1159_c6612c75-be0d-400b-8856-5b09a2647b89.jpg?v=1683818688"},"price":{"amount":23500.0,"currencyCode":"KGS"},"product":{"id":"8377212535110","title":"Wheel throwing and Terra Sigillata workshop","untranslatedTitle":"Wheel throwing and Terra Sigillata workshop","vendor":"YONOBI classes","type":"pottery class"},"sku":"","title":"Class 1: 17th - 20th of July","untranslatedTitle":"Class 1: 17th - 20th of July"},{"id":"46529114898758","image":{"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/1228\/3134\/files\/Screenshot2023-06-08at17.08.59.png?v=1687340855"},"price":{"amount":19600.0,"currencyCode":"KGS"},"product":{"id":"8377215779142","title":"Summer Pottery Kids Camp (Age 9-15)","untranslatedTitle":"Summer Pottery Kids Camp (Age 9-15)","vendor":"YONOBI classes","type":"pottery class"},"sku":"","title":"Class 1: 4th \u2013 7th. of July","untranslatedTitle":"Class 1: 4th \u2013 7th. of July"},{"id":"46529157005638","image":{"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/1228\/3134\/products\/6bd13bae-3c6a-44c7-80c2-5a524157f1dc-image_8265fcd8-338b-47ca-a921-5b6e35f4e6f4.jpg?v=1686273793"},"price":{"amount":22200.0,"currencyCode":"KGS"},"product":{"id":"8377236259142","title":"3-day weekend pottery class","untranslatedTitle":"3-day weekend pottery class","vendor":"YONOBI classes","type":"pottery class"},"sku":"","title":"Class 1: 7th - 9th of July","untranslatedTitle":"Class 1: 7th - 9th of July"},{"id":"46796796461382","image":{"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/1228\/3134\/files\/yonobi_001_a8381ac5-1dbf-424d-bcd5-5928432043d1.jpg?v=1685063242"},"price":{"amount":1900.0,"currencyCode":"KGS"},"product":{"id":"8419536994630","title":"Book a pottery wheel","untranslatedTitle":"Book a pottery wheel","vendor":"YONOBI classes","type":"pottery class"},"sku":"","title":"Default Title","untranslatedTitle":"Default Title"},{"id":"46908611002694","image":{"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/1228\/3134\/products\/38fdbf7a-08c9-4b4a-96e2-536a5a4558dc-yonobi_007_1200x_247edec7-ea52-4fc6-a75a-7ce238cf10f5.jpg?v=1688025470"},"price":{"amount":7900.0,"currencyCode":"KGS"},"product":{"id":"8430387102022","title":"One-day evening pottery class (4 hours)","untranslatedTitle":"One-day evening pottery class (4 hours)","vendor":"YONOBI classes","type":""},"sku":"","title":"Class 4: 22nd of June","untranslatedTitle":"Class 4: 22nd of June"},{"id":"46853132386630","image":{"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/1228\/3134\/products\/3ccffa70-d785-4dab-b202-d1625dbf45b9-IMG_7560_202_46ef816e-3cee-457d-858a-aa124ca6828c.jpg?v=1687924772"},"price":{"amount":6600.0,"currencyCode":"KGS"},"product":{"id":"8437702754630","title":"Create your own mug!","untranslatedTitle":"Create your own mug!","vendor":"YONOBI classes","type":""},"sku":"","title":"Class 3: 11th of July","untranslatedTitle":"Class 3: 11th of July"}]}});},"https://cdn.shopify.com","browser","0.0.318","7f8aa99ew5bf4848ep3f53c2cfm8b6b48c8",["web_pixels_use_shop_domain_monorail_endpoint","web_pixels_shopify_pixel_validation","web_pixels_prefetch_assets","web_pixels_manager_runtime_asset_prefix","web_pixels_async_pixel_refactor"]);</script><link rel="prefetch" href="https://yonobi.com/wpm@7f8aa99ew5bf4848ep3f53c2cfm8b6b48c8/web-pixel-shopify-app-pixel@0548/sandbox/worker.modern.js" as="script"><link rel="prefetch" href="https://yonobi.com/wpm@7f8aa99ew5bf4848ep3f53c2cfm8b6b48c8/web-pixel-42533190@0.25.0-1282d524bd666027c0baee20e1a094c0/sandbox/worker.modern.js" as="script"><script async="" src="https://cdn.shopify.com/wpm/b7f8aa99ew5bf4848ep3f53c2cfm8b6b48c8m.js"></script>  <script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
+  window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
+  window.ShopifyAnalytics.meta.currency = 'KGS';
+  var meta = {"products":[{"id":4816180477999,"gid":"gid:\/\/shopify\/Product\/4816180477999","vendor":"YONOBI classes","type":"pottery class","variants":[{"id":46905658474822,"price":3790000,"name":"EVENING WHEEL THROWING CLASS - Class 3: 11th of April - 16th of May","public_title":"Class 3: 11th of April - 16th of May","sku":""},{"id":46905658507590,"price":3790000,"name":"EVENING WHEEL THROWING CLASS - Class 4: 12th of April - 17th of May","public_title":"Class 4: 12th of April - 17th of May","sku":""},{"id":46905658540358,"price":3790000,"name":"EVENING WHEEL THROWING CLASS - Class 5: 13th of April - 25th of May (skips the 18th of May)","public_title":"Class 5: 13th of April - 25th of May (skips the 18th of May)","sku":""},{"id":46905658573126,"price":3790000,"name":"EVENING WHEEL THROWING CLASS - Class 6: 17th of April - 22nd of May","public_title":"Class 6: 17th of April - 22nd of May","sku":""},{"id":46905658605894,"price":3790000,"name":"EVENING WHEEL THROWING CLASS - Class 7: 24th of April - 5th of June (skips the 29th of May)","public_title":"Class 7: 24th of April - 5th of June (skips the 29th of May)","sku":""},{"id":46905658638662,"price":3790000,"name":"EVENING WHEEL THROWING CLASS - Class 8: 12th of May - 16th of June","public_title":"Class 8: 12th of May - 16th of June","sku":""},{"id":46905658671430,"price":3790000,"name":"EVENING WHEEL THROWING CLASS - Class 9: 16th of May - 20th of June","public_title":"Class 9: 16th of May - 20th of June","sku":""},{"id":46905658704198,"price":3790000,"name":"EVENING WHEEL THROWING CLASS - Class 10: 17th of May - 21st of June","public_title":"Class 10: 17th of May - 21st of June","sku":""},{"id":44495461974312,"price":3790000,"name":"EVENING WHEEL THROWING CLASS - Class 11: 23rd of May - 27th of June","public_title":"Class 11: 23rd of May - 27th of June","sku":""},{"id":44495462007080,"price":3790000,"name":"EVENING WHEEL THROWING CLASS - Class 12: 24th of May - 28th of June","public_title":"Class 12: 24th of May - 28th of June","sku":""},{"id":44502643474728,"price":3790000,"name":"EVENING WHEEL THROWING CLASS - Class 13: 1st of June - 6th of July","public_title":"Class 13: 1st of June - 6th of July","sku":""},{"id":46905658736966,"price":3790000,"name":"EVENING WHEEL THROWING CLASS - Class 14: 5th of June - 10th of July","public_title":"Class 14: 5th of June - 10th of July","sku":""},{"id":44502643540264,"price":3790000,"name":"EVENING WHEEL THROWING CLASS - Class 15: 8th of June - 13th of July","public_title":"Class 15: 8th of June - 13th of July","sku":""},{"id":46905658769734,"price":3790000,"name":"EVENING WHEEL THROWING CLASS - Autumn class 1: 22nd of August - 26th of September (Mia maya)","public_title":"Autumn class 1: 22nd of August - 26th of September (Mia maya)","sku":""},{"id":46905727549766,"price":3790000,"name":"EVENING WHEEL THROWING CLASS - Autumn class 2:","public_title":"Autumn class 2:","sku":""}]},{"id":4355292954671,"gid":"gid:\/\/shopify\/Product\/4355292954671","vendor":"YONOBI classes","type":"Gift Card","variants":[{"id":46902154068294,"price":783085,"name":"Ceramic class Gift Card - One-day Evening Class 2023","public_title":"One-day Evening Class 2023","sku":""},{"id":46902154690886,"price":1044113,"name":"Ceramic class Gift Card - One-day Day Class 2023","public_title":"One-day Day Class 2023","sku":""},{"id":44056903811368,"price":2740796,"name":"Ceramic class Gift Card - Weekend Pottery Class 2023","public_title":"Weekend Pottery Class 2023","sku":""},{"id":44056904466728,"price":3784909,"name":"Ceramic class Gift Card - Evening Pottery Class 2023","public_title":"Evening Pottery Class 2023","sku":""},{"id":44056904663336,"price":3523881,"name":"Ceramic class Gift Card - Day Pottery Class 2023","public_title":"Day Pottery Class 2023","sku":""}]},{"id":8376755192134,"gid":"gid:\/\/shopify\/Product\/8376755192134","vendor":"YONOBI classes","type":"","variants":[{"id":46851388145990,"price":1050000,"name":"One-day pottery wheel class (5 hours) - Class 0: 8th of July","public_title":"Class 0: 8th of July","sku":""},{"id":46738078597446,"price":1050000,"name":"One-day pottery wheel class (5 hours) - Class 1: 14th of July","public_title":"Class 1: 14th of July","sku":""},{"id":46902103474502,"price":1050000,"name":"One-day pottery wheel class (5 hours) - Class 5: 18th of July","public_title":"Class 5: 18th of July","sku":""},{"id":46738078630214,"price":1050000,"name":"One-day pottery wheel class (5 hours) - Class 2: 28th of July","public_title":"Class 2: 28th of July","sku":""},{"id":46738078662982,"price":1050000,"name":"One-day pottery wheel class (5 hours) - Class 3: 11th of August","public_title":"Class 3: 11th of August","sku":""},{"id":46738078728518,"price":1050000,"name":"One-day pottery wheel class (5 hours) - Class 4: 25th of August","public_title":"Class 4: 25th of August","sku":""}]},{"id":8377190973766,"gid":"gid:\/\/shopify\/Product\/8377190973766","vendor":"YONOBI classes","type":"pottery class","variants":[{"id":46529039794502,"price":2480000,"name":"Weekend Wheel Throwing Class - Mugs and Jugs - Class 1: 22nd - 23rd of July. 28th of July","public_title":"Class 1: 22nd - 23rd of July. 28th of July","sku":""},{"id":46529039827270,"price":2480000,"name":"Weekend Wheel Throwing Class - Mugs and Jugs - Class 2: 29th - 30th of July. 4th of August","public_title":"Class 2: 29th - 30th of July. 4th of August","sku":""}]},{"id":8377195036998,"gid":"gid:\/\/shopify\/Product\/8377195036998","vendor":"YONOBI classes","type":"pottery class","variants":[{"id":46529053425990,"price":2880000,"name":"5-days-intense Evening Wheel Throwing Class - Class 1: 24th - 27th of July. 3rd of August","public_title":"Class 1: 24th - 27th of July. 3rd of August","sku":""},{"id":46529053458758,"price":2880000,"name":"5-days-intense Evening Wheel Throwing Class - Class 2: 7th - 10th of August. 17th of August","public_title":"Class 2: 7th - 10th of August. 17th of August","sku":""}]},{"id":8377199362374,"gid":"gid:\/\/shopify\/Product\/8377199362374","vendor":"YONOBI classes","type":"pottery class","variants":[{"id":46887115063622,"price":2880000,"name":"5-days-intense Day Wheel Throwing Class - Class 1: 17th - 20th of July. 28th of July","public_title":"Class 1: 17th - 20th of July. 28th of July","sku":""},{"id":46529067319622,"price":2880000,"name":"5-days-intense Day Wheel Throwing Class - Class 2: 24th - 27th July. 4th of August","public_title":"Class 2: 24th - 27th July. 4th of August","sku":""},{"id":46529067352390,"price":2880000,"name":"5-days-intense Day Wheel Throwing Class - Class 3: 14th - 17th of August. 25th of August","public_title":"Class 3: 14th - 17th of August. 25th of August","sku":""}]},{"id":8377205391686,"gid":"gid:\/\/shopify\/Product\/8377205391686","vendor":"YONOBI classes","type":"pottery class","variants":[{"id":46529097335110,"price":2350000,"name":"4-day intense pottery class - Flatware and slip techniques - Class 2: 31st of July - 3rd of August","public_title":"Class 2: 31st of July - 3rd of August","sku":""}]},{"id":8377212535110,"gid":"gid:\/\/shopify\/Product\/8377212535110","vendor":"YONOBI classes","type":"pottery class","variants":[{"id":46529106510150,"price":2350000,"name":"Wheel throwing and Terra Sigillata workshop - Class 1: 17th - 20th of July","public_title":"Class 1: 17th - 20th of July","sku":""}]},{"id":8377215779142,"gid":"gid:\/\/shopify\/Product\/8377215779142","vendor":"YONOBI classes","type":"pottery class","variants":[{"id":46529114898758,"price":1960000,"name":"Summer Pottery Kids Camp (Age 9-15) - Class 1: 4th – 7th. of July","public_title":"Class 1: 4th – 7th. of July","sku":""}]},{"id":8377236259142,"gid":"gid:\/\/shopify\/Product\/8377236259142","vendor":"YONOBI classes","type":"pottery class","variants":[{"id":46529157005638,"price":2220000,"name":"3-day weekend pottery class - Class 1: 7th - 9th of July","public_title":"Class 1: 7th - 9th of July","sku":""},{"id":46841417236806,"price":2220000,"name":"3-day weekend pottery class - Class 2: 14th - 16th of July","public_title":"Class 2: 14th - 16th of July","sku":""}]},{"id":8419536994630,"gid":"gid:\/\/shopify\/Product\/8419536994630","vendor":"YONOBI classes","type":"pottery class","variants":[{"id":46796796461382,"price":190000,"name":"Book a pottery wheel","public_title":null,"sku":""}]},{"id":8430387102022,"gid":"gid:\/\/shopify\/Product\/8430387102022","vendor":"YONOBI classes","type":"","variants":[{"id":46908611002694,"price":790000,"name":"One-day evening pottery class (4 hours) - Class 4: 22nd of June","public_title":"Class 4: 22nd of June","sku":""},{"id":46839099097414,"price":790000,"name":"One-day evening pottery class (4 hours) - Class 5: 26th of June","public_title":"Class 5: 26th of June","sku":""},{"id":46902091022662,"price":790000,"name":"One-day evening pottery class (4 hours) - Class 9: 6th of July","public_title":"Class 9: 6th of July","sku":""},{"id":46902100164934,"price":790000,"name":"One-day evening pottery class (4 hours) - Class 10: 17th of July","public_title":"Class 10: 17th of July","sku":""},{"id":46902100197702,"price":790000,"name":"One-day evening pottery class (4 hours) - Class 11: 19th of July","public_title":"Class 11: 19th of July","sku":""}]},{"id":8437702754630,"gid":"gid:\/\/shopify\/Product\/8437702754630","vendor":"YONOBI classes","type":"","variants":[{"id":46853132386630,"price":660000,"name":"Create your own mug! - Class 3: 11th of July","public_title":"Class 3: 11th of July","sku":""},{"id":46902073491782,"price":660000,"name":"Create your own mug! - Class 4: 15th of July","public_title":"Class 4: 15th of July","sku":""}]}],"page":{"pageType":"collection","resourceType":"collection","resourceId":417033287}};
+  for (var attr in meta) {
+    window.ShopifyAnalytics.meta[attr] = meta[attr];
+  }</script>
+  <script>window.ShopifyAnalytics.merchantGoogleAnalytics = function() {
+    
+  };
+  </script>
+  <script class="analytics">(window.gaDevIds=window.gaDevIds||[]).push('BwiEti');
+  
+  
+  (function () {
+      var customDocumentWrite = function(content) {
+        var jquery = null;
+  
+        if (window.jQuery) {
+          jquery = window.jQuery;
+        } else if (window.Checkout && window.Checkout.$) {
+          jquery = window.Checkout.$;
+        }
+  
+        if (jquery) {
+          jquery('body').append(content);
+        }
+      };
+  
+      var hasLoggedConversion = function(token) {
+        if (token) {
+          return document.cookie.indexOf('loggedConversion=' + token) !== -1;
+        }
+        return false;
+      }
+  
+      var setCookieIfConversion = function(token) {
+        if (token) {
+          var twoMonthsFromNow = new Date(Date.now());
+          twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
+  
+          document.cookie = 'loggedConversion=' + token + '; expires=' + twoMonthsFromNow;
+        }
+      }
+  
+      var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
+      if (trekkie.integrations) {
+        return;
+      }
+      trekkie.methods = [
+        'identify',
+        'page',
+        'ready',
+        'track',
+        'trackForm',
+        'trackLink'
+      ];
+      trekkie.factory = function(method) {
+        return function() {
+          var args = Array.prototype.slice.call(arguments);
+          args.unshift(method);
+          trekkie.push(args);
+          return trekkie;
+        };
+      };
+      for (var i = 0; i < trekkie.methods.length; i++) {
+        var key = trekkie.methods[i];
+        trekkie[key] = trekkie.factory(key);
+      }
+      trekkie.load = function(config) {
+        trekkie.config = config || {};
+        trekkie.config.initialDocumentCookie = document.cookie;
+        var first = document.getElementsByTagName('script')[0];
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.onerror = function(e) {
+          var scriptFallback = document.createElement('script');
+          scriptFallback.type = 'text/javascript';
+          scriptFallback.onerror = function(error) {
+                  var Monorail = {
+        produce: function produce(monorailDomain, schemaId, payload) {
+          var currentMs = new Date().getTime();
+          var event = {
+            schema_id: schemaId,
+            payload: payload,
+            metadata: {
+              event_created_at_ms: currentMs,
+              event_sent_at_ms: currentMs
+            }
+          };
+          return Monorail.sendRequest("https://" + monorailDomain + "/v1/produce", JSON.stringify(event));
+        },
+        sendRequest: function sendRequest(endpointUrl, payload) {
+          // Try the sendBeacon API
+          if (window && window.navigator && typeof window.navigator.sendBeacon === 'function' && typeof window.Blob === 'function' && !Monorail.isIos12()) {
+            var blobData = new window.Blob([payload], {
+              type: 'text/plain'
+            });
+  
+            if (window.navigator.sendBeacon(endpointUrl, blobData)) {
+              return true;
+            } // sendBeacon was not successful
+  
+          } // XHR beacon
+  
+          var xhr = new XMLHttpRequest();
+  
+          try {
+            xhr.open('POST', endpointUrl);
+            xhr.setRequestHeader('Content-Type', 'text/plain');
+            xhr.send(payload);
+          } catch (e) {
+            console.log(e);
+          }
+  
+          return false;
+        },
+        isIos12: function isIos12() {
+          return window.navigator.userAgent.lastIndexOf('iPhone; CPU iPhone OS 12_') !== -1 || window.navigator.userAgent.lastIndexOf('iPad; CPU OS 12_') !== -1;
+        }
+      };
+      Monorail.produce('monorail-edge.shopifysvc.com',
+        'trekkie_storefront_load_errors/1.1',
+        {shop_id: 12283134,
+        theme_id: 83483983919,
+        app_name: "storefront",
+        context_url: window.location.href,
+        source_url: "https://cdn.shopify.com/s/trekkie.storefront.6deef03150cfc3807450afdae3e05f036f41d450.min.js"});
+  
+          };
+          scriptFallback.async = true;
+          scriptFallback.src = 'https://cdn.shopify.com/s/trekkie.storefront.6deef03150cfc3807450afdae3e05f036f41d450.min.js';
+          first.parentNode.insertBefore(scriptFallback, first);
+        };
+        script.async = true;
+        script.src = 'https://cdn.shopify.com/s/trekkie.storefront.6deef03150cfc3807450afdae3e05f036f41d450.min.js';
+        first.parentNode.insertBefore(script, first);
+      };
+      trekkie.load(
+        {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":12283134,"isMerchantRequest":null,"themeId":83483983919,"themeCityHash":"17075333571525933138","contentLanguage":"en","currency":"KGS"},"isServerSideCookieWritingEnabled":true,"monorailRegion":"shop_domain"},"Google Analytics":{"trackingId":"UA-72595901-1","domain":"auto","siteSpeedSampleRate":"10","enhancedEcommerce":true,"doubleClick":true,"includeSearch":true},"Facebook Pixel":{"pixelIds":["223240644703989","223706158483290"],"agent":"plshopify1.2"},"Pinterest Pixel":{"pixelId":"2613577622103"},"Google Gtag Pixel":{"conversionId":"G-ECJ70NCPR7","eventLabels":[{"type":"search","action_label":["G-ECJ70NCPR7","AW-924796438\/-nPzCKLO5ZABEJaM_bgD"]},{"type":"begin_checkout","action_label":["G-ECJ70NCPR7","AW-924796438\/1pPQCJ_O5ZABEJaM_bgD"]},{"type":"view_item","action_label":["G-ECJ70NCPR7","AW-924796438\/3sogCJnO5ZABEJaM_bgD","MC-F6XQLSXEX7"]},{"type":"purchase","action_label":["G-ECJ70NCPR7","AW-924796438\/LqC-CJbO5ZABEJaM_bgD","MC-F6XQLSXEX7"]},{"type":"page_view","action_label":["G-ECJ70NCPR7","AW-924796438\/hUrXCJPO5ZABEJaM_bgD","MC-F6XQLSXEX7"]},{"type":"add_payment_info","action_label":["G-ECJ70NCPR7","AW-924796438\/8y3hCKXO5ZABEJaM_bgD"]},{"type":"add_to_cart","action_label":["G-ECJ70NCPR7","AW-924796438\/VFe1CJzO5ZABEJaM_bgD"]}],"targetCountry":"DK"},"Session Attribution":{},"S2S":{"facebookCapiEnabled":true,"facebookAppPixelId":"223706158483290","source":"trekkie-storefront-renderer"}}
+      );
+  
+      var loaded = false;
+      trekkie.ready(function() {
+        if (loaded) return;
+        loaded = true;
+  
+        window.ShopifyAnalytics.lib = window.trekkie;
+  
+          ga('require', 'linker');
+        function addListener(element, type, callback) {
+          if (element.addEventListener) {
+            element.addEventListener(type, callback);
+          }
+          else if (element.attachEvent) {
+            element.attachEvent('on' + type, callback);
+          }
+        }
+        function decorate(event) {
+          event = event || window.event;
+          var target = event.target || event.srcElement;
+          if (target && (target.getAttribute('action') || target.getAttribute('href'))) {
+            ga(function (tracker) {
+              var linkerParam = tracker.get('linkerParam');
+              document.cookie = '_shopify_ga=' + linkerParam + '; ' + 'path=/';
+            });
+          }
+        }
+        addListener(window, 'load', function(){
+          for (var i=0; i < document.forms.length; i++) {
+            var action = document.forms[i].getAttribute('action');
+            if(action && action.indexOf('/cart') >= 0) {
+              addListener(document.forms[i], 'submit', decorate);
+            }
+          }
+          for (var i=0; i < document.links.length; i++) {
+            var href = document.links[i].getAttribute('href');
+            if(href && href.indexOf('/checkout') >= 0) {
+              addListener(document.links[i], 'click', decorate);
+            }
+          }
+        });
+      
+  
+        var originalDocumentWrite = document.write;
+        document.write = customDocumentWrite;
+        try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
+        document.write = originalDocumentWrite;
+  
+        window.ShopifyAnalytics.lib.page(null,{"pageType":"collection","resourceType":"collection","resourceId":417033287});
+  
+        var match = window.location.pathname.match(/checkouts\/(.+)\/(thank_you|post_purchase)/)
+        var token = match? match[1]: undefined;
+        if (!hasLoggedConversion(token)) {
+          setCookieIfConversion(token);
+          window.ShopifyAnalytics.lib.track("Viewed Product Category",{"currency":"KGS","category":"Collection: pottery-classes","collectionName":"pottery-classes","collectionId":417033287,"nonInteraction":true});
+        }
+      });
+  
+  
+          var eventsListenerScript = document.createElement('script');
+          eventsListenerScript.async = true;
+          eventsListenerScript.src = "//cdn.shopify.com/shopifycloud/shopify/assets/shop_events_listener-65cd0ba3fcd81a1df33f2510ec5bcf8c0e0958653b50e3965ec972dd638ee13f.js";
+          document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
+  
+  })();</script><script async="" src="//cdn.shopify.com/shopifycloud/shopify/assets/shop_events_listener-65cd0ba3fcd81a1df33f2510ec5bcf8c0e0958653b50e3965ec972dd638ee13f.js"></script>
+  <script class="boomerang">
+  (function () {
+    if (window.BOOMR && (window.BOOMR.version || window.BOOMR.snippetExecuted)) {
+      return;
+    }
+    window.BOOMR = window.BOOMR || {};
+    window.BOOMR.snippetStart = new Date().getTime();
+    window.BOOMR.snippetExecuted = true;
+    window.BOOMR.snippetVersion = 12;
+    window.BOOMR.application = "storefront-renderer";
+    window.BOOMR.themeName = "Prestige";
+    window.BOOMR.themeVersion = "4.12.3";
+    window.BOOMR.shopId = 12283134;
+    window.BOOMR.themeId = 83483983919;
+    window.BOOMR.renderRegion = "gcp-europe-west3";
+    window.BOOMR.url =
+      "https://cdn.shopify.com/shopifycloud/boomerang/shopify-boomerang-1.0.0.min.js";
+    var where = document.currentScript || document.getElementsByTagName("script")[0];
+    var parentNode = where.parentNode;
+    var promoted = false;
+    var LOADER_TIMEOUT = 3000;
+    function promote() {
+      if (promoted) {
+        return;
+      }
+      var script = document.createElement("script");
+      script.id = "boomr-scr-as";
+      script.src = window.BOOMR.url;
+      script.async = true;
+      parentNode.appendChild(script);
+      promoted = true;
+    }
+    
+    var link = document.createElement("link");
+    if (link.relList &&
+      typeof link.relList.supports === "function" &&
+      link.relList.supports("preload") &&
+      ("as" in link)) {
+      window.BOOMR.snippetMethod = "p";
+      link.href = window.BOOMR.url;
+      link.rel = "preload";
+      link.as = "script";
+      link.addEventListener("load", promote);
+      link.addEventListener("error", function() {
+        iframeLoader(true);
+      });
+      setTimeout(function() {
+        if (!promoted) {
+          iframeLoader(true);
+        }
+      }, LOADER_TIMEOUT);
+      BOOMR_lstart = new Date().getTime();
+      parentNode.appendChild(link);
+    } else {
+      iframeLoader(false);
+    }
+    function boomerangSaveLoadTime(e) {
+      window.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
+    }
+    if (window.addEventListener) {
+      window.addEventListener("load", boomerangSaveLoadTime, false);
+    } else if (window.attachEvent) {
+      window.attachEvent("onload", boomerangSaveLoadTime);
+    }
+    if (document.addEventListener) {
+      document.addEventListener("onBoomerangLoaded", function(e) {
+        e.detail.BOOMR.init({
+          ResourceTiming: {
+            enabled: true,
+            trackedResourceTypes: ["script", "img", "css"]
+          },
+        });
+        e.detail.BOOMR.t_end = new Date().getTime();
+      });
+    } else if (document.attachEvent) {
+      document.attachEvent("onpropertychange", function(e) {
+        if (!e) e=event;
+        if (e.propertyName === "onBoomerangLoaded") {
+          e.detail.BOOMR.init({
+            ResourceTiming: {
+              enabled: true,
+              trackedResourceTypes: ["script", "img", "css"]
+            },
+          });
+          e.detail.BOOMR.t_end = new Date().getTime();
+        }
+      });
+    }
+  })();</script><link href="https://cdn.shopify.com/shopifycloud/boomerang/shopify-boomerang-1.0.0.min.js" rel="preload" as="script"><link href="https://cdn.shopify.com/shopifycloud/boomerang/shopify-boomerang-1.0.0.min.js" rel="preload" as="script">
+  <script id="boomr-scr-as" src="https://cdn.shopify.com/shopifycloud/boomerang/shopify-boomerang-1.0.0.min.js" async=""></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/53/8/intl/ru_ALL/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/53/8/intl/ru_ALL/util.js"></script><script type="application/ld+json">
+
+</script>
+<script id="boomr-scr-as" src="https://cdn.shopify.com/shopifycloud/boomerang/shopify-boomerang-1.0.0.min.js" async=""></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/53/8/intl/ru_ALL/geocoder.js"></script><meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A+xK4jmZTgh1KBVry/UZKUE3h6Dr9HPPioFS4KNCzify+KEoOii7z/goKS2zgbAOwhpZ1GZllpdz7XviivJM9gcAAACFeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiQXR0cmlidXRpb25SZXBvcnRpbmdDcm9zc0FwcFdlYiIsImV4cGlyeSI6MTcwNzI2Mzk5OSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script attributionsrc="" type="text/javascript" async="" src="https://www.googleadservices.com/pagead/conversion/924796438/?random=1688026733319&amp;cv=11&amp;fst=1688026733319&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be36s0&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fyonobi.com%2Fcollections%2Fpottery-classes&amp;ref=https%3A%2F%2Fyonobi.com%2Fcollections%2Fpottery-classes&amp;label=hUrXCJPO5ZABEJaM_bgD&amp;tiba=Pottery%20Class%20in%20Copenhagen%20%7C%20Book%20Your%20Next%20Class%20%7C%20YONOBI&amp;hn=www.googleadservices.com&amp;frm=0&amp;gtm_ee=1&amp;auid=201641169.1687765063&amp;ec_mode=a&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B112.0.5615.204%7CYaBrowser%3B23.5.2.625%7CNot%253AA-Brand%3B99.0.0.0&amp;uamb=0&amp;uap=Windows&amp;uapv=15.0.0&amp;uaw=0&amp;data=event%3Dpage_view%3Bpage_path%3D%2Fcollections%2Fpottery-classes&amp;em=tv.1&amp;rfmt=3&amp;fmt=4"></script><meta http-equiv="origin-trial" content="AxMeahpLO9nDB/vFXFMGOd/JLhKWx/mOjErAi0qFXDzWuMSYoKpfjFtFfQWMCx+Qg39PMxDJHSLlAJF/H8rtmAwAAABveyJvcmlnaW4iOiJodHRwczovL3MucGluaW1nLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><style type="text/css">.TnITTtw-fp-collapsed-button {
+      display: none;
+      position: fixed !important;
+      top: 16px !important;
+      right: 16px !important;
+  }
+  
+  .TnITTtw-fp-collapsed-button:hover {
+      opacity: 1.0 !important;
+  }
+  
+  .TnITTtw-mate-fp-bar {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif !important;
+      color: #000;
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 999;
+      background: rgb(255 255 255 / 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 16px;
+      border-radius: 11px;
+      box-shadow: 0 2px 10px rgb(0 0 0 / 25%);
+      width: 320px;
+      line-height: initial;
+  }
+  
+  @-moz-document url-prefix() {
+      .TnITTtw-mate-fp-bar {
+          background: rgb(255 255 255 / 1.0);
+      }
+  }
+  
+  .TnITTtw-mate-fp-bar.TnITTtw-dark-mode {
+      background: rgb(44, 44, 43);
+  }
+  
+  .TnITTtw-hide-fp-bar {
+      width: 12px;
+      height: 12px;
+      background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/regular-close-tt.png) !important;
+      background-size: 12px 12px;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      cursor: pointer;
+  }
+  
+  .TnITTtw-hide-fp-bar:hover {
+      background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/hover-close-tt.png) !important;
+  }
+  
+  .TnITTtw-current-page-lang {
+      color: #6d6d72;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-align: center;
+  }
+  
+  .TnITTtw-dark-mode .TnITTtw-current-page-lang {
+      color: #98989D;
+  }
+  
+  .TnITTtw-fp-translate {
+      width: calc(100% - 73px) !important;
+      font-size: 14px !important;
+      text-transform: none !important;
+  }
+  
+  .TnITTtw-fp-translate.TnITTtw-in-progress {
+      animation-name: funky-bg;
+      animation-duration: 10s;
+      animation-timing-function: ease-in;
+  }
+  
+  .TnITTtw-fp-translate.TnITTtw-show-original {
+      width: calc(100% - 20px) !important;
+  }
+  
+  @keyframes funky-bg {
+      from {
+          background-image: linear-gradient(145deg, #01EF92, #00D8FB),
+          linear-gradient(35deg, rgba(1, 239, 146, 0.25), rgba(0, 216, 251, 0.25)) !important;
+      }
+  
+      to {
+          background-image: linear-gradient(90deg, #01EF92, #00D8FB),
+          linear-gradient(35deg, rgba(1, 239, 146, 0.25), rgba(0, 216, 251, 0.25)) !important;
+      }
+  }
+  
+  .TnITTtw-change-language, .TnITTtw-stop-fp {
+      width: 38px;
+      height: 38px;
+      background-color: #EFEFF4;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 16px 16px;
+      border-radius: 11px;
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+  }
+  
+  .TnITTtw-change-language {
+      background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/globe-earth.png) !important;
+  }
+  
+  .TnITTtw-dark-mode .TnITTtw-change-language {
+      background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/globe-earth-dark.png) !important;
+  }
+  
+  .TnITTtw-stop-fp {
+      display: none;
+      background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/regular-stt-stop.png) !important;
+      background-size: 12px 12px;
+  }
+  
+  .TnITTtw-dark-mode .TnITTtw-change-language, .TnITTtw-dark-mode .TnITTtw-stop-fp {
+      background-color: #525251 !important;
+  }
+  
+  .TnITTtw-change-language:hover, .TnITTtw-stop-fp:hover {
+      background-color: #F6F6F6;
+  }
+  
+  .TnITTtw-change-language:active, .TnITTtw-stop-fp:active {
+      background-color: #E9E9E9;
+  }
+  
+  .TnITTtw-dark-mode .TnITTtw-change-language:hover,
+  .TnITTtw-dark-mode .TnITTtw-stop-fp:hover,
+  .TnITTtw-dark-mode .TnITTtw-change-language:active,
+  .TnITTtw-dark-mode .TnITTtw-stop-fp:active {
+      background-color: #767675;
+  }
+  
+  #TnITTtw-always-translate {
+  }
+  
+  .TnITTtw-fp-options input {
+      padding: initial;
+      width: auto;
+      border: initial;
+      box-shadow: initial;
+      line-height: initial;
+      height: auto;
+      display: initial;
+      position: initial;
+      appearance: auto;
+      top: initial;
+      cursor: pointer;
+      margin: 0;
+  }
+  
+  .TnITTtw-fp-options input[readonly="readonly"] {
+      opacity: 0.5;
+  }
+  
+  #TnITTtw-always-translate + label,
+  #TnITTtw-never-translate-lang + label,
+  #TnITTtw-never-translate-site + label {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif !important;
+      display: inline-block;
+      font-weight: 400;
+      font-size: 14px;
+      margin-left: 4px;
+      color: #000;
+      cursor: pointer;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 296px;
+      vertical-align: top;
+      line-height: initial;
+      letter-spacing: initial;
+      text-transform: initial;
+      margin-right: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0;
+  }
+  
+  #TnITTtw-always-translate + label::before,
+  #TnITTtw-never-translate-lang + label::before,
+  #TnITTtw-never-translate-site + label::before,
+  #TnITTtw-always-translate + label::after,
+  #TnITTtw-never-translate-lang + label::after,
+  #TnITTtw-never-translate-site + label::after  {
+      content: initial;
+  } 
+  
+  .TnITTtw-always-translate-inner-label {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 252px;
+      vertical-align: top;
+      display: inline-block;
+  }
+  
+  .TnITTtw-dark-mode #TnITTtw-always-translate + label,
+  .TnITTtw-dark-mode #TnITTtw-never-translate-lang + label,
+  .TnITTtw-dark-mode #TnITTtw-never-translate-site + label {
+      color: #FFF;
+  }
+  
+  #TnITTtw-always-translate + label.TnITTtw-not-pro {
+      opacity: 0.5;
+  }
+  
+  #TnITTtw-always-translate + label .TnITTtw-pro-label {
+      position: relative;
+      background: #000;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #FFF;
+      padding: 2px 5px;
+      border-radius: 4px;
+      margin-left: 10px;
+      top: -1px;
+      user-select: none;
+      -webkit-user-select: none;
+      display: inline;
+      font-weight: 500;
+  }
+  
+  .TnITTtw-dark-mode #TnITTtw-always-translate + label .TnITTtw-pro-label {
+      background: #FFF;
+      color: #000;
+  }
+  
+  .TnITTtw-inline-original-tooltip {
+      display: none;
+      position: absolute;
+      margin: 0px;
+      border: none;
+      padding: 16px;
+      color: rgb(0, 0, 0);
+      background-color: rgb(255 255 255 / 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 11px;
+      box-shadow: 0 2px 10px rgb(0 0 0 / 25%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: normal;
+  }
+  
+  .TnITTtw-dark-mode.TnITTtw-inline-original-tooltip {
+      background-color: rgb(0 0 0 / 0.915);
+      color: #FFF;
+  }
+  
+  .TnITTtw-inline-original-tooltip .TnITTtw-close-original-tooltip {
+      width: 12px;
+      height: 12px;
+      background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/regular-close-tt.png) !important;
+      background-size: 12px 12px;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      cursor: pointer;
+  }
+  
+  .TnITTtw-inline-original-tooltip .TnITTtw-close-original-tooltip:hover {
+      background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/hover-close-tt.png) !important;
+  }
+  
+  .TnITTtw-inline-original-tooltip .TnITTtw-original-label {
+      margin: 0;
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: #6d6d72;
+      margin-bottom: 10px;
+  }
+  
+  .TnITTtw-inline-original-tooltip.TnITTtw-dark-mode .TnITTtw-original-label {
+      color: #98989D;
+  }
+  
+  .TnITTtw-inline-original-tooltip .TnITTtw-text-layout {
+      display: inline-block;
+      margin: 0;
+      font-size: 16px;
+      color: #000;
+  }
+  
+  .TnITTtw-inline-original-tooltip.TnITTtw-dark-mode .TnITTtw-text-layout {
+      color: #FFF;
+  }
+  
+  .TnITTtw-highlighted-for-original {
+      color: #0F0F5F;
+      background-color: #F0F0A0;
+  }
+  
+  /* Dropdown scrollbars */
+  
+  #selVisibleScroll-1, #selVisibleScroll-2, #selVisibleScroll-3 {
+      overflow: hidden;
+      height: 259px;
+      width: 100%;
+      position: relative;
+  }
+  
+  #sel-scrollbar-1, #sel-scrollbar-2, #sel-scrollbar-3 {
+      position: absolute;
+      width: 4px;
+      height: 259px;
+      left: 225px;
+  }
+  
+  #sel-track-1, #sel-track-2, #sel-track-3 {
+      position: absolute;
+      top: 1px;
+      width: 4px;
+      height: calc(100% - 6px);
+  }
+  
+  #sel-dragBar-1, #sel-dragBar-2, #sel-dragBar-3 {
+      position: absolute;
+      top: 1px;
+      width: 4px;
+      background: rgba(43, 43, 43, 0.5);
+      cursor: pointer;
+      border-radius: 4px;
+  }
+  
+  .dark-mode #sel-dragBar-1, .dark-mode #sel-dragBar-2, .dark-mode #sel-dragBar-3 {
+      background: rgba(255, 255, 255, 0.5);
+  }
+  
+  #sel-dragBar-1:hover, #sel-dragBar-2:hover, #sel-dragBar-3:hover, 
+  #sel-dragBar-1:active, #sel-dragBar-2:active, #sel-dragBar-3:active {
+      background: rgba(43, 43, 43, 0.675);
+  }
+  
+  .dark-mode #sel-dragBar-1:hover,
+  .dark-mode #sel-dragBar-2:hover,
+  .dark-mode #sel-dragBar-3:hover,
+  .dark-mode #sel-dragBar-1:active,
+  .dark-mode #sel-dragBar-2:active,
+  .dark-mode #sel-dragBar-3:active {
+      background: rgba(255, 255, 255, 0.675);
+  }
+  
+  #sel-scrollbar-1, #sel-track-1, #sel-dragBar-1, 
+  #sel-scrollbar-2, #sel-track-2, #sel-dragBar-2,
+  #sel-scrollbar-3, #sel-track-3, #sel-dragBar-3 {
+      -webkit-user-select: none;
+      user-select: none;
+  }
+  
+  /* Spinner for when it's translating a page */
+  
+  .TnITTtw-cta-button-layout {
+      position: relative;
+      display: inline;
+  }
+  
+  .TnITTtw-spinner {
+      display: none;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      user-select: none;
+      -webkit-user-select: none;
+  }
+    
+    @media screen and (max-width: 800px) {
+      .TnITTtw-spinner {
+        top: 28px;
+      }
+    }
+  
+    .TnITTtw-spinner.in-text {
+      display: block;
+      background: transparent;
+      position: initial;
+    }
+  
+    .TnITTtw-spinner.left {
+      text-align: left;
+    }
+    
+    .TnITTtw-spinner > div {
+      width: 12px;
+      height: 12px;
+      background-color: rgb(0, 71, 46);
+    
+      border-radius: 100%;
+      display: inline-block;
+      -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+      animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    }
+  
+    .TnITTtw-spinner.in-text > div {
+      background-color: #000;
+    }
+    
+    .TnITTtw-spinner .TnITTtw-bounce1 {
+      -webkit-animation-delay: -0.32s;
+      animation-delay: -0.32s;
+    }
+    
+    .TnITTtw-spinner .TnITTtw-bounce2 {
+      -webkit-animation-delay: -0.16s;
+      animation-delay: -0.16s;
+    }
+    
+    @-webkit-keyframes sk-bouncedelay {
+      0%, 80%, 100% { -webkit-transform: scale(0) }
+      40% { -webkit-transform: scale(1.0) }
+    }
+    
+    @keyframes sk-bouncedelay {
+      0%, 80%, 100% { 
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      } 40% { 
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+      }
+    }</style><style type="text/css">/*
+   * contextMenu.js v 1.4.0
+   * Author: Sudhanshu Yadav
+   * s-yadav.github.com
+   * Copyright (c) 2013 Sudhanshu Yadav.
+   * Dual licensed under the MIT and GPL licenses
+  **/
+  
+  .iw-contextMenu {
+      box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.10) !important;
+      border: 1px solid #c8c7cc !important;
+      border-radius: 11px !important;
+      display: none;
+      z-index: 1000000132;
+      max-width: 300px !important;
+      width: auto !important;
+  }
+  
+  .dark-mode .iw-contextMenu,
+  .TnITTtw-dark-mode.iw-contextMenu,
+  .TnITTtw-dark-mode .iw-contextMenu {
+      border-color: #747473 !important;
+  }
+  
+  .iw-cm-menu {
+      background: #fff !important;
+      color: #000 !important;
+      margin: 0px !important;
+      padding: 0px !important;
+      overflow: visible !important;
+  }
+  
+  .dark-mode .iw-cm-menu,
+  .TnITTtw-dark-mode.iw-cm-menu,
+  .TnITTtw-dark-mode .iw-cm-menu {
+      background: #525251 !important;
+      color: #FFF !important;
+  }
+  
+  .iw-curMenu {
+  }
+  
+  .iw-cm-menu li {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif !important;
+      list-style: none !important;
+      padding: 10px !important;
+      padding-right: 20px !important;
+      border-bottom: 1px solid #c8c7cc !important;
+      font-weight: 400 !important;
+      cursor: pointer !important;
+      position: relative !important;
+      font-size: 14px !important;
+      margin: 0 !important;
+      line-height: inherit !important;
+      border-radius: 0 !important;
+      display: block !important;
+  }
+  
+  .dark-mode .iw-cm-menu li, .TnITTtw-dark-mode .iw-cm-menu li {
+      border-bottom-color: #747473 !important;
+  }
+  
+  .iw-cm-menu li:first-child {
+      border-top-left-radius: 11px !important;
+      border-top-right-radius: 11px !important;
+  }
+  
+  .iw-cm-menu li:last-child {
+      border-bottom-left-radius: 11px !important;
+      border-bottom-right-radius: 11px !important;
+      border-bottom: none !important;
+  }
+  
+  .iw-mOverlay {
+      position: absolute !important;
+      width: 100% !important;
+      height: 100% !important;
+      top: 0px !important;
+      left: 0px !important;
+      background: #FFF !important;
+      opacity: .5 !important;
+  }
+  
+  .iw-contextMenu li.iw-mDisable {
+      opacity: 0.3 !important;
+      cursor: default !important;
+  }
+  
+  .iw-mSelected {
+      background-color: #F6F6F6 !important;
+  }
+  
+  .dark-mode .iw-mSelected, .TnITTtw-dark-mode .iw-mSelected {
+      background-color: #676766 !important;
+  }
+  
+  .iw-cm-arrow-right {
+      width: 0 !important;
+      height: 0 !important;
+      border-top: 5px solid transparent !important;
+      border-bottom: 5px solid transparent !important;
+      border-left: 5px solid #000 !important;
+      position: absolute !important;
+      right: 5px !important;
+      top: 50% !important;
+      margin-top: -5px !important;
+  }
+  
+  .dark-mode .iw-cm-arrow-right, .TnITTtw-dark-mode .iw-cm-arrow-right {
+      border-left-color: #FFF !important;
+  }
+  
+  .iw-mSelected > .iw-cm-arrow-right {
+  }
+  
+  /*context menu css end */</style><style type="text/css">.ui_selector, .TnITTtw-ui_selector {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif;
+      display: inline-block;
+  }
+  
+  .ui_selector .select, .TnITTtw-ui_selector .TnITTtw-select {
+      color: #000;
+      text-align: center;
+      font-weight: 600;
+      font-size: 14px;
+      border: 1px solid rgba(200, 199, 204, 0.5);
+      padding: 10px 15px;
+      width: 201px;
+      -webkit-user-select: none;
+      cursor: pointer;
+      border-radius: 11px;
+      display: inline-block;
+      background-image: -webkit-linear-gradient(top, #FAFAFA, #F6F6F6);
+      background-image: -moz-linear-gradient(top, #FAFAFA, #F6F6F6);
+      background-size: auto 48px;
+      background-position: 0px -11px;
+      box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.10);
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+  }
+  
+  .dark-mode .ui_selector .select, 
+  .TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-select {
+      background-image: -webkit-linear-gradient(top, #4A4A49, #40403F);
+      background-image: -moz-linear-gradient(top, #4A4A49, #40403F);
+      color: #FFF;
+      border-color: #747473;
+  }
+  
+  .ui_selector .select:hover,
+  .TnITTtw-ui_selector .TnITTtw-select:hover {
+      color: #424242;
+      background-image: -webkit-linear-gradient(top, #FAFAFA, #FAFAFA);
+      background-image: -moz-linear-gradient(top, #FAFAFA, #FAFAFA);
+  }
+  
+  .ui_selector .select:active,
+  .TnITTtw-ui_selector .TnITTtw-select:active {
+      color: #6d6d72;
+      background-image: -webkit-linear-gradient(top, #F6F6F6, #F6F6F6);
+      background-image: -moz-linear-gradient(top, #F6F6F6, #F6F6F6);
+  }
+  
+  .dark-mode .ui_selector .select:hover,
+  .dark-mode .ui_selector .select:active,
+  .TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-select:hover,
+  .TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-select:active {
+      background-image: -webkit-linear-gradient(top, #4A4A49, #4A4A49);
+      background-image: -moz-linear-gradient(top, #4A4A49, #4A4A49);
+      color: #FFF;
+      border-color: #747473;
+  }
+  
+  .ui_selector .select .detected-ico,
+  .TnITTtw-ui_selector .TnITTtw-select .TnITTtw-detected-ico {
+      display: inline-block;
+  }
+  
+  .ui_selector .active, .ui_selector .active:hover, .ui_selector .active:active,
+  .TnITTtw-ui_selector .TnITTtw-active, .TnITTtw-ui_selector .TnITTtw-active:hover, .TnITTtw-ui_selector .TnITTtw-active:active {
+      box-shadow: 0 -1px 15px -10px rgba(0, 0, 0, 0.85) !important;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      background: #F3F3F3;
+  }
+  
+  .sliding-text,
+  .TnITTtw-sliding-text {
+      position: relative;
+  }
+  
+  .ui_selector .options,
+  .TnITTtw-ui_selector .TnITTtw-options {
+      margin-left: 0px;
+      margin-top: -4px;
+      background: #fff;
+      border: 1px solid rgba(200, 199, 204, 0.5);
+      width: 231px;
+      overflow: hidden;
+      max-height: 313px;
+      position: absolute;
+      font-size: 12px;
+      box-shadow: 0 2px 10px rgb(0 0 0 / 25%);
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      display: none;
+  }
+  
+  .ui_selector .options.standalone,
+  .TnITTtw-ui_selector .TnITTtw-options.TnITTtw-standalone {
+      border-radius: 11px;
+      margin-top: 16px;
+  }
+  
+  /* for now, it can only be on the top */
+  .ui_selector .options-arrow,
+  .TnITTtw-ui_selector .TnITTtw-options-arrow {
+      display: none;
+      position: absolute;
+      width: 32px !important;
+      height: 18px !important;
+      background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/tt-dropdown-arrow.png);
+      background-size: 32px 18px;
+      transform: rotate(180deg);
+      margin-top: -1px;
+  }
+  
+  .dark-mode .ui_selector .options-arrow,
+  .TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-options-arrow {
+      background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/tt-dropdown-arrow-dark.png);
+  }
+  
+  .dark-mode .ui_selector .options,
+  .TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-options {
+      background: #525251;
+  }
+  
+  .ui_selector .options ul,
+  .TnITTtw-ui_selector .TnITTtw-options ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 232px;
+  }
+  
+  .ui_selector .options ul li,
+  .TnITTtw-ui_selector .TnITTtw-options ul li {
+      padding: 10px 0px;
+      -webkit-user-select: none;
+      text-align: center;
+      font-size: 17px;
+      -webkit-transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+      margin: 0 10px;
+      border-radius: 6px;
+      position: relative;
+  }
+  
+  .dark-mode .options ul li,
+  .TnITTtw-dark-mode .TnITTtw-options ul li {
+      color: #fff;
+  }
+  
+  .ui_selector .options ul li:last-child,
+  .TnITTtw-ui_selector .TnITTtw-options ul li:last-child {
+      margin-bottom: 16px;
+  }
+  
+  .ui_selector .options ul li.option:first-child,
+  .ui_selector .options ul li.option_selected:first-child,
+  .TnITTtw-ui_selector .TnITTtw-options ul li.TnITTtw-option:first-child,
+  .TnITTtw-ui_selector .TnITTtw-options ul li.TnITTtw-option_selected:first-child {
+      margin-top: 16px;
+  }
+  
+  .ui_selector .options ul li.whenHover,
+  .TnITTtw-ui_selector .TnITTtw-options ul li.TnITTtw-whenHover {
+      cursor: pointer;
+      background: #f3f3f3;
+      text-align: center;
+  }
+  
+  .dark-mode .ui_selector .options ul li.whenHover,
+  .TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-options ul li.TnITTtw-whenHover {
+      background: rgba(255, 255, 255, 0.5);
+  }
+  
+  .ui_selector .options ul li.option_selected,
+  .TnITTtw-ui_selector .TnITTtw-options ul li.TnITTtw-option_selected {
+      cursor: pointer;
+      background-image: linear-gradient(145deg, #01EF92, #00D8FB),
+      linear-gradient(35deg, rgba(1, 239, 146, 0.25), rgba(0, 216, 251, 0.25)) !important;
+      color: #fff;
+      font-weight: 600;
+  }
+  
+  .ui_selector .options ul .group,
+  .ui_selector .options ul .group:hover,
+  .ui_selector .options ul .group.whenHover,
+  .TnITTtw-ui_selector .TnITTtw-options ul .TnITTtw-group,
+  .TnITTtw-ui_selector .TnITTtw-options ul .TnITTtw-group:hover,
+  .TnITTtw-ui_selector .TnITTtw-options ul .TnITTtw-group.whenHover {
+      padding: 16px 10px;
+      color: #8e8e93;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 12px;
+      text-align: center;
+      cursor: default;
+      background: #FFF;
+  }
+  
+  .dark-mode .ui_selector .options ul .group,
+  .dark-mode .ui_selector .options ul .group:hover,
+  .dark-mode .ui_selector .options ul .group.whenHover,
+  .TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-options ul .TnITTtw-group,
+  .TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-options ul .TnITTtw-group:hover,
+  .TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-options ul .TnITTtw-group.TnITTtw-whenHover {
+      color: #98989D;
+      background: #525251;
+  }
+  
+  .group-element,
+  .TnITTtw-group-element {
+      width: 153px;
+  }
+  
+  .options .dd-search,
+  .TnITTtw-options .TnITTtw-dd-search {
+      border-bottom: 1px solid rgba(200, 199, 204, 0.5);
+  }
+  
+  .dark-mode .options .dd-search,
+  .TnITTtw-dark-mode .TnITTtw-options .TnITTtw-dd-search {
+      border-bottom-color: #747473;
+  }
+  
+  .dd-search .dd-input,
+  .TnITTtw-dd-search .TnITTtw-dd-input {
+      padding: 16px;
+      padding-left: calc(16px * 3);
+      width: 168px;
+      border: none;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif;
+      text-align: left;
+      color: #000;
+      font-size: 17px;
+      background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/searchfield-icon.png);
+      background-position: 16px;
+      background-size: 16px;
+      background-repeat: no-repeat;
+      margin: 0;
+      height: auto;
+  }
+  
+  .dark-mode .dd-search .dd-input,
+  .TnITTtw-dark-mode .TnITTtw-dd-search .TnITTtw-dd-input {
+      color: #FFF;
+      background-color: #525251;
+  }
+  
+  .dd-search .dd-input:focus,
+  .TnITTtw-dd-search .TnITTtw-dd-input:focus {
+      -webkit-transition: all 275ms cubic-bezier(0.23, 1, 0.32, 1);
+      outline: none;
+      text-align: left;
+  }
+  
+  .dd-input::-webkit-input-placeholder,
+  .TnITTtw-dd-input::-webkit-input-placeholder {
+      color: #8e8e93;
+  }
+  
+  .search-failed-plaque,
+  .TnITTtw-search-failed-plaque {
+      text-align: center;
+      padding: 20px;
+      color: #8e8e93;
+      font-size: 17px;
+      font-weight: 600;
+  }
+  
+  .dark-mode .search-failed-plaque,
+  .TnITTtw-dark-mode .TnITTtw-search-failed-plaque {
+      color: #98989D;
+  }
+  
+  .rm-recent,
+  .TnITTtw-rm-recent {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/regular-lang-remove.png);
+      background-size: 10px 10px;
+      top: 15px;
+      right: 10px;
+  }
+  
+  .rm-recent:hover,
+  .TnITTtw-rm-recent:hover {
+      background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/hover-lang-remove.png);
+  }
+  
+  .rm-recent:active,
+  .TnITTtw-rm-recent:active {
+      background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/down-lang-remove.png);
+  }
+  
+  .option_selected .rm-recent,
+  .TnITTtw-option_selected .TnITTtw-rm-recent {
+      background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/down-active-lang-remove.png);
+  }
+  
+  .option_selected .rm-recent:hover,
+  .TnITTtw-option_selected .TnITTtw-rm-recent:hover {
+      background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/hover-active-lang-remove.png);
+  }
+  
+  .option_selected .rm-recent:active,
+  .TnITTtw-option_selected .TnITTtw-rm-recent:active {
+      background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/down-active-lang-remove.png);
+  }
+  
+  .TnITTtw-hidden {
+      display: none;
+  }</style><style type="text/css">@-webkit-keyframes load4 {
+      0%,
+      100% {
+          box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+      }
+      12.5% {
+          box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+      }
+      25% {
+          box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+      }
+      37.5% {
+          box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+      }
+      50% {
+          box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+      }
+      62.5% {
+          box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+      }
+      75% {
+          box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+      }
+      87.5% {
+          box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+      }
+  }
+  
+  @keyframes load4 {
+      0%,
+      100% {
+          box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+      }
+      12.5% {
+          box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+      }
+      25% {
+          box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+      }
+      37.5% {
+          box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+      }
+      50% {
+          box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+      }
+      62.5% {
+          box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+      }
+      75% {
+          box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+      }
+      87.5% {
+          box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+      }
+  }</style>
+        </main>
+</body></html>
+
+
+{% block content %}
+
+      
+{% endblock content %}
+
+
+
+
+<!-- Footer -->
+<div id="shopify-section-footer" class="shopify-section shopify-section--footer"><footer id="section-footer" data-section-id="footer" data-section-type="footer" class="Footer  Footer--withMargin" role="contentinfo">
+    <div class="Container"><div class="Footer__Inner"><div class="Footer__Block Footer__Block--text"><h2 class="Footer__Title Heading u-h6">Посетите наш магазин в Бишкеке</h2><div class="Footer__Content Rte">
+                      <p><a href="https://goo.gl/maps/GJVyUbRjehWQPErG6" title="https://goo.gl/maps/GJVyUbRjehWQPErG6">Асанбай 4, Бишкек. Кыргызстан</a></p><p></p>
+                    </div><ul class="Footer__Social HorizontalList HorizontalList--spacingLoose">
+      <li class="HorizontalList__Item">
+        <a href="https://www.facebook.com/profile.php?id=100054390889015" class="Link Link--primary" target="_blank" rel="noopener" aria-label="Facebook">
+          <span class="Icon-Wrapper--clickable"><svg class="Icon Icon--facebook" viewBox="0 0 9 17">
+        <path d="M5.842 17V9.246h2.653l.398-3.023h-3.05v-1.93c0-.874.246-1.47 1.526-1.47H9V.118C8.718.082 7.75 0 6.623 0 4.27 0 2.66 1.408 2.66 3.994v2.23H0v3.022h2.66V17h3.182z"></path>
+      </svg></span>
+        </a>
+      </li>
+  
+      
+  <li class="HorizontalList__Item">
+        <a href="https://www.instagram.com/dissimilard/?hl=ru" class="Link Link--primary" target="_blank" rel="noopener" aria-label="Instagram">
+          <span class="Icon-Wrapper--clickable"><svg class="Icon Icon--instagram" role="presentation" viewBox="0 0 32 32">
+        <path d="M15.994 2.886c4.273 0 4.775.019 6.464.095 1.562.07 2.406.33 2.971.552.749.292 1.283.635 1.841 1.194s.908 1.092 1.194 1.841c.216.565.483 1.41.552 2.971.076 1.689.095 2.19.095 6.464s-.019 4.775-.095 6.464c-.07 1.562-.33 2.406-.552 2.971-.292.749-.635 1.283-1.194 1.841s-1.092.908-1.841 1.194c-.565.216-1.41.483-2.971.552-1.689.076-2.19.095-6.464.095s-4.775-.019-6.464-.095c-1.562-.07-2.406-.33-2.971-.552-.749-.292-1.283-.635-1.841-1.194s-.908-1.092-1.194-1.841c-.216-.565-.483-1.41-.552-2.971-.076-1.689-.095-2.19-.095-6.464s.019-4.775.095-6.464c.07-1.562.33-2.406.552-2.971.292-.749.635-1.283 1.194-1.841s1.092-.908 1.841-1.194c.565-.216 1.41-.483 2.971-.552 1.689-.083 2.19-.095 6.464-.095zm0-2.883c-4.343 0-4.889.019-6.597.095-1.702.076-2.864.349-3.879.743-1.054.406-1.943.959-2.832 1.848S1.251 4.473.838 5.521C.444 6.537.171 7.699.095 9.407.019 11.109 0 11.655 0 15.997s.019 4.889.095 6.597c.076 1.702.349 2.864.743 3.886.406 1.054.959 1.943 1.848 2.832s1.784 1.435 2.832 1.848c1.016.394 2.178.667 3.886.743s2.248.095 6.597.095 4.889-.019 6.597-.095c1.702-.076 2.864-.349 3.886-.743 1.054-.406 1.943-.959 2.832-1.848s1.435-1.784 1.848-2.832c.394-1.016.667-2.178.743-3.886s.095-2.248.095-6.597-.019-4.889-.095-6.597c-.076-1.702-.349-2.864-.743-3.886-.406-1.054-.959-1.943-1.848-2.832S27.532 1.247 26.484.834C25.468.44 24.306.167 22.598.091c-1.714-.07-2.26-.089-6.603-.089zm0 7.778c-4.533 0-8.216 3.676-8.216 8.216s3.683 8.216 8.216 8.216 8.216-3.683 8.216-8.216-3.683-8.216-8.216-8.216zm0 13.549c-2.946 0-5.333-2.387-5.333-5.333s2.387-5.333 5.333-5.333 5.333 2.387 5.333 5.333-2.387 5.333-5.333 5.333zM26.451 7.457c0 1.059-.858 1.917-1.917 1.917s-1.917-.858-1.917-1.917c0-1.059.858-1.917 1.917-1.917s1.917.858 1.917 1.917z"></path>
+      </svg></span>
+        </a>
+      </li>
+      
+  
+    </ul>
+  </div><div class="Footer__Block Footer__Block--links"><h2 class="Footer__Title Heading u-h6">Yonobi</h2>
+  
+                    <ul class="Linklist"><li class="Linklist__Item">
+                          <a href="/pages/contact" class="Link Link--primary">Контакты</a>
+                        </li><li class="Linklist__Item">
+                          <a href="/pages/about-us" class="Link Link--primary">О нас</a>
+                        
+                        
+                    
+                      
+        <polyline fill="none" stroke="currentColor" points="17 2 9.5 10 2 2" fill-rule="evenodd" stroke-width="2" stroke-linecap="square"></polyline>
+      </svg></button>
+  
+                  <div id="footer-currency-popover" class="Popover Popover--small Popover--noWrap" aria-hidden="true">
+                    <header class="Popover__Header">
+                      <button type="button" class="Popover__Close Icon-Wrapper--clickable" data-action="close-popover"><svg class="Icon Icon--close" role="presentation" viewBox="0 0 16 14">
+        <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+      </svg></button>
+                      <span class="Popover__Title Heading u-h4">Currency</span>
+                    </header>
+ 
+  
+                  <div id="footer-locale-popover" class="Popover Popover--small Popover--noWrap" aria-hidden="true">
+                    <header class="Popover__Header">
+                      <button type="button" class="Popover__Close Icon-Wrapper--clickable" data-action="close-popover"><svg class="Icon Icon--close" role="presentation" viewBox="0 0 16 14">
+        <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+      </svg></button>
+                      <span class="Popover__Title Heading u-h4">Language</span>
+                    </header>
+  
+                    <div class="Popover__Content">
+                      <div class="Popover__ValueList Popover__ValueList--center" data-scrollable=""><button type="submit" name="locale_code" class="Popover__Value is-selected Heading Link Link--primary u-h6" value="en" aria-current="true">English</button><button type="submit" name="locale_code" class="Popover__Value  Heading Link Link--primary u-h6" value="da">Dansk</button></div>
+                    </div>
+                  </div>
+                </div></form></div><div class="Footer__Copyright">
+          
+        </div><ul class="Footer__PaymentList HorizontalList">
+              
+  </li><li class="HorizontalList__Item"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" role="img" x="0" y="0" width="38" height="24" viewBox="0 0 165.521 105.965" xml:space="preserve" aria-labelledby="pi-apple_pay"><title id="pi-apple_pay">Apple Pay</title><path fill="#000" d="M150.698 0H14.823c-.566 0-1.133 0-1.698.003-.477.004-.953.009-1.43.022-1.039.028-2.087.09-3.113.274a10.51 10.51 0 0 0-2.958.975 9.932 9.932 0 0 0-4.35 4.35 10.463 10.463 0 0 0-.975 2.96C.113 9.611.052 10.658.024 11.696a70.22 70.22 0 0 0-.022 1.43C0 13.69 0 14.256 0 14.823v76.318c0 .567 0 1.132.002 1.699.003.476.009.953.022 1.43.028 1.036.09 2.084.275 3.11a10.46 10.46 0 0 0 .974 2.96 9.897 9.897 0 0 0 1.83 2.52 9.874 9.874 0 0 0 2.52 1.83c.947.483 1.917.79 2.96.977 1.025.183 2.073.245 3.112.273.477.011.953.017 1.43.02.565.004 1.132.004 1.698.004h135.875c.565 0 1.132 0 1.697-.004.476-.002.952-.009 1.431-.02 1.037-.028 2.085-.09 3.113-.273a10.478 10.478 0 0 0 2.958-.977 9.955 9.955 0 0 0 4.35-4.35c.483-.947.789-1.917.974-2.96.186-1.026.246-2.074.274-3.11.013-.477.02-.954.022-1.43.004-.567.004-1.132.004-1.699V14.824c0-.567 0-1.133-.004-1.699a63.067 63.067 0 0 0-.022-1.429c-.028-1.038-.088-2.085-.274-3.112a10.4 10.4 0 0 0-.974-2.96 9.94 9.94 0 0 0-4.35-4.35A10.52 10.52 0 0 0 156.939.3c-1.028-.185-2.076-.246-3.113-.274a71.417 71.417 0 0 0-1.431-.022C151.83 0 151.263 0 150.698 0z"></path><path fill="#FFF" d="M150.698 3.532l1.672.003c.452.003.905.008 1.36.02.793.022 1.719.065 2.583.22.75.135 1.38.34 1.984.648a6.392 6.392 0 0 1 2.804 2.807c.306.6.51 1.226.645 1.983.154.854.197 1.783.218 2.58.013.45.019.9.02 1.36.005.557.005 1.113.005 1.671v76.318c0 .558 0 1.114-.004 1.682-.002.45-.008.9-.02 1.35-.022.796-.065 1.725-.221 2.589a6.855 6.855 0 0 1-.645 1.975 6.397 6.397 0 0 1-2.808 2.807c-.6.306-1.228.511-1.971.645-.881.157-1.847.2-2.574.22-.457.01-.912.017-1.379.019-.555.004-1.113.004-1.669.004H14.801c-.55 0-1.1 0-1.66-.004a74.993 74.993 0 0 1-1.35-.018c-.744-.02-1.71-.064-2.584-.22a6.938 6.938 0 0 1-1.986-.65 6.337 6.337 0 0 1-1.622-1.18 6.355 6.355 0 0 1-1.178-1.623 6.935 6.935 0 0 1-.646-1.985c-.156-.863-.2-1.788-.22-2.578a66.088 66.088 0 0 1-.02-1.355l-.003-1.327V14.474l.002-1.325a66.7 66.7 0 0 1 .02-1.357c.022-.792.065-1.717.222-2.587a6.924 6.924 0 0 1 .646-1.981c.304-.598.7-1.144 1.18-1.623a6.386 6.386 0 0 1 1.624-1.18 6.96 6.96 0 0 1 1.98-.646c.865-.155 1.792-.198 2.586-.22.452-.012.905-.017 1.354-.02l1.677-.003h135.875"></path><g><g><path fill="#000" d="M43.508 35.77c1.404-1.755 2.356-4.112 2.105-6.52-2.054.102-4.56 1.355-6.012 3.112-1.303 1.504-2.456 3.959-2.156 6.266 2.306.2 4.61-1.152 6.063-2.858"></path><path fill="#000" d="M45.587 39.079c-3.35-.2-6.196 1.9-7.795 1.9-1.6 0-4.049-1.8-6.698-1.751-3.447.05-6.645 2-8.395 5.1-3.598 6.2-.95 15.4 2.55 20.45 1.699 2.5 3.747 5.25 6.445 5.151 2.55-.1 3.549-1.65 6.647-1.65 3.097 0 3.997 1.65 6.696 1.6 2.798-.05 4.548-2.5 6.247-5 1.95-2.85 2.747-5.6 2.797-5.75-.05-.05-5.396-2.101-5.446-8.251-.05-5.15 4.198-7.6 4.398-7.751-2.399-3.548-6.147-3.948-7.447-4.048"></path></g><g><path fill="#000" d="M78.973 32.11c7.278 0 12.347 5.017 12.347 12.321 0 7.33-5.173 12.373-12.529 12.373h-8.058V69.62h-5.822V32.11h14.062zm-8.24 19.807h6.68c5.07 0 7.954-2.729 7.954-7.46 0-4.73-2.885-7.434-7.928-7.434h-6.706v14.894z"></path><path fill="#000" d="M92.764 61.847c0-4.809 3.665-7.564 10.423-7.98l7.252-.442v-2.08c0-3.04-2.001-4.704-5.562-4.704-2.938 0-5.07 1.507-5.51 3.82h-5.252c.157-4.86 4.731-8.395 10.918-8.395 6.654 0 10.995 3.483 10.995 8.89v18.663h-5.38v-4.497h-.13c-1.534 2.937-4.914 4.782-8.579 4.782-5.406 0-9.175-3.222-9.175-8.057zm17.675-2.417v-2.106l-6.472.416c-3.64.234-5.536 1.585-5.536 3.95 0 2.288 1.975 3.77 5.068 3.77 3.95 0 6.94-2.522 6.94-6.03z"></path><path fill="#000" d="M120.975 79.652v-4.496c.364.051 1.247.103 1.715.103 2.573 0 4.029-1.09 4.913-3.899l.52-1.663-9.852-27.293h6.082l6.863 22.146h.13l6.862-22.146h5.927l-10.216 28.67c-2.34 6.577-5.017 8.735-10.683 8.735-.442 0-1.872-.052-2.261-.157z"></path></g></g></svg>
+  </li><li class="HorizontalList__Item"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24" width="38" height="24" aria-labelledby="pi-google_pay"><title id="pi-google_pay">Google Pay</title><path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" fill="#000" opacity=".07"></path><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" fill="#FFF"></path><path d="M18.093 11.976v3.2h-1.018v-7.9h2.691a2.447 2.447 0 0 1 1.747.692 2.28 2.28 0 0 1 .11 3.224l-.11.116c-.47.447-1.098.69-1.747.674l-1.673-.006zm0-3.732v2.788h1.698c.377.012.741-.135 1.005-.404a1.391 1.391 0 0 0-1.005-2.354l-1.698-.03zm6.484 1.348c.65-.03 1.286.188 1.778.613.445.43.682 1.03.65 1.649v3.334h-.969v-.766h-.049a1.93 1.93 0 0 1-1.673.931 2.17 2.17 0 0 1-1.496-.533 1.667 1.667 0 0 1-.613-1.324 1.606 1.606 0 0 1 .613-1.336 2.746 2.746 0 0 1 1.698-.515c.517-.02 1.03.093 1.49.331v-.208a1.134 1.134 0 0 0-.417-.901 1.416 1.416 0 0 0-.98-.368 1.545 1.545 0 0 0-1.319.717l-.895-.564a2.488 2.488 0 0 1 2.182-1.06zM23.29 13.52a.79.79 0 0 0 .337.662c.223.176.5.269.785.263.429-.001.84-.17 1.146-.472.305-.286.478-.685.478-1.103a2.047 2.047 0 0 0-1.324-.374 1.716 1.716 0 0 0-1.03.294.883.883 0 0 0-.392.73zm9.286-3.75l-3.39 7.79h-1.048l1.281-2.728-2.224-5.062h1.103l1.612 3.885 1.569-3.885h1.097z" fill="#5F6368"></path><path d="M13.986 11.284c0-.308-.024-.616-.073-.92h-4.29v1.747h2.451a2.096 2.096 0 0 1-.9 1.373v1.134h1.464a4.433 4.433 0 0 0 1.348-3.334z" fill="#4285F4"></path><path d="M9.629 15.721a4.352 4.352 0 0 0 3.01-1.097l-1.466-1.14a2.752 2.752 0 0 1-4.094-1.44H5.577v1.17a4.53 4.53 0 0 0 4.052 2.507z" fill="#34A853"></path><path d="M7.079 12.05a2.709 2.709 0 0 1 0-1.735v-1.17H5.577a4.505 4.505 0 0 0 0 4.075l1.502-1.17z" fill="#FBBC04"></path><path d="M9.629 8.44a2.452 2.452 0 0 1 1.74.68l1.3-1.293a4.37 4.37 0 0 0-3.065-1.183 4.53 4.53 0 0 0-4.027 2.5l1.502 1.171a2.715 2.715 0 0 1 2.55-1.875z" fill="#EA4335"></path></svg>
+  </li><li class="HorizontalList__Item"><svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-maestro"><title id="pi-maestro">Maestro</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><circle fill="#EB001B" cx="15" cy="12" r="7"></circle><circle fill="#00A2E5" cx="23" cy="12" r="7"></circle><path fill="#7375CF" d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"></path></svg></li><li class="HorizontalList__Item"><svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24" aria-labelledby="pi-master"><title id="pi-master">Mastercard</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><circle fill="#EB001B" cx="15" cy="12" r="7"></circle><circle fill="#F79E1B" cx="23" cy="12" r="7"></circle><path fill="#FF5F00" d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"></path></svg></li>
+            </ul></div>
+    </div>
+  </footer></div>
+</body>
+</html>

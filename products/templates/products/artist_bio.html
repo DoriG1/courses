@@ -1,0 +1,72 @@
+{% extends 'products/base.html' %}
+{% load static %}
+{% block content %}
+
+<body class="prestige--v4 features--heading-normal features--heading-uppercase  template-collection" data-instant-intensity="viewport" data-instant-allow-query-string="" sr-scroll-left="0" sr-scroll-top="496.79998779296875"><div></div>
+    
+    
+    <div class="PageOverlay"></div>
+    
+
+<div class="PageContainer">
+      
+      
+
+      <main id="main" role="main">
+        <div id="shopify-section-collection-template" class="shopify-section shopify-section--bordered"><section data-section-id="collection-template" data-section-type="collection" data-section-settings="{
+    &quot;collectionUrl&quot;: &quot;\/collections\/af-jord&quot;,
+    &quot;currentTags&quot;: [],
+    &quot;sortBy&quot;: &quot;created-descending&quot;,
+    &quot;filterPosition&quot;: &quot;sidebar&quot;
+  }"><div class="FlexboxIeFix">
+        <header class="PageHeader PageHeader--withBackground PageHeader--small" style="background: url({{artist.photo.url}})">
+          <div class="PageHeader__ImageWrapper Image--fadeIn Image--contrast Image--lazyLoaded" data-optimumx="1.2" style="transform: translate3d(0px, 0px, 0px); background-image: url({{artist.photo.url}});">
+          <picture style="display: none;"><source data-srcset="{{artist.photo.url}}">
+            <img alt="" class="lazyautosizes Image--lazyLoaded" data-sizes="auto" data-optimumx="1.2" data-parent-fit="cover" data-srcset="" sizes="1519px"></picture></div>
+
+          <noscript>
+            <div class="PageHeader__ImageWrapper Image--contrast" style="background-image: url({{artist.photo.url}})"></div>
+          </noscript>
+
+          <div class="Container">
+            <div class="SectionHeader SectionHeader--center">
+              <h1 class="SectionHeader__Heading Heading u-h1">{{artist.name}}</h1><div class="SectionHeader__Description Rte">
+            <p>{{ artist.content | safe }}</p>
+        </div></div>
+          </div>
+        </header>
+        </div>
+
+
+        </div><div class="CollectionMain">
+            
+            <div class="CollectionMain"><div class="CollectionInner"><div class="CollectionInner__Products">
+                <div class="ProductListWrapper">
+          <div class="ProductList ProductList--grid  Grid" data-mobile-count="2" data-desktop-count="4"><div class="SectionHeader SectionHeader--center">
+            </div>
+                {% for course in courses %} 
+                            <div class="Grid__Cell 1/2--phone 1/3--tablet-and-up 1/4--desk">
+                                <div class="ProductItem ">
+                    <div class="ProductItem__Wrapper">
+                        <!-- важно -->
+                        <a href="{% url 'pottery_class' course.id %}" class="ProductItem__ImageWrapper "> 
+                            <div class="AspectRatio AspectRatio--square" style="max-width: 3339px;  --aspect-ratio: 1.0">
+                                <img class="ProductItem__Image Image--fadeIn lazyautosizes Image--lazyLoaded" 
+                                data-widths="[200,400,600,700,800,900,1000,1200]" 
+                                data-sizes="auto"
+                                data-srcset="{{course.photo.url}}" 
+                                sizes="198px" 
+                                srcset="{{course.photo.url}}">
+                            <span class="Image__Loader"></span>
+                    
+                        </div>
+                        </a><div class="ProductItem__Info ProductItem__Info--center"><h2 class="ProductItem__Title Heading">
+                            <a href="{% url 'pottery_class' course.id %}">{{course.title}}</a>
+                            </h2><div class="ProductItem__PriceList  Heading"><span class="ProductItem__Price Price Text--subdued">{{course.price}} сом</span></div></div></div></div></div>      
+                {% endfor %}   
+    </section></div>
+      </main>     
+    </div>
+</body>
+
+{% endblock content %}

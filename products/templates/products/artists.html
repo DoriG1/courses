@@ -1,0 +1,91 @@
+{% extends 'products/base.html' %}
+{% load static %}
+{% block content %}
+
+<body class="prestige--v4 features--heading-normal features--heading-uppercase  template-page" data-instant-intensity="viewport" data-instant-allow-query-string="" sr-scroll-left="0" sr-scroll-top="564.7999877929688"><div></div>
+    
+    
+    <div class="PageOverlay"></div>
+    
+
+<div class="PageContainer">
+      <div id="shopify-section-announcement" class="shopify-section"></div>
+      
+
+      <main id="main" role="main">
+        <div id="shopify-section-list-collections-template" class="shopify-section"><section id="section-list-collections-template" data-section-id="list-collections-template">
+    <header class="PageHeader">
+      <div class="SectionHeader SectionHeader--center">
+        <h1 class="SectionHeader__Heading Heading u-h1">Мастера</h1>
+      </div>
+    </header>
+    <div class="CollectionList CollectionList--grid CollectionList--spaced">
+
+
+      {% for artist in artists %} 
+          <a href="{% url 'artist_bio' artist.id %}" class="CollectionItem CollectionItem--expand " data-slide-index="">
+            <div class="CollectionItem__Wrapper CollectionItem__Wrapper--normal" 
+            style="background-image: url({{artist.photo.url}})">
+        <div class="CollectionItem__ImageWrapper">
+
+          
+          <div class="CollectionItem__Image Image--contrast Image--zoomOut hide-no-js Image--lazyLoaded" 
+          style="background-position: center center; background-image: url({{artist.photo.url}});" 
+          data-optimumx="1.4" data-expand="-150">
+          <picture style="display: none;">
+            <source data-srcset="{{artist.photo.url}}"
+            sizes="1476px" 
+            srcset="{{artist.photo.url}}">
+            <img alt="" class="lazyautosizes Image--lazyLoaded" data-sizes="auto" data-optimumx="1.4" data-parent-fit="cover" sizes="1476px"></picture></div>
+            <noscript>
+              <div class="CollectionItem__Image Image--contrast" style="background-position: center center; background-image: url({{artist.photo.url}})"></div>
+            </noscript></div>
+
+        <div class="CollectionItem__Content CollectionItem__Content--bottomLeft">
+          <header class="SectionHeader"><h3 class="SectionHeader__SubHeading Heading u-h6">{{artist.city}}</h3><h2 class="SectionHeader__Heading SectionHeader__Heading--emphasize Heading u-h1">{{artist.name}}</h2>
+
+            <div class="SectionHeader__ButtonWrapper"><span class="CollectionItem__Link Button">Подробнее</span></div>
+          </header>
+        </div>
+      </div>
+      {% endfor %}
+</a></div>
+
+  </section>
+  
+  <style>
+  #section-list-collections-template .CollectionItem .Heading {
+    color: #ffffff;
+  }
+
+  #section-list-collections-template .CollectionItem__Link {
+    color: #363636;
+    border-color: #ffffff;
+  }
+
+  #section-list-collections-template .CollectionItem__Link::before {
+    background-color: #ffffff;
+  }
+
+  @media (-moz-touch-enabled: 0), (hover: hover) {
+    #section-list-collections-template .CollectionItem__Link:hover {
+      color: #ffffff;
+    }
+  }
+</style>
+
+</div>
+      </main>
+      
+
+
+
+      
+      
+    </div>
+  
+
+
+</body>
+
+{% endblock content %}

@@ -1,0 +1,42 @@
+{% extends 'products/base.html' %}
+{% load static %}
+{% block content %}
+
+<main id="main" role="main">
+    <section data-section-id="reset-password" data-section-type="reset-password">
+<div class="Container">
+<div class="PageContent PageContent--fitScreen PageContent--extraNarrow"><form method="post" action="/account" id="create_customer" accept-charset="UTF-8" data-login-with-shop-sign-up="true" name="create_customer" class="Form Form--spacingTight" data-gtm-form-interact-id="0" onsubmit="window.Shopify.recaptchaV3.addToken(this, &quot;create_customer&quot;); return false;"><input type="hidden" name="form_type" value="create_customer"><input type="hidden" name="utf8" value="✓"><header class="Form__Header">
+      <h1 class="Form__Title Heading u-h1">Регистрация</h1>
+      <p class="Form__Legend">Заполните информацию ниже:</p>
+    </header><div class="Form__Item">
+        <input type="text" class="Form__Input" name="customer[first_name]" aria-label="First name" placeholder="Имя" autofocus="">
+        <label class="Form__FloatingLabel">Имя</label>
+      </div>
+
+      <div class="Form__Item">
+        <input type="text" class="Form__Input" name="customer[last_name]" aria-label="Last name" placeholder="Фамилия">
+        <label class="Form__FloatingLabel">Фамилия</label>
+      </div><div class="Form__Item">
+      <input type="email" class="Form__Input" name="customer[email]" aria-label="Email" placeholder="Email" required="required" data-gtm-form-interact-field-id="0">
+      <label class="Form__FloatingLabel">Email</label>
+    </div>
+
+    <div class="Form__Item">
+      <input type="password" class="Form__Input" name="customer[password]" aria-label="Password" placeholder="Пароль" required="required" data-gtm-form-interact-field-id="1">
+      <label class="Form__FloatingLabel">Пароль</label>
+    </div>
+
+    <button type="submit" class="Form__Submit Button Button--primary Button--full">Создать аккаунт</button></form></div>
+</div>
+</section>
+
+<div id="shopify-section-1648717021426333c3" class="shopify-section shopify-section--bordered"><section class="Section Section--spacingNormal" data-section-id="1648717021426333c3" data-section-type="featured-collections" data-settings="{
+    &quot;layout&quot;: &quot;carousel&quot;
+    }">
+    </section></div>
+
+  </main>
+
+
+
+{% endblock content %}

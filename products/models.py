@@ -2,6 +2,8 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
 
+
+
 class Artist(models.Model):
     name = models.CharField(max_length=255, verbose_name="Имя")
     city = models.CharField(max_length=255, verbose_name="Город")
@@ -10,6 +12,7 @@ class Artist(models.Model):
 
     def __str__(self):
         return self.name
+
 
 
 class Course(models.Model): 
@@ -22,7 +25,6 @@ class Course(models.Model):
     date_start = models.CharField(max_length=255, verbose_name="Старт курса")
     level = models.CharField(max_length=255, verbose_name="Уровень", null=True)
     teacher = models.ForeignKey(Artist, on_delete=models.CASCADE, verbose_name="Преподаватель", null=True)
-
 
     def __str__(self):
         return self.title
@@ -47,4 +49,3 @@ class Order(models.Model):
         total = self.course.price * self.people
         return total
     
-

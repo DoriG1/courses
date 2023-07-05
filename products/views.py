@@ -7,7 +7,7 @@ from django.contrib.auth.views import LoginView
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 
-from .forms import OrderForm
+from .forms import OrderForm, RegistrationForm
 
 from .models import Course, Artist
 
@@ -86,7 +86,7 @@ class LoginView(LoginView):
 
 class RegisterPage(FormView):
     template_name = 'products/register.html'
-    form_class = UserCreationForm
+    form_class = RegistrationForm
     redirect_authenticated_user = True
     success_url = reverse_lazy('home')
 
@@ -94,9 +94,9 @@ class RegisterPage(FormView):
         user = form.save()
         if user is not None:
             login(self.request, user)
-        return super(RegisterPage, self).form_valid(form)
+        return super().form_valid(form)
     
     def get(self, *args, **kwargs):
         if self.request.user.is_authenticated:
             return redirect('home')
-        return super(RegisterPage, self).get(*args, **kwargs)
+        return super().get(*args, **kwargs)

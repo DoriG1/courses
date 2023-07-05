@@ -84,10 +84,20 @@
         <span class="UnitPriceMeasurement__Price"></span>
         <span class="UnitPriceMeasurement__Separator">/ </span><span class="UnitPriceMeasurement__ReferenceValue"></span><span class="UnitPriceMeasurement__ReferenceUnit"></span>
       </div>
-    </div></div><form method="post" action="/cart/add" id="product_form_8376755192134" accept-charset="UTF-8" class="ProductForm" enctype="multipart/form-data"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓">
+    </div></div>
+    <br>
 
-	
-<button type="submit" data-use-primary-button="true" class="ptwAddToCart ProductForm__AddToCart Button Button--primary Button--full" data-action="add-to-cart" style="display: block;"><span><ya-tr-span data-index="7-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Add to cart" data-translation="Добавить в корзину" data-ch="0" data-type="trSpan" data-selected="false">Добавить в корзину</ya-tr-span></span>
+
+
+  <input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓">
+
+  <a href="{% url 'order' course.id %}"
+  class="ptwAddToCart ProductForm__AddToCart Button Button--primary Button--full" style="display: block;">
+  <span>
+    <ya-tr-span data-index="7-0" data-translated="true" data-source-lang="en" 
+    data-target-lang="ru" data-translation="Добавить в корзину" data-ch="0" data-type="trSpan" 
+    data-selected="false">Записаться</ya-tr-span>
+  </span></a>
 
 
 </div></form>

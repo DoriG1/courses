@@ -1046,7 +1046,7 @@
               </div></div>
                 </div></form></li>
               </ul>
-            </nav><a href="/account" class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable hidden-phone"><svg class="Icon Icon--account" role="presentation" viewBox="0 0 20 20">
+            </nav><a href="{% url 'login' %}" class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable hidden-phone"><svg class="Icon Icon--account" role="presentation" viewBox="0 0 20 20">
           <g transform="translate(1 1)" stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square">
             <path d="M0 18c0-4.5188182 3.663-8.18181818 8.18181818-8.18181818h1.63636364C14.337 9.81818182 18 13.4811818 18 18"></path>
             <circle cx="9" cy="4.90909091" r="4.90909091"></circle>
@@ -2721,9 +2721,9 @@
   </div><div class="Footer__Block Footer__Block--links"><h2 class="Footer__Title Heading u-h6">Yonobi</h2>
   
                     <ul class="Linklist"><li class="Linklist__Item">
-                          <a href="/pages/contact" class="Link Link--primary">Контакты</a>
+                          
                         </li><li class="Linklist__Item">
-                          <a href="/pages/about-us" class="Link Link--primary">О нас</a>
+                          <a href="{% url 'about_us' %}" class="Link Link--primary">О нас</a>
                         
                         
                     

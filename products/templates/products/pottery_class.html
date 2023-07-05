@@ -91,6 +91,8 @@
 
   <input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓">
 
+
+{% if user.is_authenticated %}
   <a href="{% url 'order' course.id %}"
   class="ptwAddToCart ProductForm__AddToCart Button Button--primary Button--full" style="display: block;">
   <span>
@@ -98,7 +100,15 @@
     data-target-lang="ru" data-translation="Добавить в корзину" data-ch="0" data-type="trSpan" 
     data-selected="false">Записаться</ya-tr-span>
   </span></a>
-
+{% else %}
+  <a href="{% url 'register' %}"
+  class="ptwAddToCart ProductForm__AddToCart Button Button--primary Button--full" style="display: block;">
+  <span>
+    <ya-tr-span data-index="7-0" data-translated="true" data-source-lang="en" 
+    data-target-lang="ru" data-translation="Записаться" data-ch="0" data-type="trSpan" 
+    data-selected="false">Записаться</ya-tr-span>
+  </span></a>
+{% endif %}
 
 </div></form>
 

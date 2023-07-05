@@ -9,7 +9,7 @@ from django.contrib.auth import login
 
 from .forms import OrderForm, RegistrationForm
 
-from .models import Course, Artist
+from .models import Course, Artist, Order
 
 
 def home(request):
@@ -54,8 +54,8 @@ def about_us(request):
     return render(request, 'products/about_us.html')
 
 
-def checkout(request):
-    return render(request, 'products/checkout.html')
+def account(request):
+    return render(request, 'products/account.html')
 
 
 def order(request, id):
@@ -70,6 +70,7 @@ def order(request, id):
     else:
         form = OrderForm()
         course = Course.objects.get(id=id)
+    
 
     return render(request, 'products/order.html', {"form": form, 'course': course})
 

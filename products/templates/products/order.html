@@ -2,12 +2,83 @@
 {% load static %}
 {% block content %}
 
+<section data-section-id="cart-template" data-section-type="cart" data-section-settings="{
+    &quot;type&quot;: &quot;drawer&quot;,
+    &quot;itemCount&quot;: 1,
+    &quot;drawer&quot;: false,
+    &quot;hasShippingEstimator&quot;: true
+  }"><div class="Container">
+        <header class="PageHeader">
+          <div class="SectionHeader SectionHeader--center">
+            <h1 class="SectionHeader__Heading Heading u-h1">Корзина</h1></div>
+        </header>
+  
+        <div class="PageContent">
+          <form method="POST" class="Cart Cart--expanded" novalidate="">
+            {% csrf_token %}
+            <input type="hidden" name="attributes[collection_mobile_items_per_row]" value="">
+            <input type="hidden" name="attributes[collection_desktop_items_per_row]" value="">
+  
+            <div class="Cart__ItemList"><div class="Cart__Head hidden-phone">
+        <span class="Cart__HeadItem Heading Text--subdued u-h7">Курс</span>
+        <span class="Cart__HeadItem"></span>
+        <span class="Cart__HeadItem Heading Text--subdued u-h7" style="text-align: center">Количество человек</span>
+        <span class="Cart__HeadItem Heading Text--subdued u-h7" style="text-align: right">Стоимость курса для одного человека</span>
+      </div><div class="CartItem">
+        <div class="CartItem__ImageWrapper AspectRatio">
+          <div class="AspectRatio" style="--aspect-ratio: 1.0">
+            <img class="CartItem__Image" src="{{ course.photo.url }}">
+          </div>
+        </div>
+  
+        <div class="CartItem__Info">
+          <h2 class="CartItem__Title Heading">
+            <a href="{% url 'pottery_class' course.id %}">{{ course.title }}</a>
+          </h2>
+  
+          <div class="CartItem__Meta Heading Text--subdued"><p class="CartItem__Variant">{{ course.date_start }}</p><ul class="CartItem__PropertyList"></ul><div class="CartItem__PriceList"></div></div><div class="CartItem__Actions Heading Text--subdued" style="text-align: center">
+              <div class="CartItem__QuantitySelector">
+                <div class="QuantitySelector"><a class="QuantitySelector__Button Link Link--primary" title="Set quantity to 0" href="/cart/change?quantity=0&amp;line=1" data-quantity="0" data-line="1" data-action="update-item-quantity" data-no-instant=""><svg class="Icon Icon--minus" role="presentation" viewBox="0 0 16 2">
+        <path d="M1,1 L15,1" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square"></path>
+      </svg></a>
+  
+                  <input type="text" name="updates[]" id="updates_46529106510150:006fa2b1959d73175b2b0a2965a0b442" class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" data-line="1" value="1"><a class="QuantitySelector__Button Link Link--primary" title="Set quantity to 2" href="/cart/change?quantity=2&amp;line=1" data-quantity="2" data-line="1" data-action="update-item-quantity" data-no-instant=""><svg class="Icon Icon--plus" role="presentation" viewBox="0 0 16 16">
+        <g stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="square">
+          <path d="M8,1 L8,15"></path>
+          <path d="M1,8 L15,8"></path>
+        </g>
+      </svg></a>
+                </div>
+              </div>
+  
+            </div>
+        </div><div class="CartItem__Actions Heading Text--subdued" style="text-align: center">
+              <div class="CartItem__QuantitySelector">
+                <div class="QuantitySelector">
+  
+                  <input type="text" name="{{ form.people.name}}"  class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" data-line="1" value="1">
+                </div>
+              </div>
+  
+              
+            </div>
+  
+          <div class="CartItem__LinePriceList Heading Text--subdued" style="text-align: right"><span class="CartItem__Price Price">{{ course.price }} сом</span></div></div></div>
+  
+            <footer class="Cart__Footer"><div class="Cart__Recap"><p class="Cart__Total Heading u-h6">Итоговая стоимость: <span>{{ order1.get_total }}</span></p>
+                <button type="submit" name="checkout" class="Cart__Checkout Button Button--primary Button--full">Записаться</button>
+              </div>
+            </footer>
+          </form></div>
+      </div></section>
+
+<!-- 
 <p>Вы выбрали: {{ course.title }}</p>
 <p>Время: {{ course.date_start }}</p>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Submit">
-</form>
+</form> -->
 
 {% endblock content %}

@@ -225,7 +225,7 @@
           </div><div class="Slideshow__Content Slideshow__Content--middleCenter">
             <header class="SectionHeader" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
               <h3 class="SectionHeader__SubHeading Heading u-h6">откройте для себя</h3><h2 class="SectionHeader__Heading SectionHeader__Heading--emphasize Heading u-h1">мастер-классы по гончарному делу</h2><div class="SectionHeader__ButtonWrapper" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-              <div class="ButtonGroup ButtonGroup--spacingSmall "><a href="pottery-classes/" class="ButtonGroup__Item Button">забронируйте место прямо сейчас</a></div>
+              <div class="ButtonGroup ButtonGroup--spacingSmall "><a href="{% url 'pottery' %}" class="ButtonGroup__Item Button">забронируйте место прямо сейчас</a></div>
             </div>
             </header>
           </div></div></div></div></div></div>
@@ -295,7 +295,35 @@
 }">
 <div class="ImageHero " data-vimeo-initialized="true">
   <div class="ImageHero__VideoHolder"></div>
-<iframe src="https://player.vimeo.com/video/451200856?muted=1&amp;autoplay=1&amp;autopause=0&amp;loop=1&amp;background=1&amp;app_id=122963" width="426" height="240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="YONOBI Pottery Classes" data-ready="true"></iframe></div>
+  <!-- <video autoplay loop muted playsinline src="{% static 'products/images/YONOBI Pottery Classes.mp4' %}"></video> -->
+
+  <style>
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 39.7%; /* 16:9 aspect ratio (change this value to adjust the aspect ratio) */
+      overflow: hidden;
+    }
+  
+    .video-container video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  </style>
+  
+  <div class="video-container">
+    <video autoplay loop muted playsinline>
+      <source src="{% static 'products/images/YONOBI Pottery Classes.mp4' %}" type="video/mp4">
+    </video>
+  </div>
+  
+<!-- <iframe autoplay loop muted playsinline src="{% static 'products/images/YONOBI Pottery Classes.mp4' %}" type="video/mp4" width="426" height="240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" data-ready="true"></iframe></div> -->
 </section>
 
 </div>

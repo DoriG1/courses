@@ -12,9 +12,9 @@ urlpatterns = [
 
     path('login/', LoginView.as_view(), name="login"),
     path('login/register/', RegisterPage.as_view(), name="register"),
+    path('account/', account, name="account"),
 
     path('order/<int:id>/', order, name="order"),
-    path('checkout/', checkout, name="checkout"),
 
     path('about-us/', about_us, name="about_us"),
 ]

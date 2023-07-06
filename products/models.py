@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 
 class Artist(models.Model):
     name = models.CharField(max_length=255, verbose_name="Имя")
+    slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL", null=True)
     city = models.CharField(max_length=255, verbose_name="Город")
     content = content = models.TextField(blank=True, verbose_name="Биография")
     photo = models.ImageField(upload_to="photos/%Y/%m/%d/", null=True, verbose_name="Фото")

@@ -35,7 +35,7 @@
                                 <div class="ProductItem ">
                     <div class="ProductItem__Wrapper">
                         <!-- важно -->
-                        <a href="{% url 'pottery_class' course.id %}" class="ProductItem__ImageWrapper "> 
+                        <a href="{% url 'pottery_class' course.slug %}" class="ProductItem__ImageWrapper "> 
                             <div class="AspectRatio AspectRatio--square" style="max-width: 3339px;  --aspect-ratio: 1.0">
                                 <img class="ProductItem__Image Image--fadeIn lazyautosizes Image--lazyLoaded" 
                                 data-widths="[200,400,600,700,800,900,1000,1200]" 
@@ -47,7 +47,7 @@
                     
                         </div>
                         </a><div class="ProductItem__Info ProductItem__Info--center"><h2 class="ProductItem__Title Heading">
-                            <a href="{% url 'pottery_class' course.id %}">{{course.title}}</a>
+                            <a href="{% url 'pottery_class' course.slug  %}">{{course.title}}</a>
                             </h2><div class="ProductItem__PriceList  Heading"><span class="ProductItem__Price Price Text--subdued">{{course.price}} сом</span></div></div></div></div></div>      
                 {% endfor %}
           </main>       

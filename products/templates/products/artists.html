@@ -23,7 +23,7 @@
 
 
       {% for artist in artists %} 
-          <a href="{% url 'artist_bio' artist.id %}" class="CollectionItem CollectionItem--expand " data-slide-index="">
+          <a href="{% url 'artist_bio' artist.slug %}" class="CollectionItem CollectionItem--expand " data-slide-index="">
             <div class="CollectionItem__Wrapper CollectionItem__Wrapper--normal" 
             style="background-image: url({{artist.photo.url}})">
         <div class="CollectionItem__ImageWrapper">

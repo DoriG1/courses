@@ -1,9 +1,15 @@
 from django.contrib import admin
 from .models import Course, Artist, Order
 
-admin.site.register(Course)
-admin.site.register(Artist)
+@admin.register(Artist)
+class ArtistAdmin(admin.ModelAdmin):
+    list_display = ["name"]
+    prepopulated_fields = {"slug": ("name",)}
 
+@admin.register(Course)
+class CourseAdmin(admin.ModelAdmin):
+    list_display = ["title", "price","date_start","teacher"]
+    prepopulated_fields = {"slug": ("title",)}
 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):

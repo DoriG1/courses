@@ -1,16 +1,18 @@
 from django.shortcuts import render
+
 from django.shortcuts import redirect
 from django.views.generic.edit import FormView
 from django.urls import reverse_lazy
-
 from django.contrib.auth.views import LoginView
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
-
 from .forms import OrderForm, RegistrationForm
 
-from .models import Course, Artist, Order
+from .models import Course, Artist
+
 from django.contrib.auth import get_user_model
+from django.shortcuts import get_object_or_404
+
+
 
 User = get_user_model()
 
@@ -26,8 +28,8 @@ def pottery_classes(request):
 
 
 
-def pottery_class(request, id):
-    course = Course.objects.get(id=id)
+def pottery_class(request, slug):
+    course = get_object_or_404(Course, slug=slug)
     context = {'course': course}
     return render(request, 'products/pottery_class.html', context)
 
@@ -40,8 +42,8 @@ def artists(request):
 
 
 
-def artist_bio(request, id):
-    artist = Artist.objects.get(id=id)
+def artist_bio(request, slug):
+    artist = get_object_or_404(Artist, slug=slug)
     courses = Course.objects.filter(teacher=artist)
     context = {'artist': artist, 'courses': courses}
 
@@ -63,19 +65,20 @@ def account(request):
     return render(request, 'products/account.html', context)
 
 
-def order(request, id):
+def order(request, slug):
+    course = get_object_or_404(Course, slug=slug)
+
     if request.method == "POST":
         form = OrderForm(request.POST)
         if form.is_valid():
             order = form.save()
             order.user = request.user
-            order.course = Course.objects.get(id=id)
+            order.course = course
             form.save()
             return render(request, 'products/home.html')
     else:
         form = OrderForm()
-        course = Course.objects.get(id=id)
-    
+            
 
     return render(request, 'products/order.html', {"form": form, 'course': course})
 

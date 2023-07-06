@@ -17,12 +17,7 @@
 
 <div class="PageLayout PageLayout--breakLap"><div class="PageLayout__Section"><div class="Segment">
       <h2 class="Segment__Title Heading u-h7"><ya-tr-span data-index="5-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="My orders" data-translation="Мои заказы" data-ch="0" data-type="trSpan" data-selected="false">Мои курсы</ya-tr-span></h2>
-
-
-
-
-
-      
+     
       {% if orders %}
            
         {% for order in orders %}
@@ -35,7 +30,7 @@
             
                 <div class="CartItem__Info">
                 <h2 class="CartItem__Title Heading">
-                    <a href="{% url 'pottery_class' order.course.id %}">{{ order.course }}</a>
+                    <a href="{% url 'pottery_class' order.course.slug %}">{{ order.course }}</a>
                 </h2>
             
                 <div class="CartItem__Meta Heading Text--subdued">

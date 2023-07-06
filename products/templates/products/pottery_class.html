@@ -93,7 +93,7 @@
 
 
 {% if user.is_authenticated %}
-  <a href="{% url 'order' course.id %}"
+  <a href="{% url 'order' course.slug %}"
   class="ptwAddToCart ProductForm__AddToCart Button Button--primary Button--full" style="display: block;">
   <span>
     <ya-tr-span data-index="7-0" data-translated="true" data-source-lang="en" 

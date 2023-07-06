@@ -10,7 +10,9 @@ from django.contrib.auth import login
 from .forms import OrderForm, RegistrationForm
 
 from .models import Course, Artist, Order
+from django.contrib.auth import get_user_model
 
+User = get_user_model()
 
 def home(request):
     return render(request, 'products/home.html')
@@ -55,7 +57,10 @@ def about_us(request):
 
 
 def account(request):
-    return render(request, 'products/account.html')
+    user = User.objects.get(username=request.user.username)
+    orders = user.order_set.all()
+    context = {'user': user, 'orders': orders}
+    return render(request, 'products/account.html', context)
 
 
 def order(request, id):

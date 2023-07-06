@@ -9,7 +9,7 @@
     &quot;hasShippingEstimator&quot;: true
   }"><div class="Container">
         <header class="PageHeader">
-          <div class="SectionHeader SectionHeader--center">
+          <div class="SectionHeader SectionHeader--center"><br>
             <h1 class="SectionHeader__Heading Heading u-h1">Корзина</h1></div>
         </header>
   
@@ -22,8 +22,9 @@
             <div class="Cart__ItemList"><div class="Cart__Head hidden-phone">
         <span class="Cart__HeadItem Heading Text--subdued u-h7">Курс</span>
         <span class="Cart__HeadItem"></span>
+        
+        <span class="Cart__HeadItem Heading Text--subdued u-h7" style="text-align: center">Стоимость курса для одного человека</span>
         <span class="Cart__HeadItem Heading Text--subdued u-h7" style="text-align: center">Количество человек</span>
-        <span class="Cart__HeadItem Heading Text--subdued u-h7" style="text-align: right">Стоимость курса для одного человека</span>
       </div><div class="CartItem">
         <div class="CartItem__ImageWrapper AspectRatio">
           <div class="AspectRatio" style="--aspect-ratio: 1.0">
@@ -52,7 +53,8 @@
               </div>
   
             </div>
-        </div><div class="CartItem__Actions Heading Text--subdued" style="text-align: center">
+        </div><div class="CartItem__LinePriceList Heading Text--subdued" style="text-align: center"><span class="CartItem__Price Price">{{ course.price }} сом</span></div>
+        <div class="CartItem__Actions Heading Text--subdued" style="text-align: center">
               <div class="CartItem__QuantitySelector">
                 <div class="QuantitySelector">
   
@@ -63,22 +65,16 @@
               
             </div>
   
-          <div class="CartItem__LinePriceList Heading Text--subdued" style="text-align: right"><span class="CartItem__Price Price">{{ course.price }} сом</span></div></div></div>
+          </div></div>
   
-            <footer class="Cart__Footer"><div class="Cart__Recap"><p class="Cart__Total Heading u-h6">Итоговая стоимость: <span>{{ order1.get_total }}</span></p>
+            <footer class="Cart__Footer"><div class="Cart__Recap">
+              <p class="Cart__Taxes Text--subdued">После бронирования курса с вами свяжется менеджер для подтверждения заказа и оплаты</p>
+              <p class="Cart__Total Heading u-h6"><span></span></p>
                 <button type="submit" name="checkout" class="Cart__Checkout Button Button--primary Button--full">Записаться</button>
               </div>
             </footer>
           </form></div>
       </div></section>
-
-<!-- 
-<p>Вы выбрали: {{ course.title }}</p>
-<p>Время: {{ course.date_start }}</p>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Submit">
-</form> -->
+      <br><br><br>
 
 {% endblock content %}

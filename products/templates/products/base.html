@@ -1046,51 +1046,39 @@
               </div></div>
                 </div></form></li>
               </ul>
-            </nav><a href="{% url 'login' %}" class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable hidden-phone"><svg class="Icon Icon--account" role="presentation" viewBox="0 0 20 20">
-          <g transform="translate(1 1)" stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square">
-            <path d="M0 18c0-4.5188182 3.663-8.18181818 8.18181818-8.18181818h1.63636364C14.337 9.81818182 18 13.4811818 18 18"></path>
-            <circle cx="9" cy="4.90909091" r="4.90909091"></circle>
-          </g>
-        </svg></a>
+            </nav>
+
+
+
+
+            {% if user.is_authenticated %}
+              <a href="{% url 'account' %}" class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable hidden-phone">
+                <svg class="Icon Icon--account" role="presentation" viewBox="0 0 20 20">
+                  <g transform="translate(1 1)" stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                    <path d="M0 18c0-4.5188182 3.663-8.18181818 8.18181818-8.18181818h1.63636364C14.337 9.81818182 18 13.4811818 18 18"></path>
+                    <circle cx="9" cy="4.90909091" r="4.90909091"></circle>
+                  </g>
+                </svg>
+              </a>
+            {% else %}
+              <a href="{% url 'login' %}" class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable hidden-phone">
+                <svg class="Icon Icon--account" role="presentation" viewBox="0 0 20 20">
+                  <g transform="translate(1 1)" stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                    <path d="M0 18c0-4.5188182 3.663-8.18181818 8.18181818-8.18181818h1.63636364C14.337 9.81818182 18 13.4811818 18 18"></path>
+                    <circle cx="9" cy="4.90909091" r="4.90909091"></circle>
+                  </g>
+                </svg>
+              </a>
+            {% endif %}
           
         
         </svg></span>
-          </a>
-    
-          <a href="/cart" class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable " data-action="open-drawer" data-drawer-id="sidebar-cart" aria-expanded="false" aria-label="Open cart" data-no-instant="">
-            <span class="hidden-tablet-and-up"><svg class="Icon Icon--cart" role="presentation" viewBox="0 0 17 20">
-          <path d="M0 20V4.995l1 .006v.015l4-.002V4c0-2.484 1.274-4 3.5-4C10.518 0 12 1.48 12 4v1.012l5-.003v.985H1V19h15V6.005h1V20H0zM11 4.49C11 2.267 10.507 1 8.5 1 6.5 1 6 2.27 6 4.49V5l5-.002V4.49z" fill="currentColor"></path>
-        </svg></span>
-            <span class="hidden-phone"><svg class="Icon Icon--cart-desktop" role="presentation" viewBox="0 0 19 23">
-          <path d="M0 22.985V5.995L2 6v.03l17-.014v16.968H0zm17-15H2v13h15v-13zm-5-2.882c0-2.04-.493-3.203-2.5-3.203-2 0-2.5 1.164-2.5 3.203v.912H5V4.647C5 1.19 7.274 0 9.5 0 11.517 0 14 1.354 14 4.647v1.368h-2v-.912z" fill="currentColor"></path>
-        </svg></span>
-            <span class="Header__CartDot"></span>
           </a>
         </div>
       </div>
     
     
     </header>
-
-
-
-
-  <link type="text/css" rel="stylesheet" href="https://cdn.shopify.com/s/files/1/0184/4255/1360/files/quicklink.scss.css?v=1614655406"><link rel="preconnect dns-prefetch" href="https://triplewhale-pixel.web.app/" crossorigin="">
-  <link rel="preconnect dns-prefetch" href="https://api.config-security.com/" crossorigin="">
-  <script async="" src="https://replayapp.io/collect/initialize.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KD5MN3S"></script><script src="https://replayapp.io/js/camera-da29441937.js" type="text/javascript" data-main="__SREC__" async=""></script><script async="" src="https://replayapp.io/collect/initialize.js"></script><script async="" src="https://invitejs.trustpilot.com/tp.min.js" type="text/javascript"></script><script type="text/javascript" async="" src="https://brmicrojs.cartkitcdn.com/br.production.min.js?unique_id=itsyonobi.myshopify.com&amp;replayApiKey=bb805550-04ab-11ea-bce7-c9b493773477&amp;proof_ignore_admin_visits=false&amp;shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://brmicrojs.cartkitcdn.com/br.production.min.js?unique_id=itsyonobi.myshopify.com&amp;replayApiKey=bb805550-04ab-11ea-bce7-c9b493773477&amp;proof_ignore_admin_visits=false&amp;shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://cdn.api.better-replay.com/replay.js?unique_id=itsyonobi.myshopify.com&amp;replayApiKey=bb805550-04ab-11ea-bce7-c9b493773477&amp;proof_ignore_admin_visits=false&amp;shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://api.reaktion.com/assets/tracking/store.js?s=np2z3Ii6p8EIeGWI6JSn0wS9TrGdJaxa&amp;shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://cdn.shopify.com/shopifycloud/shopify_chat/storefront/shopifyChatV1.js?api_env=production&amp;c=%23515151&amp;i=chat_bubble&amp;p=bottom_right&amp;s=icon&amp;shop_id=yda_41ZJdpdisG3EiWk03_H9f_1CuZrzlSh3xm3l530&amp;t=no_text&amp;v=1&amp;shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=TQ7gJF&amp;shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://wrapin.prezenapps.com/public/js/load-wrapin-v5-app.js?shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://cdn.shopify.com/s/files/1/0184/4255/1360/files/quicklink.v3.min.js?v=1645163498&amp;shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://cdn.shopify.com/shopifycloud/privacy-banner/storefront-banner.js?shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://geolocation-recommendations.shopifyapps.com/locale_bar/script.js?shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.sync.bootstrap.min.js?shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://ecommplugins-trustboxsettings.trustpilot.com/itsyonobi.myshopify.com.js?settings=1683912360939&amp;shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://ecommplugins-scripts.trustpilot.com/v2.1/js/header.min.js?settings=eyJrZXkiOiJuelByWERYM1FQNktCbHdDIiwicyI6InNrdSJ9&amp;v=2.5&amp;shop=itsyonobi.myshopify.com"></script><script type="text/javascript" async="" src="https://chimpstatic.com/mcjs-connected/js/users/9c92e994948c370317a510f3d/f1af57527d736033cede7ff87.js?shop=itsyonobi.myshopify.com"></script><script async="" src="https://s.pinimg.com/ct/lib/main.14eb2ef4.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/destination?id=MC-F6XQLSXEX7&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/destination?id=AW-924796438&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-ECJ70NCPR7&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://s.pinimg.com/ct/core.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://connect.facebook.net/signals/config/223706158483290?v=2.9.110&amp;r=stable" async=""></script><script src="https://connect.facebook.net/signals/config/223240644703989?v=2.9.110&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://cdn.shopify.com/s/trekkie.storefront.6deef03150cfc3807450afdae3e05f036f41d450.min.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KD5MN3S"></script><script>
-  /* >> TriplePixel :: start*/
-  ~function(W,H,A,L,E,_,B,N){function O(U,T,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,H.open("GET",U,!0),H.send(null),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):N[B]=R):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}A.getItem('"!nC`')||(A=N,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return W=L(),(E._q=E._q||[]).push([W,t,e]),W},E.ch=W,B="configSecurityConfModel",N[B]=1,O("//conf.config-security.com/model",0),O("//triplewhale-pixel.web.app/triplefw.txt?",5)))}}("","TriplePixel",localStorage);
-  /* << TriplePixel :: end*/
-  </script>
-     <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-KD5MN3S');</script>
-  <!-- End Google Tag Manager -->
-      
-    
   
   
       

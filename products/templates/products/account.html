@@ -1,19 +1,23 @@
 {% extends 'products/base.html' %}
 {% load static %}
 {% block content %}
+<head>
+    <title>Аккаунт | YONOBI</title>
+</head>
 
 <main id="main" role="main">
     <div class="Container Container--narrow">
 <header class="PageHeader">
 
-
+    <br><br>
 <div class="SectionHeader">
+    <a href="{% url 'logout' %}" class="PageHeader__Back Heading Text--subdued Link Link--primary u-h7">Logout</a>
   <h1 class="SectionHeader__Heading Heading u-h1">
     <ya-tr-span data-index="3-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="My account" data-translation="Мой аккаунт" data-ch="0" data-type="trSpan" data-selected="false">Мой аккаунт</ya-tr-span></h1>
   <p class="SectionHeader__Description">
     <ya-tr-span data-index="4-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-ch="0" data-type="trSpan" data-selected="false">C Возвращением, {{ request.user.first_name }}!</ya-tr-span></p>
 </div>
-</header><br>
+</header>
 
 <div class="PageLayout PageLayout--breakLap"><div class="PageLayout__Section"><div class="Segment">
       <h2 class="Segment__Title Heading u-h7"><ya-tr-span data-index="5-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="My orders" data-translation="Мои заказы" data-ch="0" data-type="trSpan" data-selected="false">Мои курсы</ya-tr-span></h2>
@@ -70,7 +74,7 @@
       {% else %}
       <div class="Segment__Content">
         <p>
-            <ya-tr-span data-index="6-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="You haven't placed any orders yet" data-translation="Вы еще не разместили никаких заказов" data-ch="0" data-type="trSpan" data-selected="false">Вы еще не разместили никаких заказов</ya-tr-span>
+            <ya-tr-span data-index="6-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="You haven't placed any orders yet" data-translation="Вы еще не разместили никаких заказов" data-ch="0" data-type="trSpan" data-selected="false">Вы еще не записались ни на один курс</ya-tr-span>
         </p>
       </div>
       {% endif %}

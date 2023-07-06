@@ -1,57 +1,62 @@
 {% extends 'products/base.html' %}
 {% load static %}
 {% block content %}
-    <div class="PageContainer">
-          <div id="shopify-section-announcement" class="shopify-section"></div>
-          
-    
-          <main id="main" role="main">
-            <div id="shopify-section-collection-template-classes" class="shopify-section shopify-section--bordered">
-                <section data-section-id="collection-template-classes" data-section-type="collection" data-section-settings="{
-        &quot;collectionUrl&quot;: &quot;\/collections\/pottery-classes&quot;,
-        &quot;currentTags&quot;: [],
-        &quot;sortBy&quot;: &quot;manual&quot;,
-        &quot;filterPosition&quot;: &quot;sidebar&quot;
-      }"><header class="PageHeader">
-              <div class="Container">
-                <div class="SectionHeader SectionHeader--center">
-                  <h1 class="SectionHeader__Heading Heading u-h1">КУРСЫ ГОНЧАРНОГО МАСТЕРСТВА</h1>
-                  <div class="SectionHeader__Description Rte">
-                    <p style="text-align: center;">
-                        <meta charset="utf-8">Научитесь создавать свою керамику на одном из многочисленных гончарных мастер-классов YŌNOBI в нашей уютной студии в Бишкеке.</p>
-    <p style="text-align: center;">Мы приглашаем вас познакомиться с миром гончарного дела на наших занятиях - научиться владеть гончарным кругом, создавать красивые скульптуры и создавать уникальные творения своими руками, простыми гончарными инструментами.</p>
-    
-    
-    
-    
-    </div></div>
-              </div>
-            </header><div class="CollectionMain"><div class="CollectionInner"><div class="CollectionInner__Products">
-                <div class="ProductListWrapper">
-          <div class="ProductList ProductList--grid  Grid" data-mobile-count="2" data-desktop-count="4"><div class="SectionHeader SectionHeader--center">
-            </div>
-                {% for course in courses %} 
-                            <div class="Grid__Cell 1/2--phone 1/3--tablet-and-up 1/4--desk">
-                                <div class="ProductItem ">
-                    <div class="ProductItem__Wrapper">
-                        <!-- важно -->
-                        <a href="{% url 'pottery_class' course.slug %}" class="ProductItem__ImageWrapper "> 
-                            <div class="AspectRatio AspectRatio--square" style="max-width: 3339px;  --aspect-ratio: 1.0">
-                                <img class="ProductItem__Image Image--fadeIn lazyautosizes Image--lazyLoaded" 
-                                data-widths="[200,400,600,700,800,900,1000,1200]" 
-                                data-sizes="auto"
-                                data-srcset="{{course.photo.url}}" 
-                                sizes="198px" 
-                                srcset="{{course.photo.url}}">
-                            <span class="Image__Loader"></span>
-                    
-                        </div>
-                        </a><div class="ProductItem__Info ProductItem__Info--center"><h2 class="ProductItem__Title Heading">
-                            <a href="{% url 'pottery_class' course.slug  %}">{{course.title}}</a>
-                            </h2><div class="ProductItem__PriceList  Heading"><span class="ProductItem__Price Price Text--subdued">{{course.price}} сом</span></div></div></div></div></div>      
-                {% endfor %}
-          </main>       
+
+<head>
+  <title>Мастер-классы | YONOBI</title>
+</head>
+
+<div class="PageContainer">
+      <div id="shopify-section-announcement" class="shopify-section"></div>
+      
+
+      <main id="main" role="main">
+        <div id="shopify-section-collection-template-classes" class="shopify-section shopify-section--bordered">
+            <section data-section-id="collection-template-classes" data-section-type="collection" data-section-settings="{
+    &quot;collectionUrl&quot;: &quot;\/collections\/pottery-classes&quot;,
+    &quot;currentTags&quot;: [],
+    &quot;sortBy&quot;: &quot;manual&quot;,
+    &quot;filterPosition&quot;: &quot;sidebar&quot;
+  }"><header class="PageHeader">
+          <div class="Container">
+            <div class="SectionHeader SectionHeader--center">
+              <h1 class="SectionHeader__Heading Heading u-h1">КУРСЫ ГОНЧАРНОГО МАСТЕРСТВА</h1>
+              <div class="SectionHeader__Description Rte">
+                <p style="text-align: center;">
+                    <meta charset="utf-8">Научитесь создавать свою керамику на одном из многочисленных гончарных мастер-классов YŌNOBI в нашей уютной студии в Бишкеке.</p>
+<p style="text-align: center;">Мы приглашаем вас познакомиться с миром гончарного дела на наших занятиях - научиться владеть гончарным кругом, создавать красивые скульптуры и создавать уникальные творения своими руками, простыми гончарными инструментами.</p>
+
+
+
+
+</div></div>
+          </div>
+        </header><div class="CollectionMain"><div class="CollectionInner"><div class="CollectionInner__Products">
+            <div class="ProductListWrapper">
+      <div class="ProductList ProductList--grid  Grid" data-mobile-count="2" data-desktop-count="4"><div class="SectionHeader SectionHeader--center">
         </div>
-    </body></html>
+            {% for course in courses %} 
+                        <div class="Grid__Cell 1/2--phone 1/3--tablet-and-up 1/4--desk">
+                            <div class="ProductItem ">
+                <div class="ProductItem__Wrapper">
+                    <!-- важно -->
+                    <a href="{% url 'pottery_class' course.slug %}" class="ProductItem__ImageWrapper "> 
+                        <div class="AspectRatio AspectRatio--square" style="max-width: 3339px;  --aspect-ratio: 1.0">
+                            <img class="ProductItem__Image Image--fadeIn lazyautosizes Image--lazyLoaded" 
+                            data-widths="[200,400,600,700,800,900,1000,1200]" 
+                            data-sizes="auto"
+                            data-srcset="{{course.photo.url}}" 
+                            sizes="198px" 
+                            srcset="{{course.photo.url}}">
+                        <span class="Image__Loader"></span>
+                
+                    </div>
+                    </a><div class="ProductItem__Info ProductItem__Info--center"><h2 class="ProductItem__Title Heading">
+                        <a href="{% url 'pottery_class' course.slug  %}">{{course.title}}</a>
+                        </h2><div class="ProductItem__PriceList  Heading"><span class="ProductItem__Price Price Text--subdued">{{course.price}} сом</span></div></div></div></div></div>      
+            {% endfor %}
+      </main>       
+    </div>
+</body></html>
 
 {% endblock content %}

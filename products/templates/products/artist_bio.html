@@ -1,6 +1,9 @@
 {% extends 'products/base.html' %}
 {% load static %}
 {% block content %}
+<head>
+  <title>{{artist.name}} | YONOBI</title>
+</head>
 
 <body class="prestige--v4 features--heading-normal features--heading-uppercase  template-collection" data-instant-intensity="viewport" data-instant-allow-query-string="" sr-scroll-left="0" sr-scroll-top="496.79998779296875"><div></div>
     
@@ -49,7 +52,7 @@
                                 <div class="ProductItem ">
                     <div class="ProductItem__Wrapper">
                         <!-- важно -->
-                        <a href="{% url 'pottery_class' course.id %}" class="ProductItem__ImageWrapper "> 
+                        <a href="{% url 'pottery_class' course.slug %}" class="ProductItem__ImageWrapper "> 
                             <div class="AspectRatio AspectRatio--square" style="max-width: 3339px;  --aspect-ratio: 1.0">
                                 <img class="ProductItem__Image Image--fadeIn lazyautosizes Image--lazyLoaded" 
                                 data-widths="[200,400,600,700,800,900,1000,1200]" 

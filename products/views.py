@@ -50,12 +50,10 @@ def artist_bio(request, slug):
     return render(request, 'products/artist_bio.html', context)
 
 
-def cart(request):
-    return render(request, 'products/cart.html')
-
 
 def about_us(request):
     return render(request, 'products/about_us.html')
+
 
 
 def account(request):
@@ -63,6 +61,7 @@ def account(request):
     orders = user.order_set.all()
     context = {'user': user, 'orders': orders}
     return render(request, 'products/account.html', context)
+
 
 
 def order(request, slug):
@@ -91,6 +90,7 @@ class LoginView(LoginView):
 
     def get_success_url(self):
         return reverse_lazy('home')
+
 
 
 class RegisterPage(FormView):

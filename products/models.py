@@ -8,11 +8,15 @@ class Artist(models.Model):
     name = models.CharField(max_length=255, verbose_name="Имя")
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL", null=True)
     city = models.CharField(max_length=255, verbose_name="Город")
-    content = content = models.TextField(blank=True, verbose_name="Биография")
+    content = models.TextField(blank=True, verbose_name="Биография")
     photo = models.ImageField(upload_to="photos/%Y/%m/%d/", null=True, verbose_name="Фото")
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        verbose_name = 'Мастера'
+        verbose_name_plural = 'Мастера'
 
 
 
@@ -30,13 +34,17 @@ class Course(models.Model):
     def __str__(self):
         return self.title
     
+    class Meta:
+        verbose_name = 'Курсы'
+        verbose_name_plural = 'Курсы'
+    
 
 
 class Order(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
-    course = models.ForeignKey(Course, on_delete=models.SET_NULL, null=True)
-    date_order = models.DateTimeField(auto_now_add=True)
-    people = models.PositiveIntegerField()
+    course = models.ForeignKey(Course, on_delete=models.SET_NULL, null=True, verbose_name="Курс")
+    date_order = models.DateTimeField(auto_now_add=True, verbose_name="Дата заказа")
+    people = models.PositiveIntegerField(verbose_name="Количество человек")
 
     def __str__(self):
         return str(self.id)
@@ -45,4 +53,8 @@ class Order(models.Model):
     def get_total(self):
         total = self.course.price * self.people
         return total
+    
+    class Meta:
+        verbose_name = 'Заказы'
+        verbose_name_plural = 'Заказы'
     
